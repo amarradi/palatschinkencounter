@@ -1,8 +1,5 @@
 package com.git.amarradi.palatschinkencounter;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
@@ -11,11 +8,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import org.w3c.dom.Text;
+import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements ExampleDialog.ExampleDialogListener {
 
     private int counter = 0;
     private TextView textView;
@@ -51,20 +47,35 @@ public class MainActivity extends AppCompatActivity {
 
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu, menu);
+        MenuItem clean = menu.findItem(R.id.item_clean);
+        clean.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                openDialog();
+                return false;
+            }
+        });
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.item_clean:
-                reset_counter();
+//    @Override
+//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
-                Toast.makeText(this, "reset counter", Toast.LENGTH_SHORT).show();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
+//        switch (item.getItemId()) {
+//            case R.id.item_clean:
+//                openDialog();
+//
+//                Toast.makeText(this, "reset counter", Toast.LENGTH_SHORT).show();
+//                return true;
+//            default:
+//                return super.onOptionsItemSelected(item);
+//        }
+//    return true
+//    }
+
+    private void openDialog() {
+        ExampleDialog dialog = new ExampleDialog();
+        dialog.show(getSupportFragmentManager(), "example dialog");
     }
 
     public void save_data() {
@@ -90,4 +101,8 @@ public class MainActivity extends AppCompatActivity {
         updateViews();
     }
 
+    @Override
+    public void onYesClicked() {
+        reset_counter();
+    }
 }
