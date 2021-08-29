@@ -5,7 +5,9 @@
       <map>
         <entry key="..\:/Users/Marcus Radisch/AndroidStudioProjects/palatschinkencounter/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.43743589743589745" />
         <entry key="..\:/Users/Marcus Radisch/AndroidStudioProjects/palatschinkencounter/app/src/main/res/drawable/ic_launcher_background.xml" value="0.43743589743589745" />
-        <entry key="..\:/Users/Marcus Radisch/AndroidStudioProjects/palatschinkencounter/app/src/main/res/layout/activity_main.xml" value="0.20820668693009117" />
+        <entry key="..\:/Users/Marcus Radisch/AndroidStudioProjects/palatschinkencounter/app/src/main/res/drawable/ic_round_cleaning_services_24.xml" value="0.44427083333333334" />
+        <entry key="..\:/Users/Marcus Radisch/AndroidStudioProjects/palatschinkencounter/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/Marcus Radisch/AndroidStudioProjects/palatschinkencounter/app/src/main/res/menu/menu.xml" value="0.3990740740740741" />
       </map>
     </option>
   </component>
