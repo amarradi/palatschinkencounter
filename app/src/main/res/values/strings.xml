@@ -3,4 +3,5 @@
     <string name="btnCounter">+1</string>
     <string name="txViewCounterState">0</string>
     <string name="textviewComplain">Anzahl der gegessenen Palatschinken</string>
+    <string name="txt_menu_item_counter_reset">reset counter</string>
 </resources>
