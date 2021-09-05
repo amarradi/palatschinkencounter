@@ -2,5 +2,5 @@
     <string name="app_name">Palatschinkencounter</string>
     <string name="btnCounter">+1</string>
     <string name="txViewCounterState">0</string>
-    <string name="textviewComplain">Anzahl der gegessenen Palatschinken</string>
+    <string name="textviewComplain">Pancake count</string>
 </resources>
