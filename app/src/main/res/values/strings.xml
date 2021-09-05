@@ -3,4 +3,9 @@
     <string name="btnCounter">+1</string>
     <string name="txViewCounterState">0</string>
     <string name="textviewComplain">Pancake count</string>
+    <string name="txt_menu_item_counter_reset">reset counter</string>
+    <string name="attention">Attention!</string>
+    <string name="resetMessage">Are you sure?</string>
+    <string name="resetCancel">cancel</string>
+    <string name="resetOK">yes</string>
 </resources>
