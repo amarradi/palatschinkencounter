@@ -8,5 +8,5 @@
     <string name="attention">Achtung</string>
     <string name="resetCancel">Abbrechen</string>
     <string name="resetOK">OK</string>
-    <string name="resetMessage">Sind Sie sucher?</string>
+    <string name="resetMessage">Sind Sie sicher?</string>
 </resources>
