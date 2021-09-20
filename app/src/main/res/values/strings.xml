@@ -2,5 +2,10 @@
     <string name="app_name">Palatschinkencounter</string>
     <string name="btnCounter">+1</string>
     <string name="txViewCounterState">0</string>
-    <string name="textviewComplain">Anzahl der gegessenen Palatschinken</string>
+    <string name="textviewComplain">Pancake count</string>
+    <string name="txt_menu_item_counter_reset">reset counter</string>
+    <string name="attention">Counter reset</string>
+    <string name="resetMessage">Do you want to reset the counter?</string>
+    <string name="resetCancel">cancel</string>
+    <string name="resetOK">yes</string>
 </resources>

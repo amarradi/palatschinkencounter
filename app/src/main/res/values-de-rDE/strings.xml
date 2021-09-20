@@ -5,8 +5,8 @@
     <string name="txViewCounterState">0</string>
     <string name="textviewComplain">Anzahl der gegessenen Palatschinken</string>
     <string name="txt_menu_item_counter_reset">Zähler zurücksetzen</string>
-    <string name="attention">Achtung</string>
+    <string name="attention">Zähler zurücksetzen</string>
     <string name="resetCancel">Abbrechen</string>
     <string name="resetOK">OK</string>
-    <string name="resetMessage">Sind Sie sicher?</string>
+    <string name="resetMessage">Möchten Sie den Zähler zurücksetzen?</string>
 </resources>
