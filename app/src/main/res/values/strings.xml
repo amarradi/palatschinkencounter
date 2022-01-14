@@ -1,11 +1,11 @@
-<resources>
-    <string name="app_name">Palatschinkencounter</string>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name" translatable="false">Palatschinkencounter</string>
     <string name="btnCounter">+1</string>
     <string name="txViewCounterState">0</string>
     <string name="textviewComplain">Pancake count</string>
     <string name="txt_menu_item_counter_reset">reset counter</string>
     <string name="attention">Counter reset</string>
     <string name="resetMessage">Do you want to reset the counter?</string>
-    <string name="resetCancel">cancel</string>
+    <string name="Cancel" tools:ignore="ButtonCase">cancel</string>
     <string name="resetOK">yes</string>
 </resources>

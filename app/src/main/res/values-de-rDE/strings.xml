@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Palatschinkencounter</string>
     <string name="btnCounter">+1</string>
     <string name="txViewCounterState">0</string>
     <string name="textviewComplain">Anzahl der gegessenen Palatschinken</string>
     <string name="txt_menu_item_counter_reset">Zähler zurücksetzen</string>
     <string name="attention">Zähler zurücksetzen</string>
-    <string name="resetCancel">Abbrechen</string>
+    <string name="Cancel">Abbrechen</string>
     <string name="resetOK">OK</string>
     <string name="resetMessage">Möchten Sie den Zähler zurücksetzen?</string>
 </resources>

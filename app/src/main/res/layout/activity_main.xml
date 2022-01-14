@@ -19,7 +19,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-
     <Button
         android:id="@+id/counter_text_button"
         android:layout_width="0dp"

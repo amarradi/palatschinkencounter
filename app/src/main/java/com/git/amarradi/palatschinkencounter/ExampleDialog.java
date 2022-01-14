@@ -2,7 +2,6 @@ package com.git.amarradi.palatschinkencounter;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -15,21 +14,13 @@ public class ExampleDialog extends AppCompatDialogFragment {
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        AlertDialog.Builder builder = new AlertDialog.Builder(requireActivity());
         builder.setTitle(getResources().getString(R.string.attention))
                 .setMessage(getResources().getString(R.string.resetMessage))
-                .setNegativeButton(getResources().getString(R.string.resetCancel), new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
+                .setNegativeButton(getResources().getString(R.string.Cancel), (dialog, which) -> {
 
-                    }
                 })
-                .setPositiveButton(getResources().getString(R.string.resetOK), new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        listener.onYesClicked();
-                    }
-                });
+                .setPositiveButton(getResources().getString(R.string.resetOK), (dialog, which) -> listener.onYesClicked());
         return builder.create();
     }
 

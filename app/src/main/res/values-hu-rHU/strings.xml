@@ -2,7 +2,7 @@
 <resources>
     <string name="resetMessage">Szeretné visszaállítani a számlálót?</string>
     <string name="resetOK">Oké</string>
-    <string name="resetCancel">Elvetél</string>
+    <string name="Cancel">Elvetél</string>
     <string name="attention">Számláló visszaállítása</string>
     <string name="txt_menu_item_counter_reset">Számláló visszaállítása</string>
     <string name="textviewComplain">Az elfogyasztott palacsinták száma</string>
