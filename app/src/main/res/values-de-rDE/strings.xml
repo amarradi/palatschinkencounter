@@ -8,4 +8,9 @@
     <string name="Cancel">Abbrechen</string>
     <string name="resetOK">OK</string>
     <string name="resetMessage">Möchten Sie den Zähler zurücksetzen?</string>
+    <string name="about">Über die App</string>
+    <string name="image">Bild</string>
+    <string name="reset">Zähler zurückgesetzt</string>
+    <string name="whatsdo">Mit dieser App kannst du alle deine gegessenen Palatschinken zählen.</string>
+    <string name="havefun">Habt Spaß :-)</string>
 </resources>

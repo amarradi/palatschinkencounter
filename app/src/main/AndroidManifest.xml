@@ -13,16 +13,19 @@
         android:theme="@style/Theme.Palatschinkencounter">
         <activity
             android:name=".MainActivity"
+            android:exported="true"
             android:icon="@drawable/logo_psc_512_transparent"
-            android:theme="@style/Theme.Palatschinkencounter"
-            android:exported="true">
+            android:theme="@style/Theme.Palatschinkencounter">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".AboutActivity"
+            android:icon="@drawable/logo_psc_512_transparent"
+            android:parentActivityName=".MainActivity"/>
 
     </application>
 

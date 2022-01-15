@@ -8,4 +8,10 @@
     <string name="resetMessage">Do you want to reset the counter?</string>
     <string name="Cancel" tools:ignore="ButtonCase">cancel</string>
     <string name="resetOK">yes</string>
+    <string name="about">about the app</string>
+    <string name="image">image</string>
+    <string name="reset">reset counter</string>
+    <string name="version" translatable="false">%1$s</string>
+    <string name="whatsdo">With this app you can count all your eaten pancakes.</string>
+    <string name="havefun">have fun :-)</string>
 </resources>

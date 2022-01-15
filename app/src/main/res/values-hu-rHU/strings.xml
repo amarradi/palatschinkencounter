@@ -8,4 +8,9 @@
     <string name="textviewComplain">Az elfogyasztott palacsinták száma</string>
     <string name="txViewCounterState">0</string>
     <string name="btnCounter">+1</string>
+    <string name="about">az alkalmazáson keresztül</string>
+    <string name="image">" kép"</string>
+    <string name="reset">Számláló visszaállítása</string>
+    <string name="whatsdo">Ezzel az alkalmazással megszámolhatod az összes megevett palacsintát.</string>
+    <string name="havefun">Jó szórakozást :-)</string>
 </resources>
