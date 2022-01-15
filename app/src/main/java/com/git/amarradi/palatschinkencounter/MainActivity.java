@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity implements ExampleDialog.Exa
         counter = savedCounter;
     }
 
-    @SuppressLint("SetTextI18n")
+    //@SuppressLint("SetTextI18n")
     public void updateViews() {
         textView.setText(Integer.toString(savedCounter));
     }
