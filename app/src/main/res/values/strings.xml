@@ -14,4 +14,7 @@
     <string name="version" translatable="false">%1$s</string>
     <string name="whatsdo">With this app you can count all your eaten pancakes.</string>
     <string name="havefun">have fun :-)</string>
+    <string name="txt_menu_item_recipe">recipe</string>
+    <string name="txt_recipe_entry_txt">I take the following ingredients for the best Hungarian pancakes</string>
+    <string name="ll_ingredients_txt">ingredients</string>
 </resources>

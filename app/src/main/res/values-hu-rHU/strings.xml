@@ -13,4 +13,7 @@
     <string name="reset">Számláló visszaállítása</string>
     <string name="whatsdo">Ezzel az alkalmazással megszámolhatod az összes megevett palacsintát.</string>
     <string name="havefun">Jó szórakozást :-)</string>
+    <string name="txt_menu_item_recipe">A  receptje</string>
+    <string name="txt_recipe_entry_txt">A legjobb magyar palacsintához a következő hozzávalókból készítem a legjobb magyar palacsintát</string>
+    <string name="ll_ingredients_txt">Összetevők</string>
 </resources>

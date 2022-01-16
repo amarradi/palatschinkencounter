@@ -42,6 +42,9 @@ public class MainActivity extends AppCompatActivity implements ExampleDialog.Exa
         counterTextButton = findViewById(R.id.counter_text_button);
         textView = findViewById(R.id.textview);
 
+        load_data();
+        updateViews();
+
         counterTextButton.setOnClickListener(v -> {
             counter++;
             textView.setText(Integer.toString(counter));
@@ -65,6 +68,10 @@ public class MainActivity extends AppCompatActivity implements ExampleDialog.Exa
           switch (item.getItemId()) {
               case R.id.item_clean:
                   openDialog();
+                  return true;
+              case R.id.item_recipe:
+                  Intent intentRecipe = new Intent(this, RecipeActivity.class);
+                  startActivity(intentRecipe);
                   return true;
               case R.id.item_about:
                   Intent intentAbout = new Intent(this, AboutActivity.class);
