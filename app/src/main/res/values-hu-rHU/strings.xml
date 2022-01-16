@@ -15,5 +15,5 @@
     <string name="havefun">Jó szórakozást :-)</string>
     <string name="txt_menu_item_recipe">A  receptje</string>
     <string name="txt_recipe_entry_txt">A legjobb magyar palacsintához a következő hozzávalókból készítem a legjobb magyar palacsintát</string>
-    <string name="ll_ingredients_txt">Összetevők</string>
+    <string name="ll_ingredients_txt">Az összetevők a következők</string>
 </resources>

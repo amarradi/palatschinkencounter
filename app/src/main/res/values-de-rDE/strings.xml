@@ -16,5 +16,5 @@
     <string name="txt_menu_item_recipe">Rezept</string>
     <string name="txt_recipe_entry_txt">Ich nehme für die besten ungarischen Palatschinken folgende Zutaten</string>
 
-    <string name="ll_ingredients_txt">Zutaten</string>
+    <string name="ll_ingredients_txt">Zutaten folgen</string>
 </resources>
