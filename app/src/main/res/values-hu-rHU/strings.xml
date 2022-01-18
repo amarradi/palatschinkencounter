@@ -15,5 +15,18 @@
     <string name="havefun">Jó szórakozást :-)</string>
     <string name="txt_menu_item_recipe">A  receptje</string>
     <string name="txt_recipe_entry_txt">A legjobb magyar palacsintához a következő hozzávalókból készítem a legjobb magyar palacsintát</string>
-    <string name="ll_ingredients_txt">Az összetevők a következők</string>
+    <string name="ll_ingredients_flour">20 dkg liszt</string>
+    <string name="ll_ingredients_eggs">2 tojás</string>
+    <string name="ll_ingredients_milk">3 dl tej</string>
+    <string name="ll_ingredients_soda">3 dl szóda</string>
+    <string name="ll_ingredients_salt">csipet só</string>
+    <string name="ll_ingredients_oil">2 ek Vénusz étolaj</string>
+    <string name="pancake_ingredients">Összetevők</string>
+    <string name="pancake_preparation">Előkészítés</string>
+    <string name="pancake_prep_eggs">1. A tojásokat kicsit felverjük, majd hozzáadjuk a lisztet.</string>
+    <string name="pancake_prep_bake">4. Öntsön annyi tésztát a forró serpenyőbe, hogy a palacsinta ne legyen túl sűrű, majd süsse mindkét oldalát pirosra.</string>
+    <string name="pancake_prep_oil">3. Az olajat is hozzáadjuk.</string>
+    <string name="pancake_prep_milk">2. Hígítsuk fel egy kicsit tejjel és vízzel, ízesítsük egy csipet sóval.</string>
+    <string name="itsos">Ez a projekt nyílt forráskódú, és megtalálható a GitHub-on.</string>
+
 </resources>

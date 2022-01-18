@@ -4,12 +4,14 @@
 
     <item android:id="@+id/item_clean"
         android:title="@string/txt_menu_item_counter_reset"
-        android:icon="@drawable/ic_clean"
-        app:showAsAction="never"/>
+        android:icon="@drawable/ic_baseline_delete_forever_24"
+        app:showAsAction="ifRoom"/>
     <item android:id="@+id/item_recipe"
         android:title="@string/txt_menu_item_recipe"
-        app:showAsAction="never"/>
+        android:icon="@drawable/ic_baseline_list_24"
+        app:showAsAction="collapseActionView"/>
     <item android:id="@+id/item_about"
         android:title="@string/about"
-        app:showAsAction="never"/>
+        android:icon="@drawable/ic_baseline_contact_support_24"
+        app:showAsAction="collapseActionView"/>
 </menu>

@@ -16,5 +16,17 @@
     <string name="havefun">have fun :-)</string>
     <string name="txt_menu_item_recipe">recipe</string>
     <string name="txt_recipe_entry_txt">I take the following ingredients for the best Hungarian pancakes</string>
-    <string name="ll_ingredients_txt">ingredients is coming</string>
+    <string name="pancake_ingredients">Ingredients</string>
+    <string name="ll_ingredients_flour">200 grams of flour</string>
+    <string name="ll_ingredients_eggs">2 eggs</string>
+    <string name="ll_ingredients_milk">300 ml of milk</string>
+    <string name="ll_ingredients_soda">300 ml mineral water</string>
+    <string name="ll_ingredients_salt">1 pinch of salt</string>
+    <string name="ll_ingredients_oil">2 tablespoons of sunflower oil</string>
+    <string name="pancake_preparation">Preparation</string>
+    <string name="pancake_prep_eggs">1. Beat the eggs a little and then add the flour.</string>
+    <string name="pancake_prep_milk">2. Dilute a little with milk and water, season with a pinch of salt.</string>
+    <string name="pancake_prep_oil">3. The oil is added as well.</string>
+    <string name="pancake_prep_bake">4. Pour enough batter into a hot pan so that the pancakes are not too thick, then bake on both sides until they are red.</string>
+    <string name="itsos">This project is open source and can be found on GitHub.</string>
 </resources>
