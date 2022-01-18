@@ -27,6 +27,6 @@
     <string name="pancake_prep_bake">4. Öntsön annyi tésztát a forró serpenyőbe, hogy a palacsinta ne legyen túl sűrű, majd süsse mindkét oldalát pirosra.</string>
     <string name="pancake_prep_oil">3. Az olajat is hozzáadjuk.</string>
     <string name="pancake_prep_milk">2. Hígítsuk fel egy kicsit tejjel és vízzel, ízesítsük egy csipet sóval.</string>
-    <string name="itsos">Ez a projekt nyílt forráskódú, és megtalálható a GitHub-on.</string>
+    <string name="itsos">Ez a projekt nyílt forráskódú, és megtalálható a GitHubon a https://github.com/amarradi/palatschinkencounter címen.</string>
 
 </resources>
