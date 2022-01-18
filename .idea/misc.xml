@@ -4,8 +4,16 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Marcus Radisch/AndroidStudioProjects/palatschinkencounter/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.43743589743589745" />
+        <entry key="..\:/Users/Marcus Radisch/AndroidStudioProjects/palatschinkencounter/app/src/main/res/drawable/ic_baseline_list_24.xml" value="0.22837837837837838" />
         <entry key="..\:/Users/Marcus Radisch/AndroidStudioProjects/palatschinkencounter/app/src/main/res/drawable/ic_launcher_background.xml" value="0.43743589743589745" />
-        <entry key="..\:/Users/Marcus Radisch/AndroidStudioProjects/palatschinkencounter/app/src/main/res/layout/activity_main.xml" value="0.20820668693009117" />
+        <entry key="..\:/Users/Marcus Radisch/AndroidStudioProjects/palatschinkencounter/app/src/main/res/layout/activity.xml" value="0.3171171171171171" />
+        <entry key="..\:/Users/Marcus Radisch/AndroidStudioProjects/palatschinkencounter/app/src/main/res/layout/activity_about.xml" value="0.15966386554621848" />
+        <entry key="..\:/Users/Marcus Radisch/AndroidStudioProjects/palatschinkencounter/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/Marcus Radisch/AndroidStudioProjects/palatschinkencounter/app/src/main/res/layout/activity_main2.xml" value="0.2" />
+        <entry key="..\:/Users/Marcus Radisch/AndroidStudioProjects/palatschinkencounter/app/src/main/res/layout/activity_recipe.xml" value="0.33" />
+        <entry key="..\:/Users/Marcus Radisch/AndroidStudioProjects/palatschinkencounter/app/src/main/res/layout/arwdfdsfdsdf.xml" value="0.2246376811594203" />
+        <entry key="..\:/Users/Marcus Radisch/AndroidStudioProjects/palatschinkencounter/app/src/main/res/menu/menu.xml" value="0.2153153153153153" />
+        <entry key="..\:/Users/Marcus Radisch/AndroidStudioProjects/palatschinkencounter/app/src/main/res/menu/menu_about.xml" value="0.2153153153153153" />
       </map>
     </option>
   </component>
