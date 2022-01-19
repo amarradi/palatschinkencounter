@@ -2,13 +2,13 @@ package com.git.amarradi.palatschinkencounter;
 
 import static java.util.Objects.requireNonNull;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,16 +19,12 @@ import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity implements ExampleDialog.ExampleDialogListener {
 
-    private int counter = 0;
-    private TextView textView;
-    private Button counterTextButton;
-
     public static final String SHARED_PREFS = "sharedPrefs";
     public static final String COUNTER = "text";
-
+    private int counter = 0;
+    private TextView textView;
     private int savedCounter;
 
-    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -39,16 +35,19 @@ public class MainActivity extends AppCompatActivity implements ExampleDialog.Exa
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        counterTextButton = findViewById(R.id.counter_text_button);
+        Button counterTextButton = findViewById(R.id.counter_text_button);
         textView = findViewById(R.id.textview);
 
         load_data();
         updateViews();
 
-        counterTextButton.setOnClickListener(v -> {
-            counter++;
-            textView.setText(Integer.toString(counter));
-            save_data();
+        counterTextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                counter++;
+                textView.setText(String.format("%d", counter));
+                save_data();
+            }
         });
         load_data();
         updateViews();
@@ -56,7 +55,6 @@ public class MainActivity extends AppCompatActivity implements ExampleDialog.Exa
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu, menu);
         return true;
@@ -64,23 +62,22 @@ public class MainActivity extends AppCompatActivity implements ExampleDialog.Exa
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
-          switch (item.getItemId()) {
-              case R.id.item_clean:
-                  openDialog();
-                  return true;
-              case R.id.item_recipe:
-                  Intent intentRecipe = new Intent(this, RecipeActivity.class);
-                  startActivity(intentRecipe);
-                  return true;
-              case R.id.item_about:
-                  Intent intentAbout = new Intent(this, AboutActivity.class);
-                  startActivity(intentAbout);
-                  return true;
-              default:
-                  return super.onOptionsItemSelected(item);
-          }
-      }
+        switch (item.getItemId()) {
+            case R.id.item_clean:
+                openDialog();
+                return true;
+            case R.id.item_recipe:
+                Intent intentRecipe = new Intent(this, RecipeActivity.class);
+                startActivity(intentRecipe);
+                return true;
+            case R.id.item_about:
+                Intent intentAbout = new Intent(this, AboutActivity.class);
+                startActivity(intentAbout);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 
     public void openDialog() {
         ExampleDialog dialog = new ExampleDialog();
@@ -88,26 +85,26 @@ public class MainActivity extends AppCompatActivity implements ExampleDialog.Exa
     }
 
     public void save_data() {
-        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt(COUNTER,counter);
+        editor.putInt(COUNTER, counter);
         editor.apply();
     }
 
     public void load_data() {
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-        savedCounter = sharedPreferences.getInt(COUNTER,0);
+        savedCounter = sharedPreferences.getInt(COUNTER, 0);
         counter = savedCounter;
     }
 
     public void updateViews() {
-        textView.setText(Integer.toString(savedCounter));
+        textView.setText(String.format("%d", counter));
     }
 
     public void reset_counter() {
-        counter = 0;
-        save_data();
+        counter = 0; //set counter to 0
         updateViews();
+        save_data();
         Toast.makeText(this, this.getString(R.string.reset), Toast.LENGTH_SHORT).show();
     }
 
