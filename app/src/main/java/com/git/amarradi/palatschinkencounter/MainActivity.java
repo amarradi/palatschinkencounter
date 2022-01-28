@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements ExampleDialog.Exa
 
         requireNonNull(getSupportActionBar()).setDisplayShowHomeEnabled(true);
         Objects.requireNonNull(getSupportActionBar()).setLogo(R.mipmap.logo_psc_round);
-        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        getSupportActionBar().setDisplayUseLogoEnabled(false);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
