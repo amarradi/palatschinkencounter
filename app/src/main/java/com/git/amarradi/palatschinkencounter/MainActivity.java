@@ -4,6 +4,7 @@ import static java.util.Objects.requireNonNull;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -14,16 +15,22 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import java.util.Objects;
 
-public class MainActivity extends AppCompatActivity implements ExampleDialog.ExampleDialogListener {
+public class MainActivity extends AppCompatActivity implements WipeDataDialog.WipeDialogListener {
 
     public static final String SHARED_PREFS = "sharedPrefs";
     public static final String COUNTER = "text";
+    public static final String NIGHT_MODE = "night_mode";
+
+
     private int counter = 0;
     private TextView textView;
-    private int savedCounter;
+    private int safedCounter;
+    private boolean nightMode;
+    private boolean safedNightMode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +44,16 @@ public class MainActivity extends AppCompatActivity implements ExampleDialog.Exa
 
         Button counterTextButton = findViewById(R.id.counter_text_button);
         textView = findViewById(R.id.textview);
+
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        safedNightMode = sharedPreferences.getBoolean(NIGHT_MODE, false);
+
+        if (safedNightMode) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+            counterTextButton.setTextColor(Color.WHITE);
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        }
 
         load_data();
         updateViews();
@@ -57,6 +74,7 @@ public class MainActivity extends AppCompatActivity implements ExampleDialog.Exa
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu, menu);
+
         return true;
     }
 
@@ -65,6 +83,9 @@ public class MainActivity extends AppCompatActivity implements ExampleDialog.Exa
         switch (item.getItemId()) {
             case R.id.item_clean:
                 openDialog();
+                return true;
+            case R.id.item_dn_switch:
+                switchDayNightMode();
                 return true;
             case R.id.item_recipe:
                 Intent intentRecipe = new Intent(this, RecipeActivity.class);
@@ -77,10 +98,11 @@ public class MainActivity extends AppCompatActivity implements ExampleDialog.Exa
             default:
                 return super.onOptionsItemSelected(item);
         }
+
     }
 
     public void openDialog() {
-        ExampleDialog dialog = new ExampleDialog();
+        WipeDataDialog dialog = new WipeDataDialog();
         dialog.show(getSupportFragmentManager(), "open dialog");
     }
 
@@ -93,16 +115,34 @@ public class MainActivity extends AppCompatActivity implements ExampleDialog.Exa
 
     public void load_data() {
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-        savedCounter = sharedPreferences.getInt(COUNTER, 0);
-        counter = savedCounter;
+        safedCounter = sharedPreferences.getInt(COUNTER, 0);
+        counter = safedCounter;
     }
 
     public void updateViews() {
         textView.setText(String.format("%d", counter));
     }
 
+    public void switchDayNightMode() {
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        safedNightMode = sharedPreferences.getBoolean(NIGHT_MODE, false);
+
+        nightMode = safedNightMode;
+        if (safedNightMode) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+            nightMode = false;
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+            nightMode = true;
+        }
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean(NIGHT_MODE, nightMode);
+        editor.apply();
+    }
+
+
     public void reset_counter() {
-        counter = 0; //set counter to 0
+        counter = 0;
         updateViews();
         save_data();
         Toast.makeText(this, this.getString(R.string.reset), Toast.LENGTH_SHORT).show();

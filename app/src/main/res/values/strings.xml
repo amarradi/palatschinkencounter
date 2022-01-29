@@ -29,4 +29,5 @@
     <string name="pancake_prep_oil">3. The oil is added as well.</string>
     <string name="pancake_prep_bake">4. Pour enough batter into a hot pan so that the pancakes are not too thick, then bake on both sides until they are red.</string>
     <string name="itsos">This project is open source and can be found under https://github.com/amarradi/palatschinkencounter GitHub.</string>
+    <string name="txt_menu_item_dnswitch">Night mode</string>
 </resources>

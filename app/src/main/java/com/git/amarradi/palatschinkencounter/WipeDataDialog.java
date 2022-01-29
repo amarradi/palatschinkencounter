@@ -10,8 +10,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
-public class ExampleDialog extends AppCompatDialogFragment {
-    private ExampleDialogListener listener;
+public class WipeDataDialog extends AppCompatDialogFragment {
+    private WipeDialogListener listener;
 
     @NonNull
     @Override
@@ -38,13 +38,13 @@ public class ExampleDialog extends AppCompatDialogFragment {
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
         try {
-            listener = (ExampleDialogListener) context;
+            listener = (WipeDialogListener) context;
         } catch (ClassCastException e) {
             throw new ClassCastException(context.toString());
         }
     }
 
-    public interface ExampleDialogListener {
+    public interface WipeDialogListener {
         void onYesClicked();
     }
 }
