@@ -6,6 +6,7 @@
     <color name="primaryColor">#d6bb9d</color>
     <color name="primaryLightColor">#ffedce</color>
     <color name="primaryDarkColor">#a48b6f</color>
+    <color name="menubg">?android:attr/colorPrimary</color>
 
     <color name="primaryTextColor">#000000</color>
 </resources>
