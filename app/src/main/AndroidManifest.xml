@@ -24,6 +24,7 @@
         </activity>
 
         <activity android:name=".AboutActivity"
+
             android:icon="@drawable/logo_psc_512_transparent"
             android:parentActivityName=".MainActivity"/>
 
