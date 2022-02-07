@@ -5,6 +5,8 @@ import static java.util.Objects.requireNonNull;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.graphics.Typeface;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -14,6 +16,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
@@ -32,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements WipeDataDialog.Wi
     private boolean nightMode;
     private boolean safedNightMode;
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -39,11 +43,17 @@ public class MainActivity extends AppCompatActivity implements WipeDataDialog.Wi
         Objects.requireNonNull(getSupportActionBar()).setLogo(R.mipmap.logo_psc_round);
         getSupportActionBar().setDisplayUseLogoEnabled(false);
 
+        Typeface typeface = getResources().getFont(R.font.opensans_regular);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         Button counterTextButton = findViewById(R.id.counter_text_button);
         textView = findViewById(R.id.textview);
+        TextView textView_start = findViewById(R.id.tv_startpage);
+        textView.setTypeface(typeface);
+        textView_start.setTypeface(typeface);
+
 
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         safedNightMode = sharedPreferences.getBoolean(NIGHT_MODE, false);
