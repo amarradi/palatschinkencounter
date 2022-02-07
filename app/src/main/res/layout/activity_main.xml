@@ -9,13 +9,15 @@
     <TextView
         android:id="@+id/textview"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="67dp"
         android:text="@string/txViewCounterState"
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.422" />
 
     <Button
         android:id="@+id/counter_text_button"
@@ -25,10 +27,11 @@
         android:layout_marginLeft="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/counter_txt_button_bg"
         android:text="@string/btnCounter"
         app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -36,15 +39,11 @@
         android:id="@+id/tv_startpage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginLeft="36dp"
         android:layout_marginTop="184dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginRight="36dp"
         android:layout_marginBottom="456dp"
+        android:gravity="center"
         android:text="@string/textviewComplain"
         android:textSize="25sp"
-        android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/counter_text_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,12 +53,11 @@
         android:id="@+id/image_startpage"
         android:layout_width="109dp"
         android:layout_height="109dp"
-        android:layout_marginTop="80dp"
+        android:contentDescription="@string/image"
         app:layout_constraintBottom_toTopOf="@+id/counter_text_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textview"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/logo_psc_512_transparent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
