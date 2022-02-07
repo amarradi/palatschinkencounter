@@ -24,10 +24,10 @@
     <string name="ll_ingredients_salt">1 pinch of salt</string>
     <string name="ll_ingredients_oil">2 tablespoons of sunflower oil</string>
     <string name="pancake_preparation">Preparation</string>
-    <string name="pancake_prep_eggs">1. Beat the eggs a little and then add the flour.</string>
-    <string name="pancake_prep_milk">2. Dilute a little with milk and water, season with a pinch of salt.</string>
-    <string name="pancake_prep_oil">3. The oil is added as well.</string>
-    <string name="pancake_prep_bake">4. Pour enough batter into a hot pan so that the pancakes are not too thick, then bake on both sides until they are red.</string>
+    <string name="pancake_prep_eggs">1. First, scramble the eggs a little bit and then add the flour.</string>
+    <string name="pancake_prep_milk">2. Now add the milk, mineral water and salt.</string>
+    <string name="pancake_prep_oil">3. Then add the oil and continue to scramble the dough</string>
+    <string name="pancake_prep_bake">4. Finally, add only enough batter to the roasting pan so that the batter is not too thick. Bake the dough until golden brown on both sides</string>
     <string name="itsos">This project is open source and can be found under https://github.com/amarradi/palatschinkencounter GitHub.</string>
     <string name="txt_menu_item_dnswitch">Night mode</string>
 </resources>
