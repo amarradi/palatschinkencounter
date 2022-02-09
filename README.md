@@ -1,6 +1,5 @@
 # palatschinkencounter
-The Palatschinkencounter is a holiday project as an app for Android. A small declaration of love to a very tasty starter, main course or dessert. Palatschinken are also known as pancakes, crepes or german Eierkuchen
-
+Der Palatschinkencounter ist ein Urlaubsprojekt als App für Android. Eine kleine Liebeserklärung an eine sehr leckere Vorspeise, Hauptspeise oder Nachspeise. Palatschinken sind auch bekannt als Pfannkuchen, Crepes oder Eierkuchen
 # Das Rezept
 Ich nehme für die besten ungarischen Palatschinken folgende Zutaten
 ## Zutaten
