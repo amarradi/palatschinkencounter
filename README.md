@@ -8,10 +8,10 @@ The Palatschinkencounter is a holiday project as an app for Android. A small dec
 * 2 Eier
 * 300 ml Milch
 * 300 ml Mineralwasser
-* 1 Prise Salz</string>
-* 2 EL Sonnenblumenöl</string>
-## Zubereitung</string>
+* 1 Prise Salz
+* 2 EL Sonnenblumenöl
+## Zubereitung
 1. Rühren Sie zuerst die Eier ein wenig und geben anschließend das Mehl dazu.
 2. Geben Sie jetzt die Milch, das Mineralwasser und das Salz dazu.
 3. Geben Sie anschließend das Öl dazu und rühren den Teig weiter
->4. Geben Sie abschließend nur so viel Teig in die Bratpfanne, dass der Teig nicht zu dick ist. Backen Sie den Teig von beiden Seiten goldbraun
+4. Geben Sie abschließend nur so viel Teig in die Bratpfanne, dass der Teig nicht zu dick ist. Backen Sie den Teig von beiden Seiten goldbraun
