@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="btnCounter">+1</string>
+    <string name="settings">Einstellungen</string>
+    <string name="send_feedback">Feedback geben</string>
+    <string name="send_feedback_summary">Melden Sie ein technisches Problem oder reichen Sie eine neue
+        Funktion ein</string>
+    <string name="general_preference">Allgemein</string>
+    <string name="theme">Design</string>
+    <string name="theme_summary">Umstalten zwischen dunkel und hell</string>
     <string name="txViewCounterState">0</string>
     <string name="textviewComplain">Anzahl der gegessenen Palatschinken</string>
     <string name="txt_menu_item_counter_reset">Zähler zurücksetzen</string>
@@ -8,6 +15,8 @@
     <string name="Cancel">Abbrechen</string>
     <string name="resetOK">OK</string>
     <string name="resetMessage">Möchten Sie den Zähler zurücksetzen?</string>
+    <string name="resetMessage_preferences">Möchten Sie die Möglichkeit haben den Zähler NEIN/JA
+        zurückzusetzen?</string>
     <string name="about">Über die App</string>
     <string name="image">Bild</string>
     <string name="reset">Zähler zurückgesetzt</string>

@@ -1,7 +1,9 @@
 package com.git.amarradi.palatschinkencounter;
 
+import static java.lang.String.format;
 import static java.util.Objects.requireNonNull;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -31,10 +33,10 @@ public class MainActivity extends AppCompatActivity implements WipeDataDialog.Wi
 
     private int counter = 0;
     private TextView textView;
-    private int safedCounter;
     private boolean nightMode;
     private boolean safedNightMode;
 
+    @SuppressLint("DefaultLocale")
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,13 +70,10 @@ public class MainActivity extends AppCompatActivity implements WipeDataDialog.Wi
         load_data();
         updateViews();
 
-        counterTextButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                counter++;
-                textView.setText(String.format("%d", counter));
-                save_data();
-            }
+        counterTextButton.setOnClickListener(v -> {
+            counter++;
+            textView.setText(format("%d", counter));
+            save_data();
         });
         load_data();
         updateViews();
@@ -88,9 +87,14 @@ public class MainActivity extends AppCompatActivity implements WipeDataDialog.Wi
         return true;
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+            case R.id.item_setting:
+                Intent intentSetting = new Intent(this, SettingActivity.class);
+                startActivity(intentSetting);
+                return true;
             case R.id.item_clean:
                 openDialog();
                 return true;
@@ -125,12 +129,13 @@ public class MainActivity extends AppCompatActivity implements WipeDataDialog.Wi
 
     public void load_data() {
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-        safedCounter = sharedPreferences.getInt(COUNTER, 0);
+        int safedCounter = sharedPreferences.getInt(COUNTER, 0);
         counter = safedCounter;
     }
 
+    @SuppressLint("DefaultLocale")
     public void updateViews() {
-        textView.setText(String.format("%d", counter));
+        textView.setText(format("%d", counter));
     }
 
     public void switchDayNightMode() {

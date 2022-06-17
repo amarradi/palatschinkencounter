@@ -1,11 +1,20 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name" translatable="false">Palatschinkencounter</string>
     <string name="btnCounter">+1</string>
+    <string name="settings">settings</string>
+    <string name="send_feedback">send feedback</string>
+    <string name="send_feedback_summary">Report a technical issues or submit new
+        features</string>
+    <string name="general_preference">General</string>
+    <string name="theme">Theme</string>
+    <string name="theme_summary">Toggle between dark and light theme</string>
     <string name="txViewCounterState">0</string>
     <string name="textviewComplain">Pancake count</string>
     <string name="txt_menu_item_counter_reset">reset counter</string>
     <string name="attention">Counter reset</string>
     <string name="resetMessage">Do you want to reset the counter?</string>
+    <string name="resetMessage_preferences">Do you want to be able to reset the counter?
+        NO/YES</string>
     <string name="Cancel" tools:ignore="ButtonCase">cancel</string>
     <string name="resetOK">yes</string>
     <string name="about">about the app</string>
@@ -30,4 +39,4 @@
     <string name="pancake_prep_bake">4. Finally, add only enough batter to the roasting pan so that the batter is not too thick. Bake the dough until golden brown on both sides</string>
     <string name="itsos">This project is open source and can be found under https://github.com/amarradi/palatschinkencounter GitHub.</string>
     <string name="txt_menu_item_dnswitch">Night mode</string>
-</resources>
+    </resources>
