@@ -1,0 +1,22 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/general_preference"
+        />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="switch_theme_preference"
+            android:summary="@string/theme_summary"
+            android:icon="@drawable/ic_dn_switch"
+            android:title="@string/theme" />
+
+    <Preference
+        app:key="feedback_preference"
+        app:title="@string/send_feedback"
+        app:summary="@string/send_feedback_summary"
+        app:icon="@drawable/ic_baseline_mail_24"
+        android:selectable="true"/>
+
+</PreferenceScreen>
