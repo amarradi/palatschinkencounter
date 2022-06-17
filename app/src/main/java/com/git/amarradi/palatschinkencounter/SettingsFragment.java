@@ -6,6 +6,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -31,7 +32,11 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         feedback_preference.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(@NonNull Preference preference) {
-                startActivity(new Intent(getContext(),MainActivity.class));
+                Intent intent = new Intent(Intent.ACTION_SENDTO);
+                intent.setData(Uri.parse("mailto:")); // only email apps should handle this
+                intent.putExtra(Intent.EXTRA_EMAIL, "info@palatschinkencounter.de");
+                intent.putExtra(Intent.EXTRA_SUBJECT, "Feedback");
+                startActivity(intent);
                 return true;
             }
         });
