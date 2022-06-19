@@ -6,6 +6,8 @@
     <string name="send_feedback_summary">Report a technical issues or submit new
         features</string>
     <string name="general_preference">General</string>
+    <string name="theme_active">Disable darkmode by unsetting the checkbox</string>
+    <string name="theme_deactive">Enable darkmode by setting the checkbox</string>
     <string name="theme">Theme</string>
     <string name="theme_summary">Toggle between dark and light theme</string>
     <string name="txViewCounterState">0</string>

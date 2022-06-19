@@ -27,7 +27,8 @@ public class SettingActivity extends AppCompatActivity {
                 .commit();
 
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayShowHomeEnabled(true);
-        actionBar.setDisplayShowHomeEnabled(true);
+        if (actionBar != null) {
+            actionBar.setDisplayShowHomeEnabled(true);
+        }
     }
 }

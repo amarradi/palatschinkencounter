@@ -56,9 +56,8 @@ public class MainActivity extends AppCompatActivity implements WipeDataDialog.Wi
         textView.setTypeface(typeface);
         textView_start.setTypeface(typeface);
 
+        setupSharedPreferences();
 
-        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-        safedNightMode = sharedPreferences.getBoolean(NIGHT_MODE, false);
 
         if (safedNightMode) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
@@ -83,7 +82,6 @@ public class MainActivity extends AppCompatActivity implements WipeDataDialog.Wi
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu, menu);
-
         return true;
     }
 
@@ -167,4 +165,12 @@ public class MainActivity extends AppCompatActivity implements WipeDataDialog.Wi
     public void onYesClicked() {
         reset_counter();
     }
+
+    public void setupSharedPreferences() {
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        safedNightMode = sharedPreferences.getBoolean(NIGHT_MODE, false);
+    }
+
+
+
 }
