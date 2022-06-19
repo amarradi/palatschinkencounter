@@ -8,6 +8,9 @@
     <string name="general_preference">Allgemein</string>
     <string name="theme">Design</string>
     <string name="theme_summary">Umstalten zwischen dunkel und hell</string>
+    <string name="theme_active">Deaktivieren Sie den Darkmode durch Deaktivieren des Kontrollkästchens</string>
+    <string name="theme_deactive">Aktivieren Sie den Darkmode, indem Sie das Kontrollkästchen
+    aktivieren</string>
     <string name="txViewCounterState">0</string>
     <string name="textviewComplain">Anzahl der gegessenen Palatschinken</string>
     <string name="txt_menu_item_counter_reset">Zähler zurücksetzen</string>

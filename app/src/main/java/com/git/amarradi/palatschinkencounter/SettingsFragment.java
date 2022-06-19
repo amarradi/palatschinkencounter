@@ -1,11 +1,13 @@
 package com.git.amarradi.palatschinkencounter;
 
+import static android.content.Context.MODE_PRIVATE;
 import static java.lang.String.format;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -27,13 +29,15 @@ public class SettingsFragment extends PreferenceFragmentCompat {
 
     @Override
     public void onCreatePreferences(@Nullable Bundle savedInstanceState, @Nullable String rootKey) {
-        setPreferencesFromResource(R.xml.preferences, rootKey);
+
+        addPreferencesFromResource(R.xml.preferences);
         Preference feedback_preference = (Preference) findPreference("feedback_preference");
+
         feedback_preference.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(@NonNull Preference preference) {
                 Intent intent = new Intent(Intent.ACTION_SENDTO);
-                intent.setData(Uri.parse("mailto:")); // only email apps should handle this
+                intent.setData(Uri.parse("mailto:"));
                 intent.putExtra(Intent.EXTRA_EMAIL, "info@palatschinkencounter.de");
                 intent.putExtra(Intent.EXTRA_SUBJECT, "Feedback");
                 startActivity(intent);
@@ -41,13 +45,12 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             }
         });
 
-        Preference switch_theme_preference = (Preference) findPreference("switch_theme_preference");
-        switch_theme_preference.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
-            @Override
-            public boolean onPreferenceClick(@NonNull Preference preference) {
-
-                return false;
-            }
+        Preference checkbox = (Preference) findPreference("check_theme_preference");
+        checkbox.setOnPreferenceChangeListener((preference, newValue) -> {
+            Toast.makeText(getContext(), "Test", Toast.LENGTH_SHORT).show();
+            return true;
         });
+
     }
+
 }
