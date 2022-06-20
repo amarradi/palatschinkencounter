@@ -1,36 +1,28 @@
 package com.git.amarradi.palatschinkencounter;
 
-import static android.content.Context.MODE_PRIVATE;
-import static java.lang.String.format;
-
-import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatDelegate;
-import androidx.fragment.app.Fragment;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
-
-import android.util.AttributeSet;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Toast;
+import androidx.preference.PreferenceScreen;
 
 
-public class SettingsFragment extends PreferenceFragmentCompat {
+public class SettingsFragment extends PreferenceFragmentCompat implements SharedPreferences.OnSharedPreferenceChangeListener, Preference.OnPreferenceClickListener {
 
     @Override
     public void onCreatePreferences(@Nullable Bundle savedInstanceState, @Nullable String rootKey) {
 
         addPreferencesFromResource(R.xml.preferences);
+
+        SharedPreferences sharedPreferences = getPreferenceScreen().getSharedPreferences();
+        PreferenceScreen prefScreen = getPreferenceScreen();
+
         Preference feedback_preference = (Preference) findPreference("feedback_preference");
 
         feedback_preference.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
@@ -44,13 +36,50 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                 return true;
             }
         });
-
-        Preference checkbox = (Preference) findPreference("check_theme_preference");
-        checkbox.setOnPreferenceChangeListener((preference, newValue) -> {
-            Toast.makeText(getContext(), "Test", Toast.LENGTH_SHORT).show();
-            return true;
+        Preference recipe_preference = (Preference) findPreference("recipe");
+        recipe_preference.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(@NonNull Preference preference) {
+                Intent intentRecipe = new Intent(getActivity(), RecipeActivity.class);
+                startActivity(intentRecipe);
+                return false;
+            }
         });
+
+        Preference about_preference = (Preference) findPreference("about");
+        about_preference.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(@NonNull Preference preference) {
+                Intent intentAbout = new Intent(getActivity(),AboutActivity.class);
+                startActivity(intentAbout);
+                return false;
+            }
+        });
+    }
+
+
+
+    @Override
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
 
     }
 
+    @Override
+    public boolean onPreferenceClick(@NonNull Preference preference) {
+        return false;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        getPreferenceScreen().getSharedPreferences()
+                .registerOnSharedPreferenceChangeListener(this);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        getPreferenceScreen().getSharedPreferences()
+                .unregisterOnSharedPreferenceChangeListener(this);
+    }
 }

@@ -6,8 +6,9 @@
     <string name="send_feedback_summary">Melden Sie ein technisches Problem oder reichen Sie eine neue
         Funktion ein</string>
     <string name="general_preference">Allgemein</string>
-    <string name="theme">Design</string>
-    <string name="theme_summary">Umstalten zwischen dunkel und hell</string>
+
+
+    <string name="theme_summary">Umschalten zwischen dunkel und hell</string>
     <string name="theme_active">Deaktivieren Sie den Darkmode durch Deaktivieren des Kontrollkästchens</string>
     <string name="theme_deactive">Aktivieren Sie den Darkmode, indem Sie das Kontrollkästchen
     aktivieren</string>
@@ -41,6 +42,10 @@
     <string name="pancake_prep_bake">4. Geben Sie abschließend nur so viel Teig in die Bratpfanne, dass der Teig nicht zu dick ist. Backen Sie den Teig von beiden Seiten goldbraun</string>
     <string name="itsos">Dieses Projekt ist OpenSource und auf GitHub unter https://github.com/amarradi/palatschinkencounter zu finden.</string>
     <string name="txt_menu_item_dnswitch">Nachtmodus</string>
+    <string name="darkmode_preference">dunkel</string>
+    <string name="lightmode_preference">hell</string>
+    <string name="recipe_summary">Das Rezept für die besten Palatschinken</string>
+    <string name="about_summary">Was ist das für eine app</string>
 
 
 </resources>

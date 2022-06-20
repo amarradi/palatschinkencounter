@@ -8,7 +8,9 @@
     <string name="general_preference">General</string>
     <string name="theme_active">Disable darkmode by unsetting the checkbox</string>
     <string name="theme_deactive">Enable darkmode by setting the checkbox</string>
-    <string name="theme">Theme</string>
+
+
+
     <string name="theme_summary">Toggle between dark and light theme</string>
     <string name="txViewCounterState">0</string>
     <string name="textviewComplain">Pancake count</string>
@@ -17,6 +19,14 @@
     <string name="resetMessage">Do you want to reset the counter?</string>
     <string name="resetMessage_preferences">Do you want to be able to reset the counter?
         NO/YES</string>
+
+    <!-- Key name for theme preference in SharedPreferences -->
+    <string name="theme_key" translatable="false">theme</string>
+    <!-- Value in SharedPreferences for lightmode option -->
+    <string name="lightmode_preference_option_value" translatable="false">lightmode</string>
+    <!-- Value in SharedPreferences for darkmode option -->
+    <string name="darkmode_preference_option_value" translatable="false">blue</string>
+
     <string name="Cancel" tools:ignore="ButtonCase">cancel</string>
     <string name="resetOK">yes</string>
     <string name="about">about the app</string>
@@ -26,6 +36,7 @@
     <string name="whatsdo">With this app you can count all your eaten pancakes.</string>
     <string name="havefun">have fun :-)</string>
     <string name="txt_menu_item_recipe">recipe</string>
+    <string name="recipe_summary">The recipe for the best pancakes ever</string>
     <string name="txt_recipe_entry_txt">I take the following ingredients for the best Hungarian pancakes</string>
     <string name="pancake_ingredients">Ingredients</string>
     <string name="ll_ingredients_flour">200 grams of flour</string>
@@ -41,4 +52,8 @@
     <string name="pancake_prep_bake">4. Finally, add only enough batter to the roasting pan so that the batter is not too thick. Bake the dough until golden brown on both sides</string>
     <string name="itsos">This project is open source and can be found under https://github.com/amarradi/palatschinkencounter GitHub.</string>
     <string name="txt_menu_item_dnswitch">Night mode</string>
-    </resources>
+    <string name="darkmode_preference">darkmode</string>
+    <string name="lightmode_preference">lightmode</string>
+    <string name="about_summary">What is that app</string>
+
+</resources>
