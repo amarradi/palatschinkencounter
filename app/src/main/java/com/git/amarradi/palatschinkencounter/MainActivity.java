@@ -59,6 +59,9 @@ public class MainActivity<nightMode> extends AppCompatActivity implements Shared
         setupSharedPreferences();
 
 
+
+
+
         if (safedNightMode) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
             counterTextButton.setTextColor(Color.WHITE);
@@ -148,15 +151,17 @@ public class MainActivity<nightMode> extends AppCompatActivity implements Shared
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         if (key.equals("darkmode")) {
             Log.d("Value mode onShared:", key);
+            loadThemeFromPreferences(sharedPreferences);
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         } else {
             Log.d("Value mode onShared:", key);
+            loadThemeFromPreferences(sharedPreferences);
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
         }
     }
 
     // Method to pass value from SharedPreferences
-    private void loadColorFromPreference(SharedPreferences sharedPreferences) {
+    private void loadThemeFromPreferences(SharedPreferences sharedPreferences) {
         Log.d("Parzival",sharedPreferences.getString(getString(R.string.theme_key),
                 getString(R.string.lightmode_preference_option_value)));
         changeDarkLightMode(sharedPreferences.getString(getString(R.string.theme_key),
