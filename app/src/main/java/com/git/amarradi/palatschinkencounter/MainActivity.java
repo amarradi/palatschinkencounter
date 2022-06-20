@@ -10,21 +10,21 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
+import androidx.preference.PreferenceManager;
 
 import java.util.Objects;
 
-public class MainActivity extends AppCompatActivity implements WipeDataDialog.WipeDialogListener {
+public class MainActivity<nightMode> extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
 
     public static final String SHARED_PREFS = "sharedPrefs";
     public static final String COUNTER = "text";
@@ -93,30 +93,16 @@ public class MainActivity extends AppCompatActivity implements WipeDataDialog.Wi
                 Intent intentSetting = new Intent(this, SettingActivity.class);
                 startActivity(intentSetting);
                 return true;
-            case R.id.item_clean:
-                openDialog();
-                return true;
-            case R.id.item_dn_switch:
-                switchDayNightMode();
-                return true;
-            case R.id.item_recipe:
-                Intent intentRecipe = new Intent(this, RecipeActivity.class);
-                startActivity(intentRecipe);
-                return true;
-            case R.id.item_about:
-                Intent intentAbout = new Intent(this, AboutActivity.class);
-                startActivity(intentAbout);
-                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
 
     }
-
+    /*
     public void openDialog() {
         WipeDataDialog dialog = new WipeDataDialog();
         dialog.show(getSupportFragmentManager(), "open dialog");
-    }
+    }*/
 
     public void save_data() {
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
@@ -136,23 +122,8 @@ public class MainActivity extends AppCompatActivity implements WipeDataDialog.Wi
         textView.setText(format("%d", counter));
     }
 
-    public void switchDayNightMode() {
-        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-        safedNightMode = sharedPreferences.getBoolean(NIGHT_MODE, false);
 
-        nightMode = safedNightMode;
-        if (safedNightMode) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-            nightMode = false;
-        } else {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-            nightMode = true;
-        }
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putBoolean(NIGHT_MODE, nightMode);
-        editor.apply();
-    }
-
+    /*
 
     public void reset_counter() {
         counter = 0;
@@ -165,12 +136,43 @@ public class MainActivity extends AppCompatActivity implements WipeDataDialog.Wi
     public void onYesClicked() {
         reset_counter();
     }
-
-    public void setupSharedPreferences() {
-        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-        safedNightMode = sharedPreferences.getBoolean(NIGHT_MODE, false);
+*/
+    private void setupSharedPreferences() {
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        sharedPreferences.registerOnSharedPreferenceChangeListener(this);
     }
 
 
 
+    @Override
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+        if (key.equals("darkmode")) {
+            Log.d("Value mode onShared:", key);
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        } else {
+            Log.d("Value mode onShared:", key);
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        }
+    }
+
+    // Method to pass value from SharedPreferences
+    private void loadColorFromPreference(SharedPreferences sharedPreferences) {
+        Log.d("Parzival",sharedPreferences.getString(getString(R.string.theme_key),
+                getString(R.string.lightmode_preference_option_value)));
+        changeDarkLightMode(sharedPreferences.getString(getString(R.string.theme_key),
+                getString(R.string.lightmode_preference_option_value)));
+    }
+    // Method to set Color of Text.
+    private void changeDarkLightMode(String mode) {
+        Log.d("Value mode:", mode);
+        if (mode.equals("lightmode")) {
+            Log.d("Value mode:", mode);
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+
+        } else if(mode.equals("darkmode")) {
+            Log.d("Value mode:", mode);
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+
+        }
+    }
 }

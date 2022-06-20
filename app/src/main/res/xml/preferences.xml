@@ -1,23 +1,36 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <PreferenceCategory
-        android:title="@string/general_preference"
-        />
-
-    <CheckBoxPreference
-        android:defaultValue="false"
+    <PreferenceCategory android:title="@string/general_preference" />
+    <ListPreference
+        android:defaultValue="pref_color_red_value"
         android:icon="@drawable/ic_dn_switch"
-        android:key="check_theme_preference"
-        android:summaryOff="@string/theme_deactive"
-        android:summaryOn="@string/theme_active"
-        android:title="Theme"/>
+        android:entries="@array/design_mode_preference"
+        android:entryValues="@array/design_mode_preference_key"
+        android:key="@string/darkmode_preference"
+        android:title="@string/theme_summary" />
 
+
+
+    <Preference
+        android:icon="@drawable/ic_baseline_list_24"
+        android:selectable="true"
+        app:key="recipe"
+        app:summary="@string/recipe_summary"
+        app:title="@string/txt_menu_item_recipe" />
+    <PreferenceCategory android:title="@string/about" />
+    <Preference
+        android:key="about"
+        app:summary="@string/about_summary"
+        android:icon="@drawable/ic_baseline_contact_support_24"
+        android:title="@string/about"
+
+        />
     <Preference
         android:selectable="true"
         app:icon="@drawable/ic_baseline_mail_24"
         app:key="feedback_preference"
         app:summary="@string/send_feedback_summary"
-        app:title="@string/send_feedback"/>
+        app:title="@string/send_feedback" />
 
 </PreferenceScreen>
