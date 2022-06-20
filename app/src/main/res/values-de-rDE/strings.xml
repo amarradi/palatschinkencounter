@@ -18,7 +18,7 @@
     <string name="attention">Zähler zurücksetzen</string>
     <string name="Cancel">Abbrechen</string>
     <string name="resetOK">OK</string>
-    <string name="resetMessage">Möchten Sie den Zähler zurücksetzen?</string>
+    <string name="resetMessage">Möchten Sie den Zähler zurücksetzen? (nicht empfohlen)</string>
     <string name="resetMessage_preferences">Möchten Sie die Möglichkeit haben den Zähler NEIN/JA
         zurückzusetzen?</string>
     <string name="about">Über die App</string>

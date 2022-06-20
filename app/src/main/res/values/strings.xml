@@ -16,7 +16,7 @@
     <string name="textviewComplain">Pancake count</string>
     <string name="txt_menu_item_counter_reset">reset counter</string>
     <string name="attention">Counter reset</string>
-    <string name="resetMessage">Do you want to reset the counter?</string>
+    <string name="resetMessage">Do you want to reset the counter? (not recommended)</string>
     <string name="resetMessage_preferences">Do you want to be able to reset the counter?
         NO/YES</string>
 

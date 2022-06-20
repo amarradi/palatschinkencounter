@@ -18,6 +18,14 @@
         app:key="recipe"
         app:summary="@string/recipe_summary"
         app:title="@string/txt_menu_item_recipe" />
+
+    <Preference
+        android:icon="@drawable/ic_baseline_delete_forever_24"
+        android:selectable="true"
+        app:key="delete"
+        app:summary="@string/resetMessage"
+        />
+
     <PreferenceCategory android:title="@string/about" />
     <Preference
         android:key="about"

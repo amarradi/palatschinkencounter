@@ -58,7 +58,8 @@ public class MainActivity<nightMode> extends AppCompatActivity implements Shared
 
         setupSharedPreferences();
 
-
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        safedNightMode = sharedPreferences.getBoolean(NIGHT_MODE, false);
 
 
 
