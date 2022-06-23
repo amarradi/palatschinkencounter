@@ -28,4 +28,4 @@ Der Palatschinkencounter ist ein Urlaubsprojekt als App für Android. Eine klein
 * Wenn mir die Unterseite, die jetzt oben liegt, nicht braun genug ist, wende ich später ein zweites Mal
 * Ich nehme den Palatschinken aus der Pfanne und kann ihn nach Belieben belegen oder bestreuen
 * Beim Belag ist alles möglich und alles erlaubt, von Thunfisch über Schinken bis hin zu Zimt und Zucker kann ich alles empfehlen. Am besten schmeckt mir aber Aprikosenmarmelade
-# Danke Papa für das Rezept
+* Danke Papa für das Rezept
