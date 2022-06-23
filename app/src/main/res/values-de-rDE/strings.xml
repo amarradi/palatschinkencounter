@@ -24,26 +24,26 @@
 
     <string-array name="ingredients_array">
         <item>Ich nehme für die besten ungarischen Palatschinken vom
-        Balaton für 2 Personen folgende Zutaten.</item>
-        <item>200gr. Weizenmehl (Typ 405)</item>
+        Balaton für 2 Personen folgende Zutaten</item>
+        <item>200 Gramm Weizenmehl (Typ 405)</item>
         <item>2 Eier</item>
-        <item>300ml Milch</item>
+        <item>300 ml Milch</item>
         <item>300 ml Mineralwasser, vorzugsweise mit Kohlensäure</item>
         <item>1 Prise Salz</item>
         <item>2 Esslöffel Sonnenblumenöl</item>
-        <item>24cm Pfanne</item>
+        <item>24 cm Pfanne</item>
         <item>Ein wenig Öl oder Schmalz zum Backen</item>
         <item>Die Zubereitung der ungarischen Palatschinken</item>
         <item>Als erstes bereite ich alle Zutaten vor. Mit einer Pfanne dieser Größe kann ich 5-6
             Stück backen</item>
-        <item>Ich mixe die Eier leicht, bis ein homogener Teig entstanden ist.</item>
-        <item>Dann füge ich das sorgfältig gesiebte Weizenmehl hinzu und mixe weiter.</item>
+        <item>Ich mixe die Eier leicht, bis ein homogener Teig entstanden ist</item>
+        <item>Dann füge ich das sorgfältig gesiebte Weizenmehl hinzu und mixe weiter</item>
         <item>Ich mixe den Teig vorsichtig (bei niedriger Geschwindigkeit) weiter</item>
         <item>Jetzt gieße ich vorsichtig die Milch und das kohlensäurehaltige Mineralwasser hinein</item>
-        <item>LZum Schluss gebe ich das Sonnenblumenöl und die Prise Salz unter ständigem mixen
-            hinzu.</item>
-        <item>Jetzt rühre ich den Teig noch einmal 5-7 Minuten lang gut durch.</item>
-        <item>Jetzt lasse ich den Teig für 10-20 Minuten ruhen.</item>
+        <item>Zum Schluss gebe ich das Sonnenblumenöl und die Prise Salz unter ständigem mixen
+            hinzu</item>
+        <item>Jetzt rühre ich den Teig noch einmal 5-7 Minuten lang gut durch</item>
+        <item>Jetzt lasse ich den Teig für 10-20 Minuten ruhen</item>
         <item>In der Zwischenzeit kann ich die Pfanne mit einer sehr kleinen Menge Öl oder
             Schmalz erhitzen. Achtung nicht zu heiß! Auf unserem Elektroherd habe ich bei Stufe 7 von 10 gute Ergebnisse erzielt </item>
         <item>Jetzt ist es Zeit, die Palatschinken zu backen :-)</item>
@@ -54,12 +54,12 @@
             Palatschinken</item>
         <item>Wenn mir die Unterseite, die jetzt oben liegt, nicht braun genug ist, wende ich später ein zweites Mal</item>
         <item>Ich nehme den Palatschinken aus der Pfanne und kann ihn nach Belieben belegen oder
-            bestreuen.</item>
+            bestreuen</item>
         <item>Beim Belag ist alles möglich und alles erlaubt, von Thunfisch über Schinken bis hin
             zu Zimt und Zucker kann ich alles empfehlen. Am besten schmeckt mir aber
-            Aprikosenmarmelade.
+            Aprikosenmarmelade
         </item>
-        <item>Danke Papa für das Rezept.</item>
+        <item>Danke Papa für das Rezept</item>
     </string-array>
 
     <string name="about">Über uns</string>
