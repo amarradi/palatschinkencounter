@@ -33,12 +33,28 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
             android:layout_margin="10dp"
             android:contentDescription="@string/image"
+
             android:src="@drawable/logo_psc_512_transparent" />
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_margin="5dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/tv_bibleverse"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="@string/bibleverse"
+            android:padding="5dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
@@ -63,6 +79,7 @@
             android:text="@string/havefun"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
+
         <TextView
             android:id="@+id/itsos"
             android:layout_width="wrap_content"
@@ -72,5 +89,14 @@
             android:gravity="center"
             android:text="@string/itsos"
             android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/resethowto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/resethowto"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            />
     </LinearLayout>
 </ScrollView>

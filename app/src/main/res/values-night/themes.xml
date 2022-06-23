@@ -1,6 +1,7 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
 
     <style name="Theme.Palatschinkencounter" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="android:fontFamily">@font/opensans_regular</item>
         <item name="colorPrimary">@color/md_theme_dark_primary</item>
         <item name="colorOnPrimary">@color/md_theme_dark_onPrimary</item>
 
@@ -17,10 +18,9 @@
         <item name="colorOnBackground">@color/md_theme_dark_onBackground</item>
         <item name="colorSurface">@color/md_theme_dark_surface</item>
         <item name="colorOnSurface">@color/md_theme_dark_onSurface</item>
-
     </style>
 
-    <style name="MyAlertDialogTheme" parent="Theme.MaterialComponents.Light.Dialog.Alert" tools:targetApi="lollipop">
+    <style name="MyAlertDialogTheme" parent="Theme.MaterialComponents.Light.Dialog.Alert">
         <item name="android:fontFamily">@font/opensans_regular</item>
         <item name="colorPrimary">@color/md_theme_light_primary</item>
         <item name="colorOnPrimary">@color/md_theme_light_onPrimary</item>
@@ -39,4 +39,19 @@
         <item name="colorSurface">@color/md_theme_light_surface</item>
         <item name="colorOnSurface">@color/md_theme_dark_onSurface</item>
     </style>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:fontFamily">@font/opensans_regular</item>
+        <item name="android:textColor">@color/md_theme_light_onPrimary</item>
+        <item name="android:buttonStyle">@style/ButtonColor</item>
+        <item name="colorButtonNormal">@color/md_theme_dark_primaryContainer</item>
+    </style>
+
+
+
+    <style name="ButtonColor" parent="@android:style/Widget.Button">
+        <item name="android:fontFamily">@font/opensans_extrabold</item>
+        <item name="android:textColor">@color/md_theme_light_onPrimary</item>
+    </style>
+
 </resources>

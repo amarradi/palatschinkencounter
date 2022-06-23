@@ -1,59 +1,98 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name" translatable="false">Palatschinkencounter</string>
+
+    <string name="bibleverse">\'Go thy way, eat thy bread with joy, and drink thy wine with a
+        merry heart; for God hath already accepted thy works.\' Ecclesiastes 9:7</string>
     <string name="btnCounter">+1</string>
     <string name="settings">settings</string>
     <string name="send_feedback">send feedback</string>
     <string name="send_feedback_summary">Report a technical issues or submit new
         features</string>
     <string name="general_preference">General</string>
+    <string name="general_summary_preference">General settings for Palatschinkencounter</string>
     <string name="theme_active">Disable darkmode by unsetting the checkbox</string>
     <string name="theme_deactive">Enable darkmode by setting the checkbox</string>
-
-
+    <string name="version_preference" translatable="false">Version</string>
 
     <string name="theme_summary">Toggle between dark and light theme</string>
     <string name="txViewCounterState">0</string>
     <string name="textviewComplain">Pancake count</string>
     <string name="txt_menu_item_counter_reset">reset counter</string>
     <string name="attention">Counter reset</string>
-    <string name="resetMessage">Do you want to reset the counter? (not recommended)</string>
-    <string name="resetMessage_preferences">Do you want to be able to reset the counter?
-        NO/YES</string>
+    <string name="resetMessage">Do you really want to reset the counter? (really not
+        recommended)</string>
 
     <!-- Key name for theme preference in SharedPreferences -->
     <string name="theme_key" translatable="false">theme</string>
     <!-- Value in SharedPreferences for lightmode option -->
     <string name="lightmode_preference_option_value" translatable="false">lightmode</string>
     <!-- Value in SharedPreferences for darkmode option -->
-    <string name="darkmode_preference_option_value" translatable="false">blue</string>
+    <string name="darkmode_preference_option_value" translatable="false">darkmode</string>
+    <!--Value in in SharedPreferences for reset option -->
+    <string name="reset_preference" translatable="false">reset</string>
 
     <string name="Cancel" tools:ignore="ButtonCase">cancel</string>
     <string name="resetOK">yes</string>
-    <string name="about">about the app</string>
+    <string name="about">About us</string>
     <string name="image">image</string>
     <string name="reset">reset counter</string>
     <string name="version" translatable="false">%1$s</string>
-    <string name="whatsdo">With this app you can count all your eaten pancakes.</string>
+    <string name="whatsdo">With this app you can count all your eaten pancakes</string>
     <string name="havefun">have fun :-)</string>
-    <string name="txt_menu_item_recipe">recipe</string>
+    <string name="resethowto">It is not necessary and under absolutely no circumstances recommended to ever reset the counter. If you want to do it anyway, you should tap and hold your counter on the home page. After resetting the counter is permanently deleted.</string>
+
+    <!-- recipe -->
+
+    <string-array name="ingredients_array">
+        <item>I take for the best Hungarian pancakes from the
+        Balaton for 2 people the following ingredients.</item>
+        <item>200gr. of wheat flour (Type 405)</item>
+        <item>2 eggs</item>
+        <item>300ml of milk</item>
+        <item>300ml mineral water preferably sparkling</item>
+        <item>1 pinch of salt</item>
+        <item>2 tablespoon of sunflower oil</item>
+        <item>24cm pan</item>
+        <item>a little bit of oil or lard for baking</item>
+        <item>=The Preparation of pancake=</item>
+        <item tools:ignore="TypographyDashes">At first, I prepare myself all the ingredients. With a pan of this size I can bake
+            5-6 pieces</item>
+        <item>I stir the eggs lightly until a homogeneous dough is formed</item>
+        <item>Then I add the sifted carefully wheat flour and continue stirring</item>
+        <item>I stir the dough carefully (at low speed) further</item>
+        <item>Now I carefully fill the milk and the sparkling mineral water into it</item>
+        <item>Lastly I put in the sunflower oil und the pinch of salt under stirring</item>
+        <item tools:ignore="TypographyDashes">I now stir the dough well again for 5-7 minutes</item>
+        <item tools:ignore="TypographyDashes">Now I let the dough rest for 10-20 min.</item>
+
+        <item>Meanwhile, I can heat the pan with a very small amount of oil or lard. Attention
+            not too hot! On our electric stove I got good results at level 7 of 10</item>
+        <item>Now its time for baking the pancakes :-)</item>
+        <item>With a ladle or something else suitable, I put quite quickly so much batter in the
+            pan that the layer is thin (here it is a matter of trying out)</item>
+        <item>I wait until the visible side dries, then I turn the pancake</item>
+        <item>If the underside that is now on top is not brown enough for me, I turn a second time later</item>
+        <item>I take the pancake out of the pan and can top or
+            sprinkle.</item>
+        <item>When it comes to toppings, everything is possible and everything is allowed, from
+            tuna to ham or cinnamon and sugar, I can recommend anything. But I like best Apricot
+            jam.</item>
+        <item>Thank you dad for the recipe.</item>
+    </string-array>
+
+    <string name="txt_menu_item_recipe">The pancake recipe</string>
     <string name="recipe_summary">The recipe for the best pancakes ever</string>
-    <string name="txt_recipe_entry_txt">I take the following ingredients for the best Hungarian pancakes</string>
+    <string name="recipe_prewords">I take for the best Hungarian pancakes from the
+        Balaton for 2 people the following ingredients.</string>
     <string name="pancake_ingredients">Ingredients</string>
-    <string name="ll_ingredients_flour">200 grams of flour</string>
-    <string name="ll_ingredients_eggs">2 eggs</string>
-    <string name="ll_ingredients_milk">300 ml of milk</string>
-    <string name="ll_ingredients_soda">300 ml mineral water</string>
-    <string name="ll_ingredients_salt">1 pinch of salt</string>
-    <string name="ll_ingredients_oil">2 tablespoons of sunflower oil</string>
+
     <string name="pancake_preparation">Preparation</string>
-    <string name="pancake_prep_eggs">1. First, scramble the eggs a little bit and then add the flour.</string>
-    <string name="pancake_prep_milk">2. Now add the milk, mineral water and salt.</string>
-    <string name="pancake_prep_oil">3. Then add the oil and continue to scramble the dough</string>
-    <string name="pancake_prep_bake">4. Finally, add only enough batter to the roasting pan so that the batter is not too thick. Bake the dough until golden brown on both sides</string>
     <string name="itsos">This project is open source and can be found under https://github.com/amarradi/palatschinkencounter GitHub.</string>
     <string name="txt_menu_item_dnswitch">Night mode</string>
-    <string name="darkmode_preference">darkmode</string>
+    <string translatable="false" name="darkmode_preference">darkmode</string>
     <string name="lightmode_preference">lightmode</string>
     <string name="about_summary">What is that app</string>
-
+    <string name="display_text" translatable="false">Display Text</string>
+    <string name="theme_preference">Theme</string>
+    <string name="recipe_preference">The pancake recipe</string>
 </resources>

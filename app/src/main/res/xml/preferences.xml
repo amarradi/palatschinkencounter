@@ -1,44 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+<PreferenceCategory
+    android:title="@string/general_preference">
 
-    <PreferenceCategory android:title="@string/general_preference" />
     <ListPreference
-        android:defaultValue="pref_color_red_value"
-        android:icon="@drawable/ic_dn_switch"
-        android:entries="@array/design_mode_preference"
-        android:entryValues="@array/design_mode_preference_key"
-        android:key="@string/darkmode_preference"
-        android:title="@string/theme_summary" />
-
-
-
+        app:icon="@drawable/ic_dn_switch"
+        android:defaultValue="lightmode_preference_option_value"
+        android:entries="@array/design_mode_preference_key"
+        android:entryValues="@array/design_mode_preference_value"
+        android:key="@string/theme_key"
+        android:title="@string/theme_preference"
+        android:summary="@string/theme_summary"/>
+</PreferenceCategory>
+<PreferenceCategory android:title="@string/recipe_preference">
     <Preference
-        android:icon="@drawable/ic_baseline_list_24"
-        android:selectable="true"
-        app:key="recipe"
-        app:summary="@string/recipe_summary"
-        app:title="@string/txt_menu_item_recipe" />
-
-    <Preference
-        android:icon="@drawable/ic_baseline_delete_forever_24"
-        android:selectable="true"
-        app:key="delete"
-        app:summary="@string/resetMessage"
+        android:icon="@drawable/ic_baseline_description_24"
+        android:key="recipe"
+        android:title="@string/txt_menu_item_recipe"
+        android:summary="@string/recipe_summary"
         />
-
-    <PreferenceCategory android:title="@string/about" />
-    <Preference
-        android:key="about"
-        app:summary="@string/about_summary"
-        android:icon="@drawable/ic_baseline_contact_support_24"
-        android:title="@string/about"
-
-        />
-    <Preference
-        android:selectable="true"
-        app:icon="@drawable/ic_baseline_mail_24"
-        app:key="feedback_preference"
-        app:summary="@string/send_feedback_summary"
-        app:title="@string/send_feedback" />
-
+</PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/about" >
+        <Preference
+            app:icon="@drawable/ic_baseline_emoji_emotions_24"
+            android:key="about"
+            android:title="@string/about"
+            android:summary="@string/about_summary"
+            />
+        <Preference
+            android:selectable="true"
+            app:icon="@drawable/ic_baseline_mail_24"
+            app:key="feedback_preference"
+            app:summary="@string/send_feedback_summary"
+            app:title="@string/send_feedback" />
+    </PreferenceCategory>
+        <PreferenceCategory android:title="@string/version_preference">
+        <Preference
+            app:icon="@drawable/ic_baseline_numbers_24"
+            android:selectable="false"
+            android:key="version_preference"
+            />
+        </PreferenceCategory>
 </PreferenceScreen>

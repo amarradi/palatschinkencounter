@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <!-- Label ordering must match values -->
     <array name="design_mode_preference_key">
-        <item>@string/darkmode_preference</item>
         <item>@string/lightmode_preference</item>
+        <item>@string/darkmode_preference</item>
     </array>
 
-    <array name="design_mode_preference">
-    <item>@string/darkmode_preference</item>
-    <item>@string/lightmode_preference</item>
+    <array name="design_mode_preference_value">
+        <item>@string/lightmode_preference</item>
+        <item>@string/darkmode_preference</item>
     </array>
 </resources>
