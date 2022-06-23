@@ -28,7 +28,6 @@ public class AboutActivity extends AppCompatActivity {
         oss.setTypeface(typeface_regular);
         TextView resethow = findViewById(R.id.resethowto);
         resethow.setTypeface(typeface_regular);
-        //Resources resources = getResources();
         @SuppressLint({"StringFormatInvalid", "LocalSuppress"}) String version = String.format(getResources().getString(R.string.version), BuildConfig.VERSION_NAME);
         appVersion.setText(version);
     }

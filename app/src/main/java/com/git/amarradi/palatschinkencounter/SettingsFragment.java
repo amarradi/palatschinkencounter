@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.preference.CheckBoxPreference;
 import androidx.preference.EditTextPreference;
 import androidx.preference.ListPreference;
@@ -26,23 +27,24 @@ public class SettingsFragment extends PreferenceFragmentCompat implements Shared
         SharedPreferences sharedPreferences = getPreferenceScreen().getSharedPreferences();
         PreferenceScreen prefScreen = getPreferenceScreen();
 
-
-        Preference feedback_preference = getPreferenceManager().findPreference("feed_preference");
-        if (feedback_preference != null) {
-            feedback_preference.setOnPreferenceClickListener(preference -> {
+        Preference feedback_preference = findPreference("feedback_preference");
+        assert feedback_preference != null;
+        feedback_preference.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(@NonNull Preference preference) {
                 Intent intent = new Intent(Intent.ACTION_SENDTO);
                 intent.setData(Uri.parse("mailto:"));
                 intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"info@palatschinkencounter.de"});
                 intent.putExtra(Intent.EXTRA_SUBJECT, "Feedback");
                 startActivity(intent);
-                return true;
-            });
-        }
+                return false;
+            }
+        });
 
         Preference version_preference = getPreferenceManager().findPreference("version_preference");
 
         assert version_preference != null;
-        version_preference.setTitle("Palatschinkencounter "+BuildConfig.VERSION_NAME);
+        version_preference.setTitle("Palatschinkencounter " + BuildConfig.VERSION_NAME);
         int count = prefScreen.getPreferenceCount();
 
         // Go through all of the preferences, and set up their preference summary.
@@ -58,43 +60,19 @@ public class SettingsFragment extends PreferenceFragmentCompat implements Shared
             }
         }
 
-
         Preference recipe_preference = getPreferenceManager().findPreference("recipe");
         Objects.requireNonNull(recipe_preference).setOnPreferenceClickListener(preference -> {
-            Intent recipe_intent = new Intent(getActivity(),RecipeActivity.class);
+            Intent recipe_intent = new Intent(getActivity(), RecipeActivity.class);
             startActivity(recipe_intent);
             return false;
         });
         Preference about_preference = getPreferenceManager().findPreference("about");
         Objects.requireNonNull(about_preference).setOnPreferenceClickListener(preference -> {
-            Intent about_intent = new Intent(getActivity(),AboutActivity.class);
+            Intent about_intent = new Intent(getActivity(), AboutActivity.class);
             startActivity(about_intent);
             return false;
         });
-
     }
-
- /*
-    @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-     Toast error = Toast.makeText(getContext(), "Please select a number.", Toast.LENGTH_SHORT);
-
-        String sizeKey = getString(R.string.pref_size_key);
-        if (preference.getKey().equals(sizeKey)) {
-            String stringSize = (String) newValue;
-            try {
-                float size = Float.parseFloat(stringSize);
-
-            } catch (NumberFormatException nfe) {
-                error.show();
-                return false;
-            }
-        }
-
-        return true;
-
-
-    } */
 
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {

@@ -9,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class RecipeActivity extends AppCompatActivity {
     ListView listView_Recipe;
-
     String[] listItem_Recipe;
 
 
@@ -20,9 +19,6 @@ public class RecipeActivity extends AppCompatActivity {
 
         listView_Recipe = findViewById(R.id.listViewIngredients);
         listItem_Recipe = getResources().getStringArray(R.array.ingredients_array);
-
-
-
         final ArrayAdapter<String> arrayAdapter_Ingredients = new ArrayAdapter<>(this,
                 R.layout.simple_list_item_1, listItem_Recipe);
         listView_Recipe.setAdapter(arrayAdapter_Ingredients);
