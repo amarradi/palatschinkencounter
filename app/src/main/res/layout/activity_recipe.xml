@@ -1,126 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraintsLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
-    <LinearLayout
+    <ListView
+        android:id="@+id/listViewIngredients"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:padding="15dp">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingBottom="15dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        <TextView
-            android:id="@+id/tv_recipe_txt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/txt_recipe_entry_txt"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
 
-        <TextView
-            android:id="@+id/pancake_ingredients"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:text="@string/pancake_ingredients"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
 
-        <TextView
-            android:id="@+id/tv_flour"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/ll_ingredients_flour"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
 
-        <TextView
-            android:id="@+id/tv_eggs"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="5sp"
-            android:paddingBottom="5dp"
-            android:text="@string/ll_ingredients_eggs"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
 
-        <TextView
-            android:id="@+id/tv_milk"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="5sp"
-            android:paddingBottom="5dp"
-            android:text="@string/ll_ingredients_milk"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-        <TextView
-            android:id="@+id/tv_mineral_water"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="5sp"
-            android:paddingBottom="5dp"
-            android:text="@string/ll_ingredients_soda"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-        <TextView
-            android:id="@+id/tv_salt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="5sp"
-            android:paddingBottom="5dp"
-            android:text="@string/ll_ingredients_salt"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-        <TextView
-            android:id="@+id/tv_oil"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="5sp"
-            android:paddingBottom="5dp"
-            android:text="@string/ll_ingredients_oil"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-        <TextView
-            android:id="@+id/pancake_preparation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:text="@string/pancake_preparation"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <TextView
-            android:id="@+id/tv_add_flour"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/pancake_prep_eggs"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-        <TextView
-            android:id="@+id/tv_dilute_eggs"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/pancake_prep_milk"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-        <TextView
-            android:id="@+id/tv_add_oil"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/pancake_prep_oil"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-        <TextView
-            android:id="@+id/tv_add_mineral_water"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/pancake_prep_bake"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:contentDescription="@string/image"
-            app:srcCompat="@drawable/logo_psc_512_transparent" />
-    </LinearLayout>
-</ScrollView>
