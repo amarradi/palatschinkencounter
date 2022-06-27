@@ -6,7 +6,7 @@
 
     <ListPreference
         app:icon="@drawable/ic_dn_switch"
-        android:defaultValue="lightmode_preference_option_value"
+        android:defaultValue="@string/lightmode_preference"
         android:entries="@array/design_mode_preference_key"
         android:entryValues="@array/design_mode_preference_value"
         android:key="@string/theme_key"
