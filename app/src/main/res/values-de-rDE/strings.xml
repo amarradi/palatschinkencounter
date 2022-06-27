@@ -23,8 +23,6 @@
 
 
     <string-array name="ingredients_array">
-        <item>Ich nehme für die besten ungarischen Palatschinken vom
-        Balaton für 2 Personen folgende Zutaten</item>
         <item>200 Gramm Weizenmehl (Typ 405)</item>
         <item>2 Eier</item>
         <item>300 ml Milch</item>
@@ -33,20 +31,21 @@
         <item>2 Esslöffel Sonnenblumenöl</item>
         <item>24 cm Pfanne</item>
         <item>Ein wenig Öl oder Schmalz zum Backen</item>
-        <item>Die Zubereitung der ungarischen Palatschinken</item>
+    </string-array>
+    <string-array name="preparation_array">
         <item>Als erstes bereite ich alle Zutaten vor. Mit einer Pfanne dieser Größe kann ich 5-6
             Stück backen</item>
         <item>Ich mixe die Eier leicht, bis ein homogener Teig entstanden ist</item>
         <item>Dann füge ich das sorgfältig gesiebte Weizenmehl hinzu und mixe weiter</item>
         <item>Ich mixe den Teig vorsichtig (bei niedriger Geschwindigkeit) weiter</item>
         <item>Jetzt gieße ich vorsichtig die Milch und das kohlensäurehaltige Mineralwasser hinein</item>
-        <item>Zum Schluss gebe ich das Sonnenblumenöl und die Prise Salz unter ständigem mixen
+        <item>Zum Schluss gebe ich das Sonnenblumenöl und die Prise Salz unter ständigem mixe
             hinzu</item>
         <item>Jetzt rühre ich den Teig noch einmal 5-7 Minuten lang gut durch</item>
         <item>Jetzt lasse ich den Teig für 10-20 Minuten ruhen</item>
         <item>In der Zwischenzeit kann ich die Pfanne mit einer sehr kleinen Menge Öl oder
             Schmalz erhitzen. Achtung nicht zu heiß! Auf unserem Elektroherd habe ich bei Stufe 7 von 10 gute Ergebnisse erzielt </item>
-        <item>Jetzt ist es Zeit, die Palatschinken zu backen :-)</item>
+
         <item>Mit einer Schöpfkelle oder etwas anderem geeignetem, gebe ich relativ zügig so viel
             Teig in die Pfanne, dass die Schicht dünn ist (hier ist es eine Sache des Ausprobierens)</item>
 
@@ -59,20 +58,18 @@
             zu Zimt und Zucker kann ich alles empfehlen. Am besten schmeckt mir aber
             Aprikosenmarmelade
         </item>
-        <item>Danke Papa für das Rezept</item>
     </string-array>
-
+    <string name="thanks">Danke Papa für das Rezept</string>
     <string name="about">Über uns</string>
     <string name="image">Bild</string>
     <string name="reset">Zähler zurückgesetzt</string>
     <string name="whatsdo">Mit dieser App kannst du alle deine gegessenen Palatschinken zählen.</string>
     <string name="havefun">Habt Spaß :-)</string>
     <string name="txt_menu_item_recipe">Das Palatschinkenrezept</string>
-    <string name="recipe_prewords">Ich nehme für die besten ungarischen Palatschinken vom
+    <string name="txt_recipe_entry_txt">Ich nehme für die besten ungarischen Palatschinken vom
         Balaton für 2 Personen folgende Zutaten.</string>
-
     <string name="pancake_ingredients">Zutaten</string>
-    <string name="pancake_preparation">Zubereitung</string>
+    <string name="pancake_preparation">Zubereitung Jetzt ist es Zeit, die Palatschinken zu backen :-)</string>
     <string name="itsos">Dieses Projekt ist OpenSource und auf GitHub unter https://github.com/amarradi/palatschinkencounter zu finden.</string>
     <string name="txt_menu_item_dnswitch">Nachtmodus</string>
     <string name="darkmode_preference">dunkel</string>

@@ -44,8 +44,7 @@
     <!-- recipe -->
 
     <string-array name="ingredients_array">
-        <item>I take for the best Hungarian pancakes from the
-        Balaton for 2 people the following ingredients.</item>
+
         <item>200 Gramm of wheat flour (Type 405)</item>
         <item>2 eggs</item>
         <item>300 ml of milk</item>
@@ -54,7 +53,9 @@
         <item>2 tablespoon of sunflower oil</item>
         <item>24 cm pan</item>
         <item>a little bit of oil or lard for baking</item>
-        <item>=The Preparation of pancake=</item>
+    </string-array>
+    <string-array name="preparation_array">
+
         <item tools:ignore="TypographyDashes">At first, I prepare myself all the ingredients. With a pan of this size I can bake
             5-6 pieces</item>
         <item>I stir the eggs lightly until a homogeneous dough is formed</item>
@@ -67,7 +68,7 @@
 
         <item>Meanwhile, I can heat the pan with a very small amount of oil or lard. Attention
             not too hot! On our electric stove I got good results at level 7 of 10</item>
-        <item>Now its time for baking the pancakes :-)</item>
+
         <item>With a ladle or something else suitable, I put quite quickly so much batter in the
             pan that the layer is thin (here it is a matter of trying out)</item>
         <item>I wait until the visible side dries, then I turn the pancake</item>
@@ -77,16 +78,15 @@
         <item>When it comes to toppings, everything is possible and everything is allowed, from
             tuna to ham or cinnamon and sugar, I can recommend anything. But I like best Apricot
             jam.</item>
-        <item>Thank you dad for the recipe.</item>
-    </string-array>
 
+    </string-array>
+    <string name="thanks">Thank you dad for the recipe.</string>
     <string name="txt_menu_item_recipe">The pancake recipe</string>
     <string name="recipe_summary">The recipe for the best pancakes ever</string>
-    <string name="recipe_prewords">I take for the best Hungarian pancakes from the
-        Balaton for 2 people the following ingredients.</string>
+
     <string name="pancake_ingredients">Ingredients</string>
 
-    <string name="pancake_preparation">Preparation</string>
+    <string name="pancake_preparation">Preparation Now its time for baking the pancakes :-)</string>
     <string name="itsos">This project is open source and can be found under https://github.com/amarradi/palatschinkencounter GitHub.</string>
     <string name="txt_menu_item_dnswitch">Night mode</string>
     <string translatable="false" name="darkmode_preference">darkmode</string>
@@ -95,4 +95,6 @@
     <string name="display_text" translatable="false">Display Text</string>
     <string name="theme_preference">Theme</string>
     <string name="recipe_preference">The pancake recipe</string>
+    <string name="txt_recipe_entry_txt" >I take for the best Hungarian pancakes from the
+        Balaton for 2 people the following ingredients.</string>
 </resources>
