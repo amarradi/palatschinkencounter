@@ -3,13 +3,18 @@
 Der Palatschinkencounter ist ein Urlaubsprojekt als App für Android. Eine kleine Liebeserklärung an
 eine sehr leckere Vorspeise, Hauptspeise oder Nachspeise. Palatschinken sind auch bekannt als
 Pfannkuchen, Crepes oder Eierkuchen
-#Installation
-Einfach den Palatschinkencounter in der aktuellen Version vom google PlayStore installieren
-<a href='https://play.google.com/store/apps/details?id=com.git.amarradi.palatschinkencounter&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Jetzt bei Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/de_badge_web_generic.png'/></a>
+
+# Installation
+Einfach den Palatschinkencounter in der aktuellen Version vom google PlayStore installieren.
+
+<a href='https://play.google.com/store/apps/details?id=com.git.amarradi.palatschinkencounter&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img width="50%" height=50% alt='Jetzt bei Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/de_badge_web_generic.png'/></a>
+
 # Funktionsweise
 ## Bestellung oder selbst machen
-* Die Verwendung ist sehr einfach. Entweder backt man seine Palatschinken selbst und isst sie 
-  anschließend, der m
+* Entweder backt man seine [Palatschinken] selbst oder kauft sie am Strand.
+## Zählen
+* Für jeden gegessenen Palatschinken drück man auf den Button +1 auf dem Display
+
 # Das Rezept und die Zubereitung
 
 ## Ich nehme für die besten ungarischen Palatschinken vom Balaton für 2 Personen folgende Zutaten
