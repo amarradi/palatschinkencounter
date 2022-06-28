@@ -7,15 +7,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.git.amarradi.palatschinkencounter.models.IngredientsModel;
-import com.git.amarradi.palatschinkencounter.models.PreparationModel;
+import com.git.amarradi.palatschinkencounter.adapter.RecylerViewRecipeAdapter;
+import com.git.amarradi.palatschinkencounter.models.RecipeModel;
 
 import java.util.ArrayList;
 
 public class RecipeActivity extends AppCompatActivity {
 
-    ArrayList<IngredientsModel> ingredientsModels = new ArrayList<>();
-    ArrayList<PreparationModel> preparationModels = new ArrayList<>();
+    ArrayList<RecipeModel> ingredientsModels  = new ArrayList<>();
+    ArrayList<RecipeModel> preparationModels = new ArrayList<>();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -24,35 +24,35 @@ public class RecipeActivity extends AppCompatActivity {
 
         RecyclerView recyclerView_Ingredients = findViewById(R.id.recyclerView_ingredients);
 
-        setupIngredientsModels();
+        setupRecipeModels();
 
-        RecylerIngredientsViewAdapter recylerIngredientsViewAdapter =
-                new RecylerIngredientsViewAdapter(this,ingredientsModels);
-        recyclerView_Ingredients.setAdapter(recylerIngredientsViewAdapter);
+        RecylerViewRecipeAdapter recylerViewIngredientsAdapter =
+                new RecylerViewRecipeAdapter(this,ingredientsModels);
+        recyclerView_Ingredients.setAdapter(recylerViewIngredientsAdapter);
         recyclerView_Ingredients.setLayoutManager(new LinearLayoutManager(this));
 
 
         RecyclerView recyclerView_Preparation = findViewById(R.id.RecyclerView_preparation);
 
         setupPreparationModels();
-        RecylerPreparationViewAdapter recylerPreparationViewAdapter =
-                new RecylerPreparationViewAdapter(this,preparationModels);
+        RecylerViewRecipeAdapter recylerViewPreparationAdapter =
+                new RecylerViewRecipeAdapter(this,preparationModels);
         recyclerView_Preparation.setNestedScrollingEnabled(false);
-        recyclerView_Preparation.setAdapter(recylerPreparationViewAdapter);
+        recyclerView_Preparation.setAdapter(recylerViewPreparationAdapter);
         recyclerView_Preparation.setLayoutManager(new LinearLayoutManager(this));
     }
 
     private void setupPreparationModels() {
         String[] strings_preparation = getResources().getStringArray(R.array.preparation_array);
         for (String s : strings_preparation) {
-            preparationModels.add(new PreparationModel(s));
+            preparationModels.add(new RecipeModel(s));
         }
     }
 
-    public void setupIngredientsModels(){
+    public void setupRecipeModels(){
         String[] strings_ingredients = getResources().getStringArray(R.array.ingredients_array);
         for (String strings_ingredient : strings_ingredients) {
-            ingredientsModels.add(new IngredientsModel(strings_ingredient));
+            ingredientsModels.add(new RecipeModel(strings_ingredient));
         }
     }
 

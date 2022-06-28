@@ -1,4 +1,4 @@
-package com.git.amarradi.palatschinkencounter;
+package com.git.amarradi.palatschinkencounter.adapter;
 
 import android.content.Context;
 import android.util.Log;
@@ -10,18 +10,19 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.git.amarradi.palatschinkencounter.models.IngredientsModel;
+import com.git.amarradi.palatschinkencounter.R;
+import com.git.amarradi.palatschinkencounter.models.RecipeModel;
 
 import java.util.ArrayList;
 
-public class RecylerIngredientsViewAdapter extends RecyclerView.Adapter<RecylerIngredientsViewAdapter.MyViewHolder> {
+public class RecylerViewRecipeAdapter extends RecyclerView.Adapter<RecylerViewRecipeAdapter.MyViewHolder> {
 
     Context context;
-    ArrayList<IngredientsModel> ingredientsModels;
+    ArrayList<RecipeModel> recipeModels;
 
-    public RecylerIngredientsViewAdapter(Context context, ArrayList<IngredientsModel> ingredientsModels) {
+    public RecylerViewRecipeAdapter(Context context, ArrayList<RecipeModel> recipeModels) {
         this.context = context;
-        this.ingredientsModels = ingredientsModels;
+        this.recipeModels = recipeModels;
 
     }
 
@@ -38,23 +39,23 @@ public class RecylerIngredientsViewAdapter extends RecyclerView.Adapter<RecylerI
 
     @NonNull
     @Override
-    public RecylerIngredientsViewAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public RecylerViewRecipeAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.recycler_view_row, parent, false);
         return new MyViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecylerIngredientsViewAdapter.MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RecylerViewRecipeAdapter.MyViewHolder holder, int position) {
 
-        holder.CVtextView.setText(ingredientsModels.get(position).getPreparationLine());
+        holder.CVtextView.setText(recipeModels.get(position).getRecipeLine());
 
     }
 
     @Override
     public int getItemCount() {
-        Log.d("getItemCount", String.valueOf(ingredientsModels.size()) );
-        return ingredientsModels.size();
+        Log.d("getItemCount", String.valueOf(recipeModels.size()) );
+        return recipeModels.size();
     }
 
 
