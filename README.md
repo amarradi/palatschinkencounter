@@ -7,7 +7,7 @@ Pfannkuchen, Crepes oder Eierkuchen
 # Installation
 Einfach den Palatschinkencounter in der aktuellen Version vom google PlayStore installieren.
 
-<a href='https://play.google.com/store/apps/details?id=com.git.amarradi.palatschinkencounter&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img width="50%" height=50% alt='Jetzt bei Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/de_badge_web_generic.PNG'/></a>
+<a href='https://play.google.com/store/apps/details?id=com.git.amarradi.palatschinkencounter&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Jetzt bei Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/de_badge_web_generic.png'/></a>
 
 # Funktionsweise
 ## Bestellung oder selbst machen
