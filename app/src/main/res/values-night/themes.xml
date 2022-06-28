@@ -48,7 +48,6 @@
     </style>
 
 
-
     <style name="ButtonColor" parent="@android:style/Widget.Button">
         <item name="android:fontFamily">@font/opensans_extrabold</item>
         <item name="android:textColor">@color/md_theme_light_onPrimary</item>

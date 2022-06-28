@@ -26,17 +26,6 @@ public class RecylerViewRecipeAdapter extends RecyclerView.Adapter<RecylerViewRe
 
     }
 
-    public static class MyViewHolder extends RecyclerView.ViewHolder {
-
-        TextView CVtextView;
-
-        public MyViewHolder(@NonNull View itemView) {
-            super(itemView);
-
-            CVtextView = itemView.findViewById(R.id.CVtextView);
-        }
-    }
-
     @NonNull
     @Override
     public RecylerViewRecipeAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -54,8 +43,19 @@ public class RecylerViewRecipeAdapter extends RecyclerView.Adapter<RecylerViewRe
 
     @Override
     public int getItemCount() {
-        Log.d("getItemCount", String.valueOf(recipeModels.size()) );
+        Log.d("getItemCount", String.valueOf(recipeModels.size()));
         return recipeModels.size();
+    }
+
+    public static class MyViewHolder extends RecyclerView.ViewHolder {
+
+        TextView CVtextView;
+
+        public MyViewHolder(@NonNull View itemView) {
+            super(itemView);
+
+            CVtextView = itemView.findViewById(R.id.CVtextView);
+        }
     }
 
 

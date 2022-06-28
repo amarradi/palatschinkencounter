@@ -52,9 +52,10 @@
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
             android:gravity="center"
-            android:text="@string/bibleverse"
             android:padding="5dp"
-            android:textAppearance="?android:attr/textAppearanceMedium"/>
+            android:text="@string/bibleverse"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
@@ -96,7 +97,6 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:text="@string/resethowto"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            />
+            android:textAppearance="?android:attr/textAppearanceSmall" />
     </LinearLayout>
 </ScrollView>

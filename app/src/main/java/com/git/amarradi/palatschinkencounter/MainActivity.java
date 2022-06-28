@@ -59,14 +59,13 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         setupSharedPreferences();
 
 
-
         textView.setOnLongClickListener(v -> {
             openDialog();
             return false;
         });
 
-        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
-        String themes = sharedPreferences.getString(NIGHT_MODE,"");
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        String themes = sharedPreferences.getString(NIGHT_MODE, "");
 
         changeTheme(themes);
 
@@ -126,7 +125,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         Log.d("key", key);
-       if (key.equals("theme")) {
+        if (key.equals("theme")) {
             loadThemeFromPreference(sharedPreferences);
         }
     }
@@ -134,7 +133,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
 
     // Method to pass value from SharedPreferences
     private void loadThemeFromPreference(SharedPreferences sharedPreferences) {
-       // Log.d("Parzival",sharedPreferences.getString(getString(R.string.theme_active),
+        // Log.d("Parzival",sharedPreferences.getString(getString(R.string.theme_active),
         //        getString(R.string.lightmode_preference_option_value)));
         changeTheme(sharedPreferences.getString(getString(R.string.theme_key),
                 getString(R.string.lightmode_preference_option_value)));
@@ -142,23 +141,22 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
 
     // Method to set Color of Text.
     private void changeTheme(String theme_value) {
-       Log.d("changeTheme", theme_value);
-        if (theme_value.equals("lightmode")||theme_value.equals("hell")) {
+        Log.d("changeTheme", theme_value);
+        if (theme_value.equals("lightmode") || theme_value.equals("hell")) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
-            SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
+            SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putString(NIGHT_MODE,theme_value);
+            editor.putString(NIGHT_MODE, theme_value);
             editor.apply();
-        } else if (theme_value.equals("darkmode")||theme_value.equals("dunkel")) {
+        } else if (theme_value.equals("darkmode") || theme_value.equals("dunkel")) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-            SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
+            SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putString(NIGHT_MODE,theme_value);
+            editor.putString(NIGHT_MODE, theme_value);
             editor.apply();
         }
     }
-
 
 
     public void openDialog() {
@@ -195,10 +193,6 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
     public void onYesClicked() {
         reset_counter();
     }
-
-
-
-
 
 
 }

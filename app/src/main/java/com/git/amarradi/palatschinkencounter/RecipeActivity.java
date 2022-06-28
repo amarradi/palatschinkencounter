@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public class RecipeActivity extends AppCompatActivity {
 
-    ArrayList<RecipeModel> ingredientsModels  = new ArrayList<>();
+    ArrayList<RecipeModel> ingredientsModels = new ArrayList<>();
     ArrayList<RecipeModel> preparationModels = new ArrayList<>();
 
     @Override
@@ -27,7 +27,7 @@ public class RecipeActivity extends AppCompatActivity {
         setupRecipeModels();
 
         RecylerViewRecipeAdapter recylerViewIngredientsAdapter =
-                new RecylerViewRecipeAdapter(this,ingredientsModels);
+                new RecylerViewRecipeAdapter(this, ingredientsModels);
         recyclerView_Ingredients.setAdapter(recylerViewIngredientsAdapter);
         recyclerView_Ingredients.setLayoutManager(new LinearLayoutManager(this));
 
@@ -36,7 +36,7 @@ public class RecipeActivity extends AppCompatActivity {
 
         setupPreparationModels();
         RecylerViewRecipeAdapter recylerViewPreparationAdapter =
-                new RecylerViewRecipeAdapter(this,preparationModels);
+                new RecylerViewRecipeAdapter(this, preparationModels);
         recyclerView_Preparation.setNestedScrollingEnabled(false);
         recyclerView_Preparation.setAdapter(recylerViewPreparationAdapter);
         recyclerView_Preparation.setLayoutManager(new LinearLayoutManager(this));
@@ -49,7 +49,7 @@ public class RecipeActivity extends AppCompatActivity {
         }
     }
 
-    public void setupRecipeModels(){
+    public void setupRecipeModels() {
         String[] strings_ingredients = getResources().getStringArray(R.array.ingredients_array);
         for (String strings_ingredient : strings_ingredients) {
             ingredientsModels.add(new RecipeModel(strings_ingredient));

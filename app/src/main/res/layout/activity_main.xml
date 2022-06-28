@@ -30,13 +30,12 @@
         android:layout_marginRight="16dp"
         android:layout_marginBottom="32dp"
         android:background="@drawable/counter_plus_btn_bg_shape"
-        android:text="@string/btnCounter"
         android:fontFamily="@font/opensans_extrabold"
+        android:text="@string/btnCounter"
         app:layout_constraintBottom_toBottomOf="parent"
 
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tv_startpage"
