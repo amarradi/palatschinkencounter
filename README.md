@@ -11,7 +11,7 @@ Einfach den Palatschinkencounter in der aktuellen Version vom google PlayStore i
 
 # Funktionsweise
 ## Bestellung oder selbst machen
-* Entweder backt man seine [Palatschinken] selbst oder kauft sie am Strand.
+* Entweder backt man seine selbst oder kauft sie am Strand. Das Rezept für die besten Palatschinken ist in App unter Einstellungen oder [hier](https://github.com/amarradi/palatschinkencounter/blob/master/README.md#das-rezept-und-die-zubereitung) zu finden
 ## Zählen
 * Für jeden gegessenen Palatschinken drück man auf den Button +1 auf dem Display
 
