@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,6 +21,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.preference.PreferenceManager;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener, WipeDataDialog.WipeDialogListener {
@@ -27,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
     public static final String SHARED_PREFS = "sharedPrefs";
     public static final String COUNTER = "text";
     public static final String NIGHT_MODE = "night_mode";
+    private static final String FILE_NAME = "counter.txt";
 
 
     private int counter = 0;
@@ -59,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         setupSharedPreferences();
 
 
-        textView.setOnLongClickListener(v -> {
+        textView.setOnLongClickListener((View v) -> {
             openDialog();
             return false;
         });
@@ -69,31 +77,67 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
 
         changeTheme(themes);
 
-
-
-
-       /* SharedPreferences sharedPreferencesNDM = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-        safedNightMode = sharedPreferencesNDM.getBoolean(NIGHT_MODE, false);
-
-
-
-        if (safedNightMode) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-            counterTextButton.setTextColor(Color.WHITE);
-        } else {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-        }
-*/
         load_data();
+        
         updateViews();
 
         counterTextButton.setOnClickListener(v -> {
             counter++;
             textView.setText(format("%d", counter));
             save_data();
+            saveCounterToFile();
         });
         load_data();
         updateViews();
+    }
+
+    public void saveCounterToFile() {
+        FileOutputStream fileOutputStream = null;
+        try {
+            fileOutputStream = openFileOutput(FILE_NAME, MODE_PRIVATE);
+            fileOutputStream.write(String.valueOf(counter).getBytes());
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (fileOutputStream != null) {
+                try {
+                    fileOutputStream.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    public int loadCounterFromFile() {
+        FileInputStream fileInputStream = null;
+        try {
+            fileInputStream = openFileInput(FILE_NAME);
+            InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream);
+            BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+            StringBuilder stringBuilder = new StringBuilder();
+            String s;
+            while ((s = bufferedReader.readLine()) != null) {
+                stringBuilder.append(s);
+            }
+            return Integer.parseInt(stringBuilder.toString());
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (fileInputStream != null) {
+                try {
+
+                    fileInputStream.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return 0;
     }
 
     private void setupSharedPreferences() {
@@ -106,7 +150,6 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu, menu);
-
         return true;
     }
 
@@ -119,7 +162,6 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
             return true;
         }
         return super.onOptionsItemSelected(item);
-
     }
 
     @Override
@@ -131,15 +173,12 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
     }
 
 
-    // Method to pass value from SharedPreferences
+  
     private void loadThemeFromPreference(SharedPreferences sharedPreferences) {
-        // Log.d("Parzival",sharedPreferences.getString(getString(R.string.theme_active),
-        //        getString(R.string.lightmode_preference_option_value)));
-        changeTheme(sharedPreferences.getString(getString(R.string.theme_key),
-                getString(R.string.lightmode_preference_option_value)));
+        changeTheme(sharedPreferences.getString(getString(R.string.theme_key),getString(R.string.lightmode_preference_option_value)));
     }
 
-    // Method to set Color of Text.
+
     private void changeTheme(String theme_value) {
         Log.d("changeTheme", theme_value);
         if (theme_value.equals("lightmode") || theme_value.equals("hell")) {
@@ -157,8 +196,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
             editor.apply();
         }
     }
-
-
+    
     public void openDialog() {
         WipeDataDialog dialog = new WipeDataDialog();
         dialog.show(getSupportFragmentManager(), "open dialog");
@@ -193,6 +231,4 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
     public void onYesClicked() {
         reset_counter();
     }
-
-
 }
