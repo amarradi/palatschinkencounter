@@ -8,7 +8,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -58,9 +57,8 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
 
         setupSharedPreferences();
 
-
         textView.setOnLongClickListener(v -> {
-            openDialog();
+            deleteDialog();
             return false;
         });
 
@@ -69,21 +67,6 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
 
         changeTheme(themes);
 
-
-
-
-       /* SharedPreferences sharedPreferencesNDM = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-        safedNightMode = sharedPreferencesNDM.getBoolean(NIGHT_MODE, false);
-
-
-
-        if (safedNightMode) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-            counterTextButton.setTextColor(Color.WHITE);
-        } else {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-        }
-*/
         load_data();
         updateViews();
 
@@ -106,7 +89,6 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu, menu);
-
         return true;
     }
 
@@ -119,32 +101,24 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
             return true;
         }
         return super.onOptionsItemSelected(item);
-
     }
 
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-        Log.d("key", key);
+
         if (key.equals("theme")) {
             loadThemeFromPreference(sharedPreferences);
         }
     }
 
-
-    // Method to pass value from SharedPreferences
     private void loadThemeFromPreference(SharedPreferences sharedPreferences) {
-        // Log.d("Parzival",sharedPreferences.getString(getString(R.string.theme_active),
-        //        getString(R.string.lightmode_preference_option_value)));
-        changeTheme(sharedPreferences.getString(getString(R.string.theme_key),
-                getString(R.string.lightmode_preference_option_value)));
+        changeTheme(sharedPreferences.getString(getString(R.string.theme_key),getString(R.string.lightmode_preference_option_value)));
     }
 
-    // Method to set Color of Text.
     private void changeTheme(String theme_value) {
-        Log.d("changeTheme", theme_value);
+
         if (theme_value.equals("lightmode") || theme_value.equals("hell")) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-
             SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.putString(NIGHT_MODE, theme_value);
@@ -158,10 +132,9 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         }
     }
 
-
-    public void openDialog() {
+    public void deleteDialog() {
         WipeDataDialog dialog = new WipeDataDialog();
-        dialog.show(getSupportFragmentManager(), "open dialog");
+        dialog.show(getSupportFragmentManager(), "delete dialog");
     }
 
     public void save_data() {
@@ -181,7 +154,6 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         textView.setText(format("%d", counter));
     }
 
-
     public void reset_counter() {
         counter = 0;
         updateViews();
@@ -193,6 +165,5 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
     public void onYesClicked() {
         reset_counter();
     }
-
 
 }
