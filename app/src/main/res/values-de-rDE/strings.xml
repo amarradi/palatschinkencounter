@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name" translatable="true">Palatschinkencounter</string>
     <string name="btnCounter">+1</string>
     <string name="bibleverse">\'Also: Iss dein Brot mit Freude, und trink deinen Wein mit frohem
         Herzen! Denn schon längst hat Gott Gefallen an deinem Tun.\' Prediger 9:7</string>
@@ -14,14 +15,17 @@
     aktivieren</string>
     <string name="txViewCounterState">0</string>
     <string name="textviewComplain">Anzahl der gegessenen Palatschinken</string>
-    <string name="txt_menu_item_counter_reset">Zähler zurücksetzen</string>
-    <string name="attention">Zähler zurücksetzen</string>
-    <string name="Cancel">Abbrechen</string>
+
+    <string name="attention">Zähler zurücksetzen!</string>
+    <string name="cancel">Abbrechen</string>
     <string name="resetOK">OK</string>
     <string name="resetMessage">Möchten Sie den Zähler wirklich zurücksetzen? (echt nicht
         empfohlen)</string>
-
-
+    <string name="intention">Wenn man Palatschinken mag, dann sollten das natürlich die besten der
+    Welt sein. Mit dem Palatschinkencounter und dem Rezept ist jeder in der Lage die besten
+    Palatschinken der Welt zuzubereiten und sogar mitzuzählen.</string>
+    <string name="really_important">Die wichtigste Entscheidung im Leben. Hast Du dein Leben
+        Jesus übergeben?</string>
     <string-array name="ingredients_array">
         <item>200 Gramm Weizenmehl (Typ 405)</item>
         <item>2 Eier</item>
@@ -41,8 +45,8 @@
         <item>Jetzt gieße ich vorsichtig die Milch und das kohlensäurehaltige Mineralwasser hinein</item>
         <item>Zum Schluss gebe ich das Sonnenblumenöl und die Prise Salz unter ständigem mixe
             hinzu</item>
-        <item>Jetzt rühre ich den Teig noch einmal 5-7 Minuten lang gut durch</item>
-        <item>Jetzt lasse ich den Teig für 10-20 Minuten ruhen</item>
+        <item>Jetzt rühre ich den Teig noch einmal 5–7 Minuten lang gut durch</item>
+        <item>Jetzt lasse ich den Teig für 10–20 Minuten ruhen</item>
         <item>In der Zwischenzeit kann ich die Pfanne mit einer sehr kleinen Menge Öl oder
             Schmalz erhitzen. Achtung nicht zu heiß! Auf unserem Elektroherd habe ich bei Stufe 7 von 10 gute Ergebnisse erzielt </item>
 
@@ -68,18 +72,14 @@
     <string name="txt_menu_item_recipe">Das Palatschinkenrezept</string>
     <string name="txt_recipe_entry_txt">Ich nehme für die besten ungarischen Palatschinken vom
         Balaton für 2 Personen folgende Zutaten.</string>
-    <string name="pancake_ingredients">Zutaten</string>
+    <string name="pancake_ingredients">Ich nehme folgende Zutaten</string>
     <string name="pancake_preparation">Zubereitung Jetzt ist es Zeit, die Palatschinken zu backen :-)</string>
     <string name="itsos">Dieses Projekt ist OpenSource und auf GitHub unter https://github.com/amarradi/palatschinkencounter zu finden.</string>
-    <string name="txt_menu_item_dnswitch">Nachtmodus</string>
     <string name="darkmode_preference">dunkel</string>
     <string name="lightmode_preference">hell</string>
     <string name="recipe_summary">Das Rezept für die weltbesten Palatschinken</string>
-    <string name="about_summary">Was ist das für eine app</string>
-    <string name="general_summary_preference">Allgemeine Einstellungen für den Palatschinkencounter</string>
-    <string name="theme_preference">Farbschema</string>
+    <string name="about_summary">Was ist das für eine App</string>
+   <string name="theme_preference">Farbschema</string>
     <string name="recipe_preference">Das Palatschinkenrezept</string>
     <string name="resethowto">Es ist nicht nötig und unter absolut keinem Umstand empfohlen den Zähler jemals zurückzusetzen. Falls Du es trotzdem machen möchtet, muss du auf der Startseite auf deinen den Zähler tippen und halten. Nach dem zurücksetzen ist der Zähler unwiederbringlich gelöscht.</string>
-
-
 </resources>

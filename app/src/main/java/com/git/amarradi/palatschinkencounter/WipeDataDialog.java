@@ -16,10 +16,11 @@ public class WipeDataDialog extends AppCompatDialogFragment {
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.MyAlertDialogTheme);
+        AlertDialog.Builder builder = new AlertDialog.Builder(requireActivity(), R.style.MyAlertDialogTheme);
         builder.setTitle(getResources().getString(R.string.attention))
                 .setMessage(getResources().getString(R.string.resetMessage))
-                .setNegativeButton(getResources().getString(R.string.Cancel), new DialogInterface.OnClickListener() {
+                .setNegativeButton(getResources().getString(R.string.cancel),
+                        new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 

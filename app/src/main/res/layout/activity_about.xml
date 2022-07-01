@@ -37,14 +37,36 @@
             android:layout_height="200dp"
             android:layout_margin="10dp"
             android:contentDescription="@string/image"
-
             android:src="@drawable/logo_psc_512_transparent" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_margin="5dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/intention"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/intention"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:layout_margin="5dp"
             android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/tv_decision"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/really_important"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <TextView
             android:id="@+id/tv_bibleverse"

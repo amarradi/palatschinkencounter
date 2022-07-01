@@ -1,6 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name" translatable="false">Palatschinkencounter</string>
-
+    <string name="app_name" translatable="true">Pancake counter</string>
     <string name="bibleverse">\'Go thy way, eat thy bread with joy, and drink thy wine with a
         merry heart; for God hath already accepted thy works.\' Ecclesiastes 9:7</string>
     <string name="btnCounter">+1</string>
@@ -9,7 +9,6 @@
     <string name="send_feedback_summary">Report a technical issues or submit new
         features</string>
     <string name="general_preference">General</string>
-    <string name="general_summary_preference">General settings for Palatschinkencounter</string>
     <string name="theme_active">Disable darkmode by unsetting the checkbox</string>
     <string name="theme_deactive">Enable darkmode by setting the checkbox</string>
     <string name="version_preference" translatable="false">Version</string>
@@ -17,8 +16,8 @@
     <string name="theme_summary">Toggle between dark and light theme</string>
     <string name="txViewCounterState">0</string>
     <string name="textviewComplain">Pancake count</string>
-    <string name="txt_menu_item_counter_reset">reset counter</string>
-    <string name="attention">Counter reset</string>
+
+    <string name="attention">Counter reset!</string>
     <string name="resetMessage">Do you really want to reset the counter? (really not
         recommended)</string>
 
@@ -28,10 +27,9 @@
     <string name="lightmode_preference_option_value" translatable="false">lightmode</string>
     <!-- Value in SharedPreferences for darkmode option -->
     <string name="darkmode_preference_option_value" translatable="false">darkmode</string>
-    <!--Value in in SharedPreferences for reset option -->
-    <string name="reset_preference" translatable="false">reset</string>
 
-    <string name="Cancel" tools:ignore="ButtonCase">cancel</string>
+
+    <string name="cancel" tools:ignore="ButtonCase">cancel</string>
     <string name="resetOK">yes</string>
     <string name="about">About us</string>
     <string name="image">image</string>
@@ -40,9 +38,11 @@
     <string name="whatsdo">With this app you can count all your eaten pancakes</string>
     <string name="havefun">have fun :-)</string>
     <string name="resethowto">It is not necessary and under absolutely no circumstances recommended to ever reset the counter. If you want to do it anyway, you should tap and hold your counter on the home page. After resetting the counter is permanently deleted.</string>
-
+    <string name="intention">If you like pancakes, then of course they should be the best in the
+        world. With the pancake counter and the recipe, everyone is able to prepare the best pancakes in the world and even count them.</string>
     <!-- recipe -->
-
+    <string name="really_important">The most important decision in life. Have you given your life
+        to Jesus?</string>
     <string-array name="ingredients_array">
 
         <item>200 Gramm of wheat flour (Type 405)</item>
@@ -56,15 +56,15 @@
     </string-array>
     <string-array name="preparation_array">
 
-        <item tools:ignore="TypographyDashes">At first, I prepare myself all the ingredients. With a pan of this size I can bake
+        <item>At first, I prepare myself all the ingredients. With a pan of this size I can bake
             5-6 pieces</item>
         <item>I stir the eggs lightly until a homogeneous dough is formed</item>
         <item>Then I add the sifted carefully wheat flour and continue stirring</item>
         <item>I stir the dough carefully (at low speed) further</item>
         <item>Now I carefully fill the milk and the sparkling mineral water into it</item>
         <item>Lastly I put in the sunflower oil und the pinch of salt under stirring</item>
-        <item tools:ignore="TypographyDashes">I now stir the dough well again for 5-7 minutes</item>
-        <item tools:ignore="TypographyDashes">Now I let the dough rest for 10-20 min.</item>
+        <item>I now stir the dough well again for 5–7 minutes</item>
+        <item >Now I let the dough rest for 10–20 min.</item>
 
         <item>Meanwhile, I can heat the pan with a very small amount of oil or lard. Attention
             not too hot! On our electric stove I got good results at level 7 of 10</item>
@@ -84,15 +84,15 @@
     <string name="txt_menu_item_recipe">The pancake recipe</string>
     <string name="recipe_summary">The recipe for the best pancakes ever</string>
 
-    <string name="pancake_ingredients">Ingredients</string>
+    <string name="pancake_ingredients">I take following ingredients</string>
 
     <string name="pancake_preparation">Preparation Now its time for baking the pancakes :-)</string>
     <string name="itsos">This project is open source and can be found under https://github.com/amarradi/palatschinkencounter GitHub.</string>
-    <string name="txt_menu_item_dnswitch">Night mode</string>
-    <string name="darkmode_preference" translatable="false">darkmode</string>
+
+    <string name="darkmode_preference">darkmode</string>
     <string name="lightmode_preference">lightmode</string>
-    <string name="about_summary">What is that app</string>
-    <string name="display_text" translatable="false">Display Text</string>
+    <string name="about_summary">What is that App</string>
+
     <string name="theme_preference">Theme</string>
     <string name="recipe_preference">The pancake recipe</string>
     <string name="txt_recipe_entry_txt">I take for the best Hungarian pancakes from the

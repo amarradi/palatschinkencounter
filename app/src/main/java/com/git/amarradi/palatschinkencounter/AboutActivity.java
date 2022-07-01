@@ -17,6 +17,8 @@ public class AboutActivity extends AppCompatActivity {
         TextView title = findViewById(R.id.tvAppName);
         TextView whatsdo = findViewById(R.id.tvwhatsdo);
         TextView havefun = findViewById(R.id.tvhavefun);
+        TextView intention = findViewById(R.id.intention);
+        TextView decision= findViewById(R.id.tv_decision);
         TextView oss = findViewById(R.id.itsos);
         TextView appVersion = findViewById(R.id.tvVersion);
         Typeface typeface_regular = getResources().getFont(R.font.opensans_regular);
@@ -26,6 +28,8 @@ public class AboutActivity extends AppCompatActivity {
         whatsdo.setTypeface(typeface_regular);
         havefun.setTypeface(typeface_bold);
         oss.setTypeface(typeface_regular);
+        intention.setTypeface(typeface_regular);
+        decision.setTypeface(typeface_regular);
         TextView resethow = findViewById(R.id.resethowto);
         resethow.setTypeface(typeface_regular);
         @SuppressLint({"StringFormatInvalid", "LocalSuppress"}) String version = String.format(getResources().getString(R.string.version), BuildConfig.VERSION_NAME);
