@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar ns="" xmlns:tools="http://schemas.android.com/tools" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <start>
+        <element name="resources">
+            <oneOrMore>
+                <choice>
+                    <element name="string">
+                        <attribute name="name">
+                            <data type="NCName"/>
+                        </attribute>
+                        <optional>
+                            <attribute name="translatable">
+                                <data type="boolean"/>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="tools:ignore">
+                                <data type="NCName"/>
+                            </attribute>
+                        </optional>
+                        <text/>
+                    </element>
+                    <element name="string-array">
+                        <attribute name="name">
+                            <data type="NCName"/>
+                        </attribute>
+                        <oneOrMore>
+                            <element name="item">
+                                <optional>
+                                    <attribute name="tools:ignore">
+                                        <data type="NCName"/>
+                                    </attribute>
+                                </optional>
+                                <text/>
+                            </element>
+                        </oneOrMore>
+                    </element>
+                </choice>
+            </oneOrMore>
+        </element>
+    </start>
+</grammar>
