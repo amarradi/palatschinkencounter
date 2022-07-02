@@ -1,0 +1,48 @@
+# Categories (one per line, each starting with a space and a minus), chosen from the
+# official list: https://gitlab.com/fdroid/fdroiddata/blob/master/stats/categories.txt
+Categories:
+ - Games
+
+# the one license that the whole app is available under, use
+# https://spdx.org/licenses/ short identifiers, must be
+# floss-compatible.
+License: Apache-2.0
+
+# You can provide details on how to contact the author. These are optional, but
+# nice to have.
+AuthorName: Marcus Radisch
+AuthorEmail: info@palatschinkencounter.de
+AuthorWebSite: https://amarradi.github.io/palatschinkencounter/
+
+# A URL for the project's website, and to the source code repository to visit
+# using a web browser. WebSite is optional.
+WebSite: https://amarradi.github.io/palatschinkencounter/
+SourceCode: https://github.com/amarradi/palatschinkencounter
+
+# A link to the issue tracker where bugs are reported
+IssueTracker: https://github.com/amarradi/palatschinkencounter/issues
+
+# If available, you can also provide links/IDs for donations.
+Donate:
+Bitcoin: 
+LiberaPay: 
+
+# Name of the application
+AutoName: Palatschinkencounter
+
+# One sentence, no more than 30-50 chars, no trailing punctuation,
+# focus on actions what the users does with the app, e.g. "Read and
+# send emails" instead of "Email client".
+# NOTE: Summary and Description are preferably provided via Fastlane or Triple-T!
+Summary: The recipe the preparation and counting pancakes
+Description: |-
+  If you like pancakes, then of course they should be the best in the world. With the pancake
+  counter and the recipe, everyone is able to prepare the best pancakes in the world and even count them.
+
+# Repository details to be used by VCS (Version Control Systems)
+# git, git-svn, svn, hg or bzr
+RepoType: git
+
+# source code repo URL (HTTPS required)
+Repo: https://github.com/amarradi/palatschinkencounter
+
