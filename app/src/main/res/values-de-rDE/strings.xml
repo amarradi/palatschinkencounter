@@ -81,5 +81,5 @@
     <string name="about_summary">Was ist das für eine App</string>
    <string name="theme_preference">Farbschema</string>
     <string name="recipe_preference">Das Palatschinkenrezept</string>
-    <string name="resethowto">Es ist nicht nötig und unter absolut keinem Umstand empfohlen den Zähler jemals zurückzusetzen. Falls Du es trotzdem machen möchtet, muss du auf der Startseite auf deinen den Zähler tippen und halten. Nach dem zurücksetzen ist der Zähler unwiederbringlich gelöscht.</string>
+    <string name="resethowto">Es ist nicht nötig und unter absolut keinem Umstand empfohlen den Zähler jemals zurückzusetzen. Falls Du es trotzdem machen möchtet, muss du auf der Startseite auf deinen Zähler tippen und halten. Nach dem zurücksetzen ist der Zähler unwiederbringlich gelöscht.</string>
 </resources>
