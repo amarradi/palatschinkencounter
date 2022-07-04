@@ -1,0 +1,3 @@
+<p>
+Mit dieser App kannst du alle deine gegessenen Palatschinken zählen.
+</p>

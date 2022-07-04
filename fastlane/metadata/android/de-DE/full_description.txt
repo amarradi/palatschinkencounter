@@ -1,0 +1,4 @@
+<p>
+Der Palatschinkencounter ist ein Urlaubsprojekt als App für Android. Eine kleine Liebeserklärung an eine sehr leckere Vorspeise, Hauptspeise oder Nachspeise. Palatschinken sind auch bekannt als Pfannkuchen, Crepes oder Eierkuchen
+</p>
+<p>Wenn man Palatschinken mag, dann sollten das natürlich die besten der Welt sein. Mit dem Palatschinkencounter und dem Rezept ist jeder in der Lage die besten Palatschinken der Welt zuzubereiten und sogar mitzuzählen.</p>

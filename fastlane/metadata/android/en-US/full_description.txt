@@ -1,0 +1,5 @@
+<p>
+The Pancake Counter is a holiday project as an app for Android. A little declaration of love for a very tasty starter, main course or dessert. Pancakes are also known as pancakes, crepes or pancakes
+</p>
+<p>
+If you like pancakes, then of course they should be the best in the world. With the pancake counter and the recipe, everyone is able to prepare the best pancakes in the world and even count them.</p>
