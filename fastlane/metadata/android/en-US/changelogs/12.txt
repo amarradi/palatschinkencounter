@@ -1,0 +1,8 @@
+## [1.0.9] - 02.07.2022
+### Added
+- new recipe text and layout
+- new Settingpage
+### Changed
+- new round +1 Button
+### Fixed
+- Some little Bugs
