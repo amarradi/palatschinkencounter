@@ -1,0 +1,8 @@
+## [1.0.10] - 2022-07-06
+### Added
+- new Changelog for current version
+### Changed
+- some textual improvements
+- changed text About the App
+### Fixed
+- theme defaultvalue in english not set

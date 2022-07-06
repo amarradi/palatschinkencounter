@@ -24,8 +24,14 @@
     <string name="intention">Wenn man Palatschinken mag, dann sollten das natürlich die besten der
     Welt sein. Mit dem Palatschinkencounter und dem Rezept ist jeder in der Lage die besten
     Palatschinken der Welt zuzubereiten und sogar mitzuzählen.</string>
-    <string name="really_important">Die wichtigste Entscheidung im Leben. Hast Du dein Leben
-        Jesus übergeben?</string>
+    <string name="really_important">Wir entscheiden uns im Leben doch immer für das Beste,
+        so ist es auch bei den ungarischen Palatschinken. Wir geben uns nie mit den zweitbesten
+        Palatschinken zufrieden. Im eigenen Leben ist das doch genauso. Nur das beste ist gerade
+        gut genug. Hast du die beste Entscheidung deines Lebens bereits getroffen? <b>Hast Du
+            dein Leben Jesus übergeben?</b></string>
+    <string name="txt_menu_item_recipe">Das Palatschinkenrezept</string>
+    <string name="txt_recipe_entry_txt">Ich nehme für die besten ungarischen Palatschinken vom
+        Balaton für 2 Personen folgende Zutaten.</string>
     <string-array name="ingredients_array">
         <item>200 Gramm Weizenmehl (Typ 405)</item>
         <item>2 Eier</item>
@@ -67,21 +73,20 @@
         </item>
     </string-array>
     <string name="thanks">Danke Papa für das Rezept</string>
-    <string name="about">Über uns</string>
+    <string name="about">Über die App</string>
+    <string name="about_summary">Was ich über diese App sagen möchte</string>
     <string name="image">Bild</string>
     <string name="reset">Zähler zurückgesetzt</string>
     <string name="whatsdo">Mit dieser App kannst du alle deine gegessenen Palatschinken zählen.</string>
     <string name="havefun">Habt Spaß :-)</string>
-    <string name="txt_menu_item_recipe">Das Palatschinkenrezept</string>
-    <string name="txt_recipe_entry_txt">Ich nehme für die besten ungarischen Palatschinken vom
-        Balaton für 2 Personen folgende Zutaten.</string>
+
     <string name="pancake_ingredients">Ich nehme folgende Zutaten</string>
     <string name="pancake_preparation">Zubereitung Jetzt ist es Zeit, die Palatschinken zu backen :-)</string>
     <string name="itsos">Dieses Projekt ist OpenSource und auf GitHub unter https://github.com/amarradi/palatschinkencounter zu finden.</string>
     <string name="darkmode_preference">dunkel</string>
     <string name="lightmode_preference">hell</string>
     <string name="recipe_summary">Das Rezept für die weltbesten Palatschinken</string>
-    <string name="about_summary">Was ist das für eine App</string>
+
    <string name="theme_preference">Farbschema</string>
     <string name="recipe_preference">Das Palatschinkenrezept</string>
     <string name="resethowto">Es ist nicht nötig und unter absolut keinem Umstand empfohlen den Zähler jemals zurückzusetzen. Falls Du es trotzdem machen möchtet, muss du auf der Startseite auf deinen Zähler tippen und halten. Nach dem zurücksetzen ist der Zähler unwiederbringlich gelöscht.</string>

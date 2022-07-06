@@ -1,8 +1,0 @@
-## [1.0.9] - 02.07.2022
-### Added
-- neues Rezept und Layout
-- neue übersichtliche Einstellungsseite
-### Changed
-- neuer runder +1 Button
-### Fixed
-- kleinere Fehler behoben

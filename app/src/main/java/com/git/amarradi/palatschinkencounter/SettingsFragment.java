@@ -72,6 +72,16 @@ public class SettingsFragment extends PreferenceFragmentCompat implements Shared
             startActivity(about_intent);
             return false;
         });
+
+        Preference changelog = getPreferenceManager().findPreference("version_preference");
+        Objects.requireNonNull(changelog).setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(@NonNull Preference preference) {
+                Intent change_intent = new Intent(getActivity(), ChangelogActivity.class);
+                startActivity(change_intent);
+                return false;
+            }
+        });
     }
 
     @Override

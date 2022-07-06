@@ -50,6 +50,7 @@
             android:layout_height="wrap_content"
             android:text="@string/intention"
             android:gravity="center"
+            android:padding="5dp"
             android:textAppearance="?android:attr/textAppearanceSmall"/>
 
         <View

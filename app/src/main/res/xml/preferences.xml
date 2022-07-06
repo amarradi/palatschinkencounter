@@ -35,7 +35,8 @@
     <PreferenceCategory android:title="@string/version_preference">
         <Preference
             android:key="version_preference"
-            android:selectable="false"
-            app:icon="@drawable/ic_baseline_numbers_24" />
+            android:selectable="true"
+            app:icon="@drawable/ic_baseline_numbers_24"
+            android:summary="@string/change"/>
     </PreferenceCategory>
 </PreferenceScreen>

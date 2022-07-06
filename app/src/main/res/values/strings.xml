@@ -31,7 +31,8 @@
 
     <string name="cancel" tools:ignore="ButtonCase">cancel</string>
     <string name="resetOK">yes</string>
-    <string name="about">About us</string>
+    <string name="about">About the App</string>
+    <string name="about_summary">What I want to tell about this app</string>
     <string name="image">image</string>
     <string name="reset">reset counter</string>
     <string name="version" translatable="false">%1$s</string>
@@ -41,8 +42,10 @@
     <string name="intention">If you like pancakes, then of course they should be the best in the
         world. With the pancake counter and the recipe, everyone is able to prepare the best pancakes in the world and even count them.</string>
     <!-- recipe -->
-    <string name="really_important">The most important decision in life. Have you given your life
-        to Jesus?</string>
+    <string name="really_important">We always choose the best in life, it is the same with
+        hungarian pancakes. We never satisfy ourselves with the second best pancakes.
+        It is the same in our own lives. Only the best is just good enough. Have you already made
+        the best decision of your life? <b>Have you given your life to Jesus?</b></string>
     <string-array name="ingredients_array">
 
         <item>200 Gramm of wheat flour (Type 405)</item>
@@ -65,7 +68,7 @@
             it</item>
         <item>Lastly I put in the sunflower oil und the pinch of salt under stirring</item>
         <item>I now stir the dough well again for 5–7 minutes</item>
-        <item >Now I let the dough rest for 10–20 min.</item>
+        <item>Now I let the dough rest for 10–20 min.</item>
 
         <item>Meanwhile, I can heat the pan with a very small amount of oil or lard. Attention
             not too hot! On our electric stove I got good results at level 7 of 10</item>
@@ -92,7 +95,7 @@
 
     <string name="darkmode_preference">darkmode</string>
     <string name="lightmode_preference">lightmode</string>
-    <string name="about_summary">What is that App</string>
+    <string name="change" tools:ignore="MissingTranslation">Changelog</string>
 
     <string name="theme_preference">Theme</string>
     <string name="recipe_preference">The pancake recipe</string>
