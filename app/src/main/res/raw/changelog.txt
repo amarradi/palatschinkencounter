@@ -1,6 +1,7 @@
 ## [1.0.11] - 2022-07-15
 ### Added
 - added option for follow the system in theme chooser
+- added icon to reset-Dialog
 ### Changed
 - Changed a margin in the changelog. Now it is easier to read
 - Changed the texts of the About page. A little more text but also a little cleared up

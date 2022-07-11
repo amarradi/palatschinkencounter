@@ -18,8 +18,10 @@ public class WipeDataDialog extends AppCompatDialogFragment {
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(requireActivity(), R.style.MyAlertDialogTheme);
         builder.setTitle(getResources().getString(R.string.attention))
+                .setIcon(R.drawable.logo_psc_512_transparent)
                 .setMessage(getResources().getString(R.string.resetMessage))
                 .setNegativeButton(getResources().getString(R.string.cancel),
+
                         new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
