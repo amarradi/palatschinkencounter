@@ -15,6 +15,7 @@
         android:layout_height="67dp"
         android:text="@string/txViewCounterState"
         android:textSize="50sp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -24,8 +25,11 @@
 
     <Button
         android:id="@+id/counter_text_button"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
+        android:layout_width="75dp"
+        android:gravity="center"
+        android:textColor="@color/md_theme_light_onPrimary"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_height="75dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginEnd="16dp"
@@ -55,8 +59,8 @@
 
     <ImageView
         android:id="@+id/image_startpage"
-        android:layout_width="109dp"
-        android:layout_height="109dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:contentDescription="@string/image"
         app:layout_constraintBottom_toTopOf="@+id/counter_text_button"
         app:layout_constraintEnd_toEndOf="parent"

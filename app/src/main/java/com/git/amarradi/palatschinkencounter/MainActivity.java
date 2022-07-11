@@ -117,18 +117,31 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
 
     private void changeTheme(String theme_value) {
 
-        if (theme_value.equals("lightmode") || theme_value.equals("hell")) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-            SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-            SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putString(NIGHT_MODE, theme_value);
-            editor.apply();
-        } else if (theme_value.equals("darkmode") || theme_value.equals("dunkel")) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-            SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-            SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putString(NIGHT_MODE, theme_value);
-            editor.apply();
+        switch (theme_value) {
+            case "lightmode": {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString(NIGHT_MODE, theme_value);
+                editor.apply();
+                break;
+            }
+            case "darkmode": {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString(NIGHT_MODE, theme_value);
+                editor.apply();
+                break;
+            }
+            case "system default": {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
+                SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString(NIGHT_MODE, theme_value);
+                editor.apply();
+                break;
+            }
         }
     }
 

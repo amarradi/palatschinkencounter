@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="true">Palatschinkencounter</string>
+
     <string name="btnCounter">+1</string>
     <string name="bibleverse">\'Also: Iss dein Brot mit Freude, und trink deinen Wein mit frohem
         Herzen! Denn schon längst hat Gott Gefallen an deinem Tun.\' Prediger 9:7</string>
@@ -22,7 +22,7 @@
     <string name="resetMessage">Möchten Sie den Zähler wirklich zurücksetzen? (echt nicht
         empfohlen)</string>
     <string name="intention">Wenn man Palatschinken mag, dann sollten das natürlich die besten der
-    Welt sein. Mit dem Palatschinkencounter und dem Rezept ist jeder in der Lage die besten
+    Welt sein. Mit dem Palatschinkencounter und dem Rezept ist jetzt jeder in der Lage die besten
     Palatschinken der Welt zuzubereiten und sogar mitzuzählen.</string>
     <string name="really_important">Wir entscheiden uns im Leben doch immer für das Beste,
         so ist es auch bei den ungarischen Palatschinken. Wir geben uns nie mit den zweitbesten
@@ -77,17 +77,22 @@
     <string name="about_summary">Was ich über diese App sagen möchte</string>
     <string name="image">Bild</string>
     <string name="reset">Zähler zurückgesetzt</string>
-    <string name="whatsdo">Mit dieser App kannst du alle deine gegessenen Palatschinken zählen.</string>
     <string name="havefun">Habt Spaß :-)</string>
 
     <string name="pancake_ingredients">Ich nehme folgende Zutaten</string>
     <string name="pancake_preparation">Zubereitung Jetzt ist es Zeit, die Palatschinken zu backen :-)</string>
-    <string name="itsos">Dieses Projekt ist OpenSource und auf GitHub unter https://github.com/amarradi/palatschinkencounter zu finden.</string>
-    <string name="darkmode_preference">dunkel</string>
-    <string name="lightmode_preference">hell</string>
+    <string name="itsos">Dieses Projekt ist OpenSource und auf\n
+        <a href="https://github.com/amarradi/palatschinkencounter">GitHub</a> zu finden.</string>
+
     <string name="recipe_summary">Das Rezept für die weltbesten Palatschinken</string>
 
-   <string name="theme_preference">Farbschema</string>
+
     <string name="recipe_preference">Das Palatschinkenrezept</string>
     <string name="resethowto">Es ist nicht nötig und unter absolut keinem Umstand empfohlen den Zähler jemals zurückzusetzen. Falls Du es trotzdem machen möchtet, muss du auf der Startseite auf deinen Zähler tippen und halten. Nach dem zurücksetzen ist der Zähler unwiederbringlich gelöscht.</string>
+
+
+    <string name="theme_preference">Farbschema</string>
+    <string name="lightmode_preference_key">Hell (standard)</string>
+    <string name="darkmode_preference_key">Dunkel</string>
+    <string name="system_preference_key">Systemstandard</string>
 </resources>

@@ -3,6 +3,7 @@ package com.git.amarradi.palatschinkencounter;
 import android.annotation.SuppressLint;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -15,17 +16,18 @@ public class AboutActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
         TextView title = findViewById(R.id.tvAppName);
-        TextView whatsdo = findViewById(R.id.tvwhatsdo);
+
         TextView havefun = findViewById(R.id.tvhavefun);
         TextView intention = findViewById(R.id.intention);
         TextView decision= findViewById(R.id.tv_decision);
         TextView oss = findViewById(R.id.itsos);
+        oss.setMovementMethod(LinkMovementMethod.getInstance());
         TextView appVersion = findViewById(R.id.tvVersion);
         Typeface typeface_regular = getResources().getFont(R.font.opensans_regular);
         Typeface typeface_bold = getResources().getFont(R.font.opensans_extrabold);
         appVersion.setTypeface(typeface_regular);
         title.setTypeface(typeface_regular);
-        whatsdo.setTypeface(typeface_regular);
+
         havefun.setTypeface(typeface_bold);
         oss.setTypeface(typeface_regular);
         intention.setTypeface(typeface_regular);
