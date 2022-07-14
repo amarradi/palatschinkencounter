@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/tv_startpage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/textviewComplain"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="59dp"
+        android:layout_toEndOf="@+id/tv_startpage"
+        android:text="@string/txViewCounterState"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ImageView
+
+        android:id="@+id/image_startpage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/tv_startpage"
+
+
+        android:layout_centerVertical="true"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="99dp"
+        android:contentDescription="@string/image"
+        app:srcCompat="@drawable/logo_psc_512_transparent" />
+
+    <Button
+
+        android:id="@+id/counter_text_button"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignParentStart="true"
+
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="265dp"
+        android:layout_marginBottom="58dp"
+
+        android:background="@drawable/counter_plus_btn_bg_shape"
+        android:fontFamily="@font/opensans_extrabold"
+
+        android:text="@string/btnCounter"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/md_theme_light_onPrimary" />
+
+
+</RelativeLayout>

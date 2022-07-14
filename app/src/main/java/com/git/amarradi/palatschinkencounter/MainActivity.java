@@ -12,6 +12,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,7 +35,9 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
     private boolean safedNightMode;
 
     @SuppressLint("DefaultLocale")
+    ImageView imageViewShare;
 
+    @SuppressLint("DefaultLocale")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -49,7 +52,16 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
 
         Button counterTextButton = findViewById(R.id.counter_text_button);
         counterTextButton.setTypeface(getResources().getFont(R.font.opensans_bold));
+/*
+        imageViewShare = findViewById(R.id.share);
+        imageViewShare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "share now", Toast.LENGTH_SHORT).show();
+            }
+        });
 
+ */
         textView = findViewById(R.id.textview);
         TextView textView_start = findViewById(R.id.tv_startpage);
         textView.setTypeface(typeface);
@@ -72,7 +84,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
 
         counterTextButton.setOnClickListener(v -> {
             counter++;
-            textView.setText(format("%d", counter));
+            textView.setText(String.format("%d", counter));
             save_data();
         });
         load_data();
