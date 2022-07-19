@@ -1,13 +1,8 @@
-## [1.0.11] - 2022-07-15
+## [1.0.12] - 2022-07-25
+happy birthday Palatschinkencounter
 ### Added
-- added option for follow the system in theme chooser
-- added icon to reset-Dialog
-- landscape-mode
+-margin in recipe
 ### Changed
-- Changed a margin in the changelog. Now it is easier to read
-- Changed the texts of the About page. A little more text but also a little cleared up
-- The logo reduced by 50dp in height and width
-- greater +1 Button on the Startpage
-- changed color of the +1 Button
-### Removed
-- unused fonts
+- landscape-mode-layout
+- portrait-mode-layout
+- added margin in recipe
