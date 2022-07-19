@@ -1,8 +1,10 @@
 ## [1.0.12] - 2022-07-25
 happy birthday Palatschinkencounter
 ### Added
--margin in recipe
+- margin in recipe
 ### Changed
+- now you can reach the settings-menu everytime
 - landscape-mode-layout
 - portrait-mode-layout
 - added margin in recipe
+- background color in recipe

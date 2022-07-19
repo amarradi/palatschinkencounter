@@ -52,16 +52,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
 
         Button counterTextButton = findViewById(R.id.counter_text_button);
         counterTextButton.setTypeface(getResources().getFont(R.font.opensans_bold));
-/*
-        imageViewShare = findViewById(R.id.share);
-        imageViewShare.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "share now", Toast.LENGTH_SHORT).show();
-            }
-        });
 
- */
         textView = findViewById(R.id.textview);
         TextView textView_start = findViewById(R.id.tv_startpage);
         textView.setTypeface(typeface);

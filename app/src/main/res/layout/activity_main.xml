@@ -56,24 +56,24 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="2dp"
         android:layout_alignParentBottom="true">
 
 
+        <Button
+            android:id="@+id/counter_text_button"
 
-    <Button
-        android:id="@+id/counter_text_button"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
 
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+            android:background="@drawable/counter_plus_btn_bg_shape"
 
-        android:gravity="center"
-
-        android:background="@drawable/counter_plus_btn_bg_shape"
-        android:fontFamily="@font/opensans_extrabold"
-        android:text="@string/btnCounter"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/md_theme_light_onPrimary" />
+            android:fontFamily="@font/opensans_extrabold"
+            android:gravity="center"
+            android:text="@string/btnCounter"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/md_theme_light_onPrimary" />
 
     </RelativeLayout>
+
 </RelativeLayout>

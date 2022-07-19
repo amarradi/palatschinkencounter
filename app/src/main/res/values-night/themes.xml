@@ -20,6 +20,10 @@
         <item name="colorOnSurface">@color/md_theme_dark_onSurface</item>
     </style>
 
+    <style name="CustomCardview" parent="CardView">
+        <item name="cardBackgroundColor">@color/md_theme_dark_background</item>
+    </style>
+
     <style name="MyAlertDialogTheme" parent="Theme.MaterialComponents.Light.Dialog.Alert">
         <item name="android:fontFamily">@font/opensans_regular</item>
         <item name="colorPrimary">@color/md_theme_light_primary</item>

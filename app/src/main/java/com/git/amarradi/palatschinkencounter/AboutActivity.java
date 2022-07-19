@@ -1,9 +1,13 @@
 package com.git.amarradi.palatschinkencounter;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -36,6 +40,23 @@ public class AboutActivity extends AppCompatActivity {
         resethow.setTypeface(typeface_regular);
         @SuppressLint({"StringFormatInvalid", "LocalSuppress"}) String version = String.format(getResources().getString(R.string.version), BuildConfig.VERSION_NAME);
         appVersion.setText(version);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.item_setting) {
+            Intent intentSetting = new Intent(this, SettingActivity.class);
+            startActivity(intentSetting);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }
