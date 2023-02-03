@@ -6,23 +6,16 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-
     tools:context=".MainActivity">
-
-
     <TextView
         android:id="@+id/tv_startpage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-
         android:layout_alignParentTop="true"
-
         android:layout_gravity="center"
         android:layout_marginTop="32dp"
-
         android:text="@string/textviewComplain"
-
         android:textAlignment="center"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -32,10 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/image_startpage"
         android:layout_alignParentStart="true"
-
-
         android:layout_gravity="center"
-
         android:text="@string/txViewCounterState"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
@@ -44,11 +34,11 @@
         android:id="@+id/image_startpage"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
         android:layout_gravity="center"
         android:layout_marginTop="64dp"
+        android:layout_marginBottom="64dp"
         android:contentDescription="@string/image"
         app:srcCompat="@drawable/logo_psc_512_transparent" />
 
@@ -56,24 +46,19 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_marginBottom="2dp"
-        android:layout_alignParentBottom="true">
-
-
+        android:layout_below="@id/image_startpage">
         <Button
             android:id="@+id/counter_text_button"
-
+            android:layout_alignTop="@id/counter_text_button"
             android:layout_width="75dp"
             android:layout_height="75dp"
-
+            android:layout_below="@id/image_startpage"
             android:background="@drawable/counter_plus_btn_bg_shape"
-
             android:fontFamily="@font/opensans_extrabold"
-            android:gravity="center"
             android:text="@string/btnCounter"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/md_theme_light_onPrimary" />
-
+            android:textColor="@color/md_theme_light_onPrimary"
+            tools:ignore="NotSibling" />
     </RelativeLayout>
 
 </RelativeLayout>

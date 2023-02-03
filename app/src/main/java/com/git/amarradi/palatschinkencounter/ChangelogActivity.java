@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,11 +16,14 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.Calendar;
 
 public class ChangelogActivity extends AppCompatActivity {
     TextView tv_changelog, et_changelog;
     ImageView birthday;
 
+    Calendar calendar = Calendar.getInstance();
+    int birthdayMonth = 6;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +33,11 @@ public class ChangelogActivity extends AppCompatActivity {
         et_changelog = findViewById(R.id.etChangelog);
 
         birthday = findViewById(R.id.birthday);
-
+        if (calendar.get(Calendar.MONTH) == birthdayMonth) {
+            birthday.setVisibility(View.VISIBLE);
+        } else {
+            birthday.setVisibility(View.INVISIBLE);
+        }
         readChangelog();
 
     }

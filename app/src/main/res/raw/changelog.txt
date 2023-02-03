@@ -1,10 +1,6 @@
-## [1.0.12] - 2022-07-25
+## [1.0.13] - 2023-02-03
 happy birthday Palatschinkencounter
 ### Added
-- margin in recipe
+- birthday condition
 ### Changed
-- now you can reach the settings-menu everytime
-- landscape-mode-layout
-- portrait-mode-layout
-- added margin in recipe
-- background color in recipe
+- layout mainActivity
