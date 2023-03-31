@@ -4,3 +4,4 @@ happy birthday Palatschinkencounter
 - birthday condition
 ### Changed
 - layout mainActivity
+- recipe changed
