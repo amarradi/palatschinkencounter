@@ -47,6 +47,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_below="@id/image_startpage">
+
         <Button
             android:id="@+id/counter_text_button"
             android:layout_alignTop="@id/counter_text_button"
