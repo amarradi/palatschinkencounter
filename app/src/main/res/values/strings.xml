@@ -98,7 +98,6 @@
         <a href="https://github.com/amarradi/palatschinkencounter">GitHub</a>.</string>
 
 
-    <string name="change" tools:ignore="MissingTranslation">Changelog of the current version</string>
     <string name="changelogActivity" translatable="false">Changelog</string>
 
     <string name="recipe_preference">The pancake recipe</string>
@@ -112,4 +111,5 @@
     <string name="lightmode_preference_key">lightmode</string>
     <string name="darkmode_preference_key">darkmode</string>
     <string name="system_preference_key">system standard</string>
+    <string name="change">Changelog of the current version</string>
 </resources>
