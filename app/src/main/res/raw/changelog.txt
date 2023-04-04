@@ -5,3 +5,4 @@ happy birthday Palatschinkencounter
 ### Changed
 - layout mainActivity
 - recipe changed
+- string and translation update
