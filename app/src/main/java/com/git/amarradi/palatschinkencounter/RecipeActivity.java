@@ -25,6 +25,7 @@ public class RecipeActivity extends AppCompatActivity {
     @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        setTheme(R.style.Theme_Palatschinkencounter);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipe);
 

@@ -26,6 +26,7 @@ public class ChangelogActivity extends AppCompatActivity {
     int birthdayMonth = 6;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.Theme_Palatschinkencounter);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_changelog);
 

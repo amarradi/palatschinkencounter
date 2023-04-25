@@ -3,23 +3,16 @@
 
     <application
         android:allowBackup="true"
-
         android:icon="@drawable/logo_psc_512_transparent"
         android:label="@string/app_name"
         android:roundIcon="@drawable/logo_psc_512_transparent"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Palatschinkencounter">
-        <activity
-            android:name=".ChangelogActivity"
-            android:exported="true"
-            android:label="@string/changelogActivity"
-            android:icon="@drawable/logo_psc_512_transparent"
-            android:parentActivityName=".MainActivity"/>
+        android:theme="@style/Theme.App.Starting">
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:icon="@drawable/logo_psc_512_transparent"
-            android:theme="@style/Theme.Palatschinkencounter">
+            android:roundIcon="@drawable/logo_psc_512_transparent"
+            android:theme="@style/Theme.App.Starting">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,18 +20,25 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".ChangelogActivity"
+            android:exported="true"
+            android:label="@string/changelogActivity"
+            android:roundIcon="@drawable/logo_psc_512_transparent"
+            android:parentActivityName=".MainActivity"/>
+
+        <activity
             android:name=".SettingActivity"
-            android:icon="@drawable/logo_psc_512_transparent"
+            android:roundIcon="@drawable/logo_psc_512_transparent"
             android:label="@string/settings"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".AboutActivity"
-            android:icon="@drawable/logo_psc_512_transparent"
+            android:roundIcon="@drawable/logoswsplash"
             android:label="@string/about"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".RecipeActivity"
-            android:icon="@drawable/logo_psc_512_transparent"
+            android:roundIcon="@drawable/logo_psc_512_transparent"
             android:label="@string/txt_menu_item_recipe"
             android:parentActivityName=".MainActivity" />
     </application>

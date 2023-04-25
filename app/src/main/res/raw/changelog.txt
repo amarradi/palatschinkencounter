@@ -1,8 +1,4 @@
-## [1.0.13] - 2023-04-04
-happy birthday Palatschinkencounter
+## [1.0.14] - 2023-04-25
 ### Added
-- birthday condition
+* splashscreen added
 ### Changed
-- layout mainActivity
-- recipe changed
-- string and translation update

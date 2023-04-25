@@ -11,6 +11,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewTreeObserver;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -18,6 +20,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
+import androidx.core.splashscreen.SplashScreen;
 import androidx.preference.PreferenceManager;
 
 import java.util.Objects;
@@ -40,6 +43,9 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
     @SuppressLint("DefaultLocale")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.Theme_Palatschinkencounter);
+        // Handle the splash screen transition.
+        SplashScreen splashScreen = SplashScreen.installSplashScreen(this);
 
         requireNonNull(getSupportActionBar()).setDisplayShowHomeEnabled(true);
         Objects.requireNonNull(getSupportActionBar()).setLogo(R.mipmap.logo_psc_round);
@@ -48,7 +54,13 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         Typeface typeface = getResources().getFont(R.font.opensans_regular);
 
         super.onCreate(savedInstanceState);
+
+
+
         setContentView(R.layout.activity_main);
+
+        final View content = findViewById(android.R.id.content);
+
 
         Button counterTextButton = findViewById(R.id.counter_text_button);
         counterTextButton.setTypeface(getResources().getFont(R.font.opensans_bold));
