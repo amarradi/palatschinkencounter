@@ -4,7 +4,7 @@
     <item
         android:width="90dp"
         android:height="81dp"
-        android:drawable="@drawable/logoswsplash"
+        android:drawable="@drawable/logo_psc"
         android:gravity="center"
         tools:ignore="UnusedAttribute" />
 </layer-list>
