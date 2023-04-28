@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+   <cache-path
+        name="shared_images"
+        path="palatschinkencounter/"/>
+    <external-path
+        name="saved_images"
+        path="palatschinkencounter/"/> -->
+    <files-path path="images/" name="myimages" />
+</paths>

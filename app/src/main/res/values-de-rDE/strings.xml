@@ -15,7 +15,7 @@
     aktivieren</string>
     <string name="txViewCounterState">0</string>
     <string name="textviewComplain">Anzahl der gegessenen Palatschinken</string>
-
+    <string name="share_counter">Ich habe Palatschinken %1$s gegessen</string>
     <string name="attention">Zähler zurücksetzen!</string>
     <string name="cancel">Abbrechen</string>
     <string name="resetOK">OK</string>
@@ -97,4 +97,6 @@
     <string name="lightmode_preference_key">Hell (standard)</string>
     <string name="darkmode_preference_key">Dunkel</string>
     <string name="system_preference_key">Systemstandard</string>
+    <string name="item_share">Teilen</string>
+    <string name="share_with">Teilen mit</string>
 </resources>
