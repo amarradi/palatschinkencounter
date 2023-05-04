@@ -19,8 +19,7 @@
     <string name="attention">Zähler zurücksetzen!</string>
     <string name="cancel">Abbrechen</string>
     <string name="resetOK">OK</string>
-    <string name="resetMessage">Möchten Sie den Zähler wirklich zurücksetzen? (echt nicht
-        empfohlen)</string>
+    <string name="resetMessage">Möchten Sie den Zähler wirklich zurücksetzen?</string>
     <string name="intention">Wenn man Palatschinken mag, dann sollten das natürlich die besten der
     Welt sein. Mit dem Palatschinkencounter und dem Rezept ist jetzt jeder in der Lage die besten
     Palatschinken der Welt zuzubereiten und sogar mitzuzählen.</string>
@@ -99,4 +98,6 @@
     <string name="system_preference_key">Systemstandard</string>
     <string name="item_share">Teilen</string>
     <string name="share_with">Teilen mit</string>
+    <string name="ready_to_share">Bereit zum Teilen</string>
+
 </resources>

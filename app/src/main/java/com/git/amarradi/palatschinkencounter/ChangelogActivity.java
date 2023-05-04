@@ -1,5 +1,6 @@
 package com.git.amarradi.palatschinkencounter;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -13,7 +14,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Calendar;
@@ -23,7 +23,8 @@ public class ChangelogActivity extends AppCompatActivity {
     ImageView birthday;
 
     Calendar calendar = Calendar.getInstance();
-    int birthdayMonth = 6;
+
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setTheme(R.style.Theme_Palatschinkencounter);
@@ -34,7 +35,8 @@ public class ChangelogActivity extends AppCompatActivity {
         et_changelog = findViewById(R.id.etChangelog);
 
         birthday = findViewById(R.id.birthday);
-        if (calendar.get(Calendar.MONTH) == birthdayMonth) {
+
+        if (calendar.get(Calendar.MONTH) == Calendar.JUNE) {
             birthday.setVisibility(View.VISIBLE);
         } else {
             birthday.setVisibility(View.INVISIBLE);
@@ -64,17 +66,17 @@ public class ChangelogActivity extends AppCompatActivity {
         try {
             InputStream inputStream = getResources().openRawResource(R.raw.changelog);
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
-            StringBuffer stringBuffer = new StringBuffer();
+            StringBuilder stringBuilder = new StringBuilder();
 
             String s;
 
             while ((s = bufferedReader.readLine()) != null) {
-                stringBuffer.append(s).append("\n");
+                stringBuilder.append(s).append("\n");
             }
-            et_changelog.setText(stringBuffer.toString());
+            et_changelog.setText(stringBuilder.toString());
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

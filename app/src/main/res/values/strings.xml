@@ -18,8 +18,7 @@
     <string name="textviewComplain">Pancake count</string>
 
     <string name="attention">Counter reset!</string>
-    <string name="resetMessage">Do you really want to reset the counter? (really not
-        recommended)</string>
+    <string name="resetMessage">Do you really want to reset the counter?</string>
 
     <!-- Key name for theme preference in SharedPreferences -->
     <string name="theme_key" translatable="false">theme</string>
@@ -106,7 +105,7 @@
 
     <string name="theme_preference">Theme</string>
     <string name="darkmode_preference" translatable="false">darkmode</string>
-    <string translatable="false" name="lightmode_preference">lightmode</string>
+    <string name="lightmode_preference" translatable="false">lightmode</string>
     <string translatable="false" name="system_preference">system default</string>
     <string name="lightmode_preference_key">lightmode</string>
     <string name="darkmode_preference_key">darkmode</string>
@@ -114,4 +113,6 @@
     <string name="change">Changelog of the current version</string>
     <string name="item_share">share</string>
     <string name="share_with">share via</string>
+
+    <string name="ready_to_share">Ready to share</string>
 </resources>

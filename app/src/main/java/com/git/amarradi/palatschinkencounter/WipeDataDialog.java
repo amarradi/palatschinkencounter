@@ -23,11 +23,11 @@ public class WipeDataDialog extends AppCompatDialogFragment {
                 .setNegativeButton(getResources().getString(R.string.cancel),
 
                         new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
 
-                    }
-                })
+                            }
+                        })
                 .setPositiveButton(getResources().getString(R.string.resetOK), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {

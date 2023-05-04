@@ -1,6 +1,6 @@
 ## [1.0.14] - 2023-04-25
 ### Added
 * splashscreen added
-* simple share function
-* new permissions
+* simple share function without extra permissions
 ### Changed
+* changed add Button to "plus"

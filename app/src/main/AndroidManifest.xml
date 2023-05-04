@@ -1,32 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     package="com.git.amarradi.palatschinkencounter">
-
-
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-
-    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
-        tools:ignore="ScopedStorage" />
-
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="@drawable/logo_psc_512_transparent"
         android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@drawable/logo_psc_512_transparent"
         android:supportsRtl="true"
-        android:requestLegacyExternalStorage="true"
         android:theme="@style/Theme.App.Starting">
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.git.amarradi.palatschinkencounter"
-            android:grantUriPermissions="true"
-            android:exported="false">
+            android:exported="false"
+            android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/screenshots" />
+                android:resource="@xml/provider_paths" />
         </provider>
 
         <activity
@@ -44,23 +36,23 @@
             android:name=".ChangelogActivity"
             android:exported="true"
             android:label="@string/changelogActivity"
-            android:roundIcon="@drawable/logo_psc_512_transparent"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity"
+            android:roundIcon="@drawable/logo_psc_512_transparent"/>
         <activity
             android:name=".SettingActivity"
-            android:roundIcon="@drawable/logo_psc_512_transparent"
             android:label="@string/settings"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:roundIcon="@drawable/logo_psc_512_transparent" />
         <activity
             android:name=".AboutActivity"
-            android:roundIcon="@drawable/logoswsplash"
             android:label="@string/about"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:roundIcon="@drawable/logoswsplash" />
         <activity
             android:name=".RecipeActivity"
-            android:roundIcon="@drawable/logo_psc_512_transparent"
             android:label="@string/txt_menu_item_recipe"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:roundIcon="@drawable/logo_psc_512_transparent" />
     </application>
 
 </manifest>

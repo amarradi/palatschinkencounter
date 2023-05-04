@@ -48,18 +48,18 @@
         android:gravity="center"
         android:layout_below="@id/image_startpage">
 
-        <Button
+        <ImageButton
             android:id="@+id/counter_text_button"
-            android:layout_alignTop="@id/counter_text_button"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_below="@id/image_startpage"
-            android:background="@drawable/counter_plus_btn_bg_shape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:fontFamily="@font/opensans_extrabold"
+            android:contentDescription="@string/btnCounter"
+            android:scaleType="centerCrop"
+            android:background="@drawable/counter_plus_btn_bg_shape"
+            app:srcCompat="@drawable/round_add_24"
             android:text="@string/btnCounter"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/md_theme_light_onPrimary"
-            tools:ignore="NotSibling" />
+            tools:ignore="NotSibling"/>
     </RelativeLayout>
-
 </RelativeLayout>

@@ -24,7 +24,7 @@ public class AboutActivity extends AppCompatActivity {
 
         TextView havefun = findViewById(R.id.tvhavefun);
         TextView intention = findViewById(R.id.intention);
-        TextView decision= findViewById(R.id.tv_decision);
+        TextView decision = findViewById(R.id.tv_decision);
         TextView oss = findViewById(R.id.itsos);
         oss.setMovementMethod(LinkMovementMethod.getInstance());
         TextView appVersion = findViewById(R.id.tvVersion);
