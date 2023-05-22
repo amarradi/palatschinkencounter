@@ -1,7 +1,8 @@
-## [1.0.14] - 2023-04-25
+## [1.0.14] - 2023-05-22
 ### Added
 * splashscreen added
-* simple share function without extra permissions
+* simple share function without permissions
+* calculate the quantities of the ingredients
 ### Changed
 * changed add Button to "plus"
 * recipe changed from persons to portions

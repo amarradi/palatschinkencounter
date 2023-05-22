@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         ImageButton counterTextButton = findViewById(R.id.counter_text_button);
 
 
-        textView = findViewById(R.id.textview);
+        textView = findViewById(R.id.tv_counterstate);
         TextView textView_start = findViewById(R.id.tv_startpage);
         textView.setTypeface(typeface);
         textView_start.setTypeface(typeface);

@@ -23,7 +23,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
-        android:id="@+id/textview"
+        android:id="@+id/tv_counterstate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/image_startpage"
