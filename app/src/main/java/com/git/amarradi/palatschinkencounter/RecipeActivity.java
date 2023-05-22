@@ -40,8 +40,6 @@ public class RecipeActivity extends AppCompatActivity implements NotificationDia
 
         ImageButton increase;
 
-
-       // final int[] person = {getResources().getInteger(R.integer.portions)};
         ingredients = findViewById(R.id.ingredients_tv);
         Typeface typeface_regular = getResources().getFont(R.font.opensans_regular);
         Typeface typeface_bold = getResources().getFont(R.font.opensans_bold);

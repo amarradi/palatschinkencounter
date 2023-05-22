@@ -3,6 +3,9 @@
 * splashscreen added
 * simple share function without permissions
 * calculate the quantities of the ingredients
+* counter delete undo function
 ### Changed
 * changed add Button to "plus"
 * recipe changed from persons to portions
+### Removed
+* landscape-mode

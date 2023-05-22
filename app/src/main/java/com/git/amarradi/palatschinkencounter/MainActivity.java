@@ -22,9 +22,12 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.content.FileProvider;
 import androidx.core.splashscreen.SplashScreen;
 import androidx.preference.PreferenceManager;
+
+import com.google.android.material.snackbar.Snackbar;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -37,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
     public static final String COUNTER = "text";
     public static final String NIGHT_MODE = "night_mode";
     public static final String SCREENSHOT_PNG = "screenshot.png";
+    private CoordinatorLayout coordinatorLayout;
     @SuppressLint("DefaultLocale")
 
     private int counter = 0;
@@ -59,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         setContentView(R.layout.activity_main);
 
         ImageButton counterTextButton = findViewById(R.id.counter_text_button);
-
+        coordinatorLayout = findViewById(R.id.coordinatorLayout);
 
         textView = findViewById(R.id.tv_counterstate);
         TextView textView_start = findViewById(R.id.tv_startpage);
@@ -117,7 +121,11 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
     @SuppressLint({"StringFormatMatches", "ResourceType"})
     private void shareImage() {
         Resources resources = getResources();
-        Toast.makeText(this, resources.getString(R.string.ready_to_share), Toast.LENGTH_SHORT).show();
+
+        Snackbar snackbar = Snackbar.make(coordinatorLayout,
+                resources.getString(R.string.ready_to_share),Snackbar.LENGTH_LONG);
+        snackbar.show();
+
         ImageButton imageButton = findViewById(R.id.counter_text_button);
         imageButton.setVisibility(View.INVISIBLE);
         View view1 = getWindow().getDecorView().getRootView();
@@ -215,10 +223,20 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
     }
 
     public void reset_counter() {
+        Resources resources = getResources();
+        int undo = counter;
         counter = 0;
         updateViews();
         save_data();
-        Toast.makeText(this, this.getString(R.string.reset), Toast.LENGTH_SHORT).show();
+        Snackbar snackbar = Snackbar.make(coordinatorLayout,resources.getString(R.string.reset),Snackbar.LENGTH_LONG);
+        snackbar.setAction(resources.getString(R.string.undo), new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                counter = undo;
+                updateViews();
+            }
+        });
+        snackbar.show();
     }
 
     @Override

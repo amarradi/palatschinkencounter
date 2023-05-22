@@ -123,4 +123,5 @@
     <string name="notification">notification</string>
     <string name="portionstoosmall">Less than 1 portions makes no sense, because no one really gets full from it.</string>
     <string name="OK">OK</string>
+    <string name="undo">UNDO</string>
 </resources>
