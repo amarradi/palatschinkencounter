@@ -96,6 +96,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         return true;
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
@@ -107,6 +108,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
             }
             case R.id.item_share: {
                 shareImage();
+                return true;
             }
         }
         return super.onOptionsItemSelected(item);

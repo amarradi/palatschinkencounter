@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="btnCounter">+1</string>
     <string name="bibleverse">\'Also: Iss dein Brot mit Freude, und trink deinen Wein mit frohem
         Herzen! Denn schon längst hat Gott Gefallen an deinem Tun.\' Prediger 9:7</string>
@@ -16,7 +15,7 @@
     <string name="txViewCounterState">0</string>
     <string name="textviewComplain">Anzahl der gegessenen Palatschinken</string>
     <string name="share_counter">Ich habe Palatschinken %1$s gegessen</string>
-    <string name="attention">Zähler zurücksetzen!</string>
+    <string name="attention">Zähler zurücksetzen</string>
     <string name="cancel">Abbrechen</string>
     <string name="resetOK">OK</string>
     <string name="resetMessage">Möchten Sie den Zähler wirklich zurücksetzen?</string>
@@ -31,12 +30,12 @@
     <string name="txt_menu_item_recipe">Das Palatschinkenrezept</string>
     <string name="txt_recipe_entry_txt">Rezept für die besten ungarischen Pfannkuchen vom Balaton</string>
     <string-array name="ingredients_array">
-        <item>200 Gramm Weizenmehl (Typ 405)</item>
-        <item>2 Eier</item>
-        <item>300 ml Milch</item>
-        <item>300 ml Mineralwasser, vorzugsweise mit Kohlensäure</item>
-        <item>1 Prise Salz</item>
-        <item>2 Esslöffel Sonnenblumenöl</item>
+        <item>%1$d Gramm Weizenmehl (Typ 405)</item>
+        <item>%1$d Eier</item>
+        <item>%1$d ml Milch</item>
+        <item>%1$d ml Mineralwasser, vorzugsweise mit Kohlensäure</item>
+        <item>%1$d Prise Salz</item>
+        <item>%1$d Esslöffel Sonnenblumenöl</item>
 
     </string-array>
     <string-array name="preparation_array">
@@ -77,7 +76,7 @@
     <string name="reset">Zähler zurückgesetzt</string>
     <string name="havefun">Habt Spaß :-)</string>
 
-    <string name="pancake_ingredients">Zutaten für 1$d Portion</string>
+    <string name="pancake_ingredients">Zutaten für %1$d Portion</string>
     <string name="pancake_preparation">Die Zubereitung</string>
     <string name="itsos">Dieses Projekt ist OpenSource und auf\n
         <a href="https://github.com/amarradi/palatschinkencounter">GitHub</a> zu finden.</string>
@@ -102,6 +101,6 @@
     <string name="increase_button">increase</string>
     <string name="decrease_button">decrease</string>
     <string name="notification">Hinweis</string>
-    <string name="portionstoosmall">Weniger als 0 Portionen macht keinen Sinn, wer soll davon satt werden?</string>
+    <string name="portionstoosmall">Weniger als 1 Portionen macht keinen Sinn, denn davon wird keiner wirklich satt.</string>
     <string name="OK">OK</string>
 </resources>

@@ -5,11 +5,9 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -43,7 +41,7 @@ public class RecipeActivity extends AppCompatActivity implements NotificationDia
         ImageButton increase;
 
 
-        final int[] person = {getResources().getInteger(R.integer.portions)};
+       // final int[] person = {getResources().getInteger(R.integer.portions)};
         ingredients = findViewById(R.id.ingredients_tv);
         Typeface typeface_regular = getResources().getFont(R.font.opensans_regular);
         Typeface typeface_bold = getResources().getFont(R.font.opensans_bold);
@@ -51,7 +49,8 @@ public class RecipeActivity extends AppCompatActivity implements NotificationDia
         recipe_head.setTypeface(typeface_bold);
 
         ingredients.setTypeface(typeface_regular);
-        ingredients.setText(String.format(getResources().getString(R.string.pancake_ingredients), person[0]));
+
+        ingredients.setText(String.format(getResources().getString(R.string.pancake_ingredients), portions));
 
         RecyclerView recyclerView_Ingredients = findViewById(R.id.recyclerView_ingredients);
 
@@ -75,18 +74,14 @@ public class RecipeActivity extends AppCompatActivity implements NotificationDia
         increase.setOnClickListener(v -> {
             portions++;
             ingredients.setText(String.format(getResources().getString(R.string.pancake_ingredients), portions));
-            Log.d("setOnClickListener","value of persons: "+ portions);
-
             ingredientsModels.clear();
             recylerViewIngredientsAdapter.notifyDataSetChanged();
             setupRecipeModels(portions);
-
         });
 
         decrease = findViewById(R.id.decrease);
-
         decrease.setOnClickListener(v -> {
-            if(portions>=1){
+            if(portions>1){
                 portions--;
                 ingredients.setText(String.format(getResources().getString(R.string.pancake_ingredients), portions));
                 ingredientsModels.clear();
@@ -94,7 +89,6 @@ public class RecipeActivity extends AppCompatActivity implements NotificationDia
                 setupRecipeModels(portions);
             } else{
                 ingredients.setText(String.format(getResources().getString(R.string.pancake_ingredients), portions));
-
                 NotificationDialog notificationDialog = new NotificationDialog();
                 notificationDialog.show(getSupportFragmentManager(),getResources().getString(R.string.notification));
             }
@@ -108,9 +102,12 @@ public class RecipeActivity extends AppCompatActivity implements NotificationDia
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
+        inflater.inflate(R.menu.menu_setting, menu);
+
         return true;
     }
+
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -123,9 +120,7 @@ public class RecipeActivity extends AppCompatActivity implements NotificationDia
     }
 
     public void setupRecipeModels(int person) {
-        Log.d("setupRecipeModels:", "value of person " + person);
         Resources resources = getResources();
-
         int[] ingredients = resources.getIntArray(R.array.Ingredients);
         String[] strings_ingredients = resources.getStringArray(R.array.ingredients_array);
         int count = 0;
@@ -136,15 +131,12 @@ public class RecipeActivity extends AppCompatActivity implements NotificationDia
             }
     }
 
-
     private void setupPreparationModels() {
-
         String[] strings_preparation = getResources().getStringArray(R.array.preparation_array);
         for (String s : strings_preparation) {
             preparationModels.add(new RecipeModel(s));
         }
     }
-
 
     @Override
     public void onOKClicked() {

@@ -17,7 +17,7 @@
     <string name="txViewCounterState">0</string>
     <string name="textviewComplain">Pancake count</string>
 
-    <string name="attention">Counter reset!</string>
+    <string name="attention">Counter reset</string>
     <string name="resetMessage">Do you really want to reset the counter?</string>
 
     <!-- Key name for theme preference in SharedPreferences -->
@@ -121,6 +121,6 @@
     <string name="increase_description">Increase the amounts</string>
     <string name="decrease_description">decrease the amounts</string>
     <string name="notification">notification</string>
-    <string name="portionstoosmall">Less than 0 portion makes no sense, who is going to get full from that?</string>
+    <string name="portionstoosmall">Less than 1 portions makes no sense, because no one really gets full from it.</string>
     <string name="OK">OK</string>
 </resources>
