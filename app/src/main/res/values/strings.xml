@@ -111,7 +111,7 @@
     <string name="lightmode_preference_key">lightmode</string>
     <string name="darkmode_preference_key">darkmode</string>
     <string name="system_preference_key">system standard</string>
-    <string name="change">Changelog of the current version</string>
+    <string name="change">Changelog of the current version and licence</string>
     <string name="item_share">share</string>
     <string name="share_with">share via</string>
 
@@ -129,4 +129,5 @@
     <string name="changelog_title">What\'s New</string>
     <string name="changelog_ok_button">OK</string>
     <string name="changelog_show_full">More…</string>
+    <string name="birthdayCake">Birthdaycake</string>
 </resources>

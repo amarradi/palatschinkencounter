@@ -5,16 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ChangelogActivity" android:layout_gravity="center">
+    android:scrollbars="vertical"
+    android:scrollbarStyle="insideInset"
+    tools:context=".ChangelogActivity"
+    android:layout_margin="10dp"
+    >
 
 
     <TextView
         android:id="@+id/tvChangeloghead"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:text="@string/change"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         app:layout_constraintEnd_toEndOf="parent"
         android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,15 +28,15 @@
         android:id="@+id/birthday"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_baseline_cake_24" />
-
+        app:srcCompat="@drawable/ic_baseline_cake_24"
+        android:contentDescription="@string/birthdayCake" />
     <TextView
         android:id="@+id/etChangelog"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:autofillHints="@string/change"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="16dp"
-        android:gravity="start|top" />
+
+        android:gravity="start|top"
+        android:textAppearance="?android:attr/textAppearanceSmall"/>
+
 </androidx.appcompat.widget.LinearLayoutCompat>
