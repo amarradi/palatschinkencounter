@@ -18,7 +18,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
@@ -34,6 +33,8 @@ import java.io.FileOutputStream;
 import java.io.OutputStream;
 import java.util.Objects;
 
+import de.cketti.library.changelog.ChangeLog;
+
 public class MainActivity extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener, WipeDataDialog.WipeDialogListener {
 
     public static final String SHARED_PREFS = "sharedPrefs";
@@ -41,6 +42,8 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
     public static final String NIGHT_MODE = "night_mode";
     public static final String SCREENSHOT_PNG = "screenshot.png";
     private CoordinatorLayout coordinatorLayout;
+
+ 
     @SuppressLint("DefaultLocale")
 
     private int counter = 0;
@@ -61,6 +64,11 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ChangeLog cl = new ChangeLog(this);
+        if (cl.isFirstRun()) {
+            cl.getLogDialog().show();
+        }
 
         ImageButton counterTextButton = findViewById(R.id.counter_text_button);
         coordinatorLayout = findViewById(R.id.coordinatorLayout);

@@ -1,11 +1,7 @@
 ## [1.0.14] - 2023-05-22
-### Added
-* splashscreen added
-* simple share function without permissions
-* calculate the quantities of the ingredients
-* counter delete undo function
-### Changed
-* changed add Button to "plus"
-* recipe changed from persons to portions
-### Removed
-* landscape-mode
+neue Änderungshistorie eingefügt
+Übersetzungen überarbeitet
+einen splashscreen beim Start der App eingefügt
+eine einfache Teilen-Funktion über den bekannten share-Button (rechts oben) eingefügt
+das Löschen des Counters kann jetzt rückgängig gemacht werden
+den Landscape-modus entfernt
