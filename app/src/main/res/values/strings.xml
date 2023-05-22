@@ -48,15 +48,12 @@
     <!-- recipe -->
 
     <string-array name="ingredients_array">
-
-        <item>200 Gramm of wheat flour (Type 405)</item>
-        <item>2 eggs</item>
-        <item>300 ml of milk</item>
-        <item>300 ml mineral water preferably sparkling</item>
-        <item>1 pinch of salt</item>
-        <item>2 tablespoon of sunflower oil</item>
-        <item>24 cm pan</item>
-        <item>a little bit of oil or lard for baking</item>
+        <item>%1$d Gramm of wheat flour (Type 405)</item>
+        <item>%1$d eggs</item>
+        <item>%1$d ml of milk</item>
+        <item>%1$d ml mineral water preferably sparkling</item>
+        <item>%1$d pinch of salt</item>
+        <item>%1$d tablespoon of sunflower oil</item>
     </string-array>
     <string-array name="preparation_array">
 
@@ -90,9 +87,13 @@
     <string name="txt_menu_item_recipe">The pancake recipe</string>
     <string name="recipe_summary">The recipe for the best pancakes ever</string>
 
-    <string name="pancake_ingredients">I take following ingredients</string>
 
-    <string name="pancake_preparation">Preparation Now its time for baking the pancakes :-)</string>
+    <string name="pancake_ingredients">
+        Ingredients for %1$d portions
+    </string>
+
+
+    <string name="pancake_preparation">The preparation</string>
     <string name="itsos">This project is open source and can be found under\n
         <a href="https://github.com/amarradi/palatschinkencounter">GitHub</a>.</string>
 
@@ -100,8 +101,8 @@
     <string name="changelogActivity" translatable="false">Changelog</string>
 
     <string name="recipe_preference">The pancake recipe</string>
-    <string name="txt_recipe_entry_txt">I take for the best Hungarian pancakes from the
-        Balaton for 2 people the following ingredients.</string>
+    <string name="txt_recipe_entry_txt">Recipe for the best hungarian pancakes from the
+        Balaton</string>
 
     <string name="theme_preference">Theme</string>
     <string name="darkmode_preference" translatable="false">darkmode</string>
@@ -115,4 +116,11 @@
     <string name="share_with">share via</string>
 
     <string name="ready_to_share">Ready to share</string>
+    <string name="increase_button">increase</string>
+    <string name="decrease_button">decrease</string>
+    <string name="increase_description">Increase the amounts</string>
+    <string name="decrease_description">decrease the amounts</string>
+    <string name="notification">notification</string>
+    <string name="portionstoosmall">Less than 0 portion makes no sense, who is going to get full from that?</string>
+    <string name="OK">OK</string>
 </resources>

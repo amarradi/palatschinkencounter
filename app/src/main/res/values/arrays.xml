@@ -6,10 +6,21 @@
         <item>@string/darkmode_preference_key</item>
         <item>@string/system_preference_key</item>
     </array>
-
     <array name="design_mode_preference_value">
         <item>@string/lightmode_preference</item>
         <item>@string/darkmode_preference</item>
         <item>@string/system_preference</item>
     </array>
+    <!-- Ingredients -->
+
+    <integer-array name="Ingredients">
+        <item name="wheat">200</item>
+        <item name="eggs">2</item>
+        <item name="milk">300</item>
+        <item name="water">300</item>
+        <item name="salt">1</item>
+        <item name="oil">1</item>
+    </integer-array>
+    <integer name="portions">1</integer>
+
 </resources>

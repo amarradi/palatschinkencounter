@@ -4,3 +4,4 @@
 * simple share function without extra permissions
 ### Changed
 * changed add Button to "plus"
+* recipe changed from persons to portions

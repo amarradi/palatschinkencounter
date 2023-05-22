@@ -15,7 +15,7 @@
         <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
     </style>
     <style name="CustomCardview" parent="CardView">
-        <item name="cardBackgroundColor">@color/md_theme_light_surface</item>
+        <item name="cardBackgroundColor">@color/md_theme_light_onPrimary</item>
     </style>
 
 
