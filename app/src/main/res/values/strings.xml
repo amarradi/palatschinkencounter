@@ -37,7 +37,7 @@
     <string name="version" translatable="false">%1$s</string>
     <string name="share_counter">I have eaten %1$s pancakes</string>
     <string name="havefun">have fun :-)</string>
-    <string name="resethowto">It is not necessary and under absolutely no circumstances recommended to ever reset the counter. If you want to do it anyway, you should tap and hold your counter on the home page. After resetting the counter is permanently deleted.</string>
+    <string name="resethowto">It is not necessary and under absolutely no circumstances recommended to ever reset the counter. If you want to do it anyway, you should tap and hold your counter on the home page. After resetting the counter and letting the time to undo the counter elapse, the counter will be permanently deleted.</string>
     <string name="intention">If you like pancakes, then of course they should be the best in the
         world. With the pancake counter and the recipe, everyone is now able to prepare the best
         pancakes in the world and even track them.</string>
@@ -107,7 +107,7 @@
     <string name="theme_preference">Theme</string>
     <string name="darkmode_preference" translatable="false">darkmode</string>
     <string name="lightmode_preference" translatable="false">lightmode</string>
-    <string translatable="false" name="system_preference">system default</string>
+    <string name="system_preference" translatable="false">system default</string>
     <string name="lightmode_preference_key">lightmode</string>
     <string name="darkmode_preference_key">darkmode</string>
     <string name="system_preference_key">system standard</string>
