@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
     public static final String SCREENSHOT_PNG = "screenshot.png";
     private CoordinatorLayout coordinatorLayout;
 
- 
+
     @SuppressLint("DefaultLocale")
 
     private int counter = 0;
