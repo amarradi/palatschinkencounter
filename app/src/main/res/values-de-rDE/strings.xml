@@ -16,7 +16,7 @@
     <string name="textviewComplain">Anzahl der gegessenen Palatschinken</string>
     <string name="share_counter">Ich habe Palatschinken %1$s gegessen</string>
     <string name="attention">Zähler zurücksetzen</string>
-    <string name="cancel">Abbrechen</string>
+    <string name="cancel">Nein</string>
     <string name="resetOK">OK</string>
     <string name="resetMessage">Möchten Sie den Zähler wirklich zurücksetzen?</string>
     <string name="intention">Wenn man Palatschinken mag, dann sollten das natürlich die besten der

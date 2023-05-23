@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
+    android:layout_margin="10dp"
     android:scrollbars="vertical">
 
     <LinearLayout
@@ -17,7 +18,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:padding="5dp"
             android:text="@string/app_name"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -27,21 +27,21 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:gravity="center"
-            android:padding="5dp"
+
             android:text="@string/version"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="100dp"
+            android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_margin="10dp"
+
             android:contentDescription="@string/image"
             android:src="@drawable/logo_psc_512_transparent" />
         <View
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_margin="5dp"
+            android:layout_height="1dp"
+
             android:background="?android:attr/listDivider" />
 
         <TextView
@@ -50,13 +50,13 @@
             android:layout_height="wrap_content"
             android:text="@string/intention"
             android:gravity="center"
-            android:padding="5dp"
+
             android:textAppearance="?android:attr/textAppearanceMedium"/>
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_margin="5dp"
+            android:layout_height="1dp"
+
             android:background="?android:attr/listDivider" />
 
         <TextView
@@ -65,7 +65,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
             android:gravity="center"
-            android:padding="5dp"
+
             android:text="@string/really_important"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -75,29 +75,30 @@
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
             android:gravity="center"
-            android:padding="5dp"
+
             android:text="@string/bibleverse"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_margin="5dp"
+            android:layout_height="1dp"
+
             android:background="?android:attr/listDivider" />
 
         <TextView
             android:id="@+id/tvhavefun"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+
             android:text="@string/havefun"
             android:textColor="@color/md_theme_light_secondaryContainer"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_margin="5dp"
+            android:layout_height="1dp"
+
+
             android:background="?android:attr/listDivider" />
 
 
@@ -105,16 +106,20 @@
             android:id="@+id/resethowto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+
             android:gravity="center"
             android:text="@string/resethowto"
             android:textAppearance="?android:attr/textAppearanceSmall" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
         <TextView
             android:id="@+id/itsos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_margin="10dp"
+
             android:gravity="center"
             android:text="@string/itsos"
             android:textAppearance="?android:attr/textAppearanceSmall" />

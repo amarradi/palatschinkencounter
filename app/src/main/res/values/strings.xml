@@ -28,8 +28,8 @@
     <string name="darkmode_preference_option_value" translatable="false">darkmode</string>
 
 
-    <string name="cancel" tools:ignore="ButtonCase">cancel</string>
-    <string name="resetOK">yes</string>
+    <string name="cancel" tools:ignore="ButtonCase">NO</string>
+    <string name="resetOK">YES</string>
     <string name="about">About the App</string>
     <string name="about_summary">What I want to tell about this app</string>
     <string name="image">image</string>
