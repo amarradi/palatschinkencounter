@@ -7,10 +7,5 @@
         android:icon="@drawable/ic_baseline_settings_24"
         android:title="@string/settings"
         app:showAsAction="ifRoom" />
-    <item
-        android:id="@+id/item_share"
-        app:showAsAction="ifRoom"
-        android:icon="@drawable/baseline_share_24"
-        android:title="@string/share_with" />
 
 </menu>

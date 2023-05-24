@@ -18,6 +18,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
@@ -26,6 +27,8 @@ import androidx.core.content.FileProvider;
 import androidx.core.splashscreen.SplashScreen;
 import androidx.preference.PreferenceManager;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.io.File;
@@ -42,8 +45,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
     public static final String NIGHT_MODE = "night_mode";
     public static final String SCREENSHOT_PNG = "screenshot.png";
     private CoordinatorLayout coordinatorLayout;
-
-
+    FloatingActionButton floatingActionButton;
     @SuppressLint("DefaultLocale")
 
     private int counter = 0;
@@ -64,11 +66,19 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        floatingActionButton = findViewById(R.id.floatingActionButton);
+
+        floatingActionButton.setOnClickListener(v -> {
+            shareImage();
+        });
+
+
 
         ChangeLog cl = new ChangeLog(this);
         if (cl.isFirstRun()) {
             cl.getLogDialog().show();
         }
+
 
         ImageButton counterTextButton = findViewById(R.id.counter_text_button);
         coordinatorLayout = findViewById(R.id.coordinatorLayout);
@@ -112,16 +122,10 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        switch (item.getItemId()) {
-            case R.id.item_setting: {
-                Intent intentSetting = new Intent(this, SettingActivity.class);
-                startActivity(intentSetting);
-                return true;
-            }
-            case R.id.item_share: {
-                shareImage();
-                return true;
-            }
+        if (item.getItemId() == R.id.item_setting) {
+            Intent intentSetting = new Intent(this, SettingActivity.class);
+            startActivity(intentSetting);
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -136,12 +140,14 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
 
         ImageButton imageButton = findViewById(R.id.counter_text_button);
         imageButton.setVisibility(View.INVISIBLE);
+
+        floatingActionButton.setVisibility(View.INVISIBLE);
         View view1 = getWindow().getDecorView().getRootView();
         view1.setDrawingCacheEnabled(true);
         Bitmap bitmap = Bitmap.createBitmap(view1.getDrawingCache());
         view1.setDrawingCacheEnabled(false);
         imageButton.setVisibility(View.VISIBLE);
-
+        floatingActionButton.setVisibility(View.VISIBLE);
         try {
             File cacheFile = new File(getApplicationContext().getCacheDir(), SCREENSHOT_PNG);
             OutputStream outputStream = new FileOutputStream(cacheFile);

@@ -27,6 +27,7 @@
         Palatschinken zufrieden. Im eigenen Leben ist das doch genauso. Nur das beste ist gerade
         gut genug. Hast du die beste Entscheidung deines Lebens bereits getroffen? <b>Hast Du
             dein Leben Jesus übergeben?</b></string>
+    <string name="share">Über den neuen Button in der rechten unteren Ecke kann man seinen aktuellen Zählerstand mit Freunden teilen.</string>
     <string name="txt_menu_item_recipe">Das Palatschinkenrezept</string>
     <string name="txt_recipe_entry_txt">Rezept für die besten ungarischen Pfannkuchen vom Balaton</string>
     <string-array name="ingredients_array">
@@ -110,4 +111,5 @@
     <string name="changelog_ok_button">OK</string>
     <string name="changelog_show_full">Mehr</string>
     <string name="birthdayCake">Geburtstagskuchen</string>
+    <string name="item_home">home</string>
 </resources>

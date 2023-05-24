@@ -37,6 +37,7 @@
     <string name="version" translatable="false">%1$s</string>
     <string name="share_counter">I have eaten %1$s pancakes</string>
     <string name="havefun">have fun :-)</string>
+    <string name="share">You can share your current meter reading with friends using the new button in the bottom right corner.</string>
     <string name="resethowto">It is not necessary and under absolutely no circumstances recommended to ever reset the counter. If you want to do it anyway, you should tap and hold your counter on the home page. After resetting the counter and letting the time to undo the counter elapse, the counter will be permanently deleted.</string>
     <string name="intention">If you like pancakes, then of course they should be the best in the
         world. With the pancake counter and the recipe, everyone is now able to prepare the best
@@ -130,4 +131,5 @@
     <string name="changelog_ok_button">OK</string>
     <string name="changelog_show_full">More…</string>
     <string name="birthdayCake">Birthdaycake</string>
+    <string name="item_home">home</string>
 </resources>

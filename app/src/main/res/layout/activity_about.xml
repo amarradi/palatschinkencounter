@@ -68,7 +68,10 @@
 
             android:text="@string/really_important"
             android:textAppearance="?android:attr/textAppearanceMedium" />
-
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
         <TextView
             android:id="@+id/tv_bibleverse"
             android:layout_width="wrap_content"
@@ -97,10 +100,19 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-
-
             android:background="?android:attr/listDivider" />
 
+        <TextView
+            android:id="@+id/tv_share"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/share"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
 
         <TextView
             android:id="@+id/resethowto"
