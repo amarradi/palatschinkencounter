@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
-    <release version="1.0.14" versioncode="17" >
+    <release version="1.0.14" versioncode="18" >
         <change>neue Änderungshistorie eingefügt</change>
         <change>Übersetzungen überarbeitet</change>
         <change>einen splashscreen beim Start der App eingefügt</change>

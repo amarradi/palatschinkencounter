@@ -102,7 +102,7 @@
     <string name="increase_button">increase</string>
     <string name="decrease_button">decrease</string>
     <string name="notification">Hinweis</string>
-    <string name="portionstoosmall">Weniger als 1 Portionen macht keinen Sinn, denn davon wird keiner wirklich satt.</string>
+    <string name="portionstoosmall">Weniger als 1 Portion macht keinen Sinn, denn davon wird wirklich keiner satt.</string>
     <string name="OK">OK</string>
     <string name="undo">Rückgängig</string>
 

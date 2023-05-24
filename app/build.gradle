@@ -9,7 +9,7 @@ android {
         applicationId "com.git.amarradi.palatschinkencounter"
         minSdkVersion 26
         targetSdkVersion 33
-        versionCode 17
+        versionCode 18
         versionName "1.0.14"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"

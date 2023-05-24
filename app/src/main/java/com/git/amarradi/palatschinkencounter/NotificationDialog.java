@@ -17,13 +17,12 @@ public class NotificationDialog extends AppCompatDialogFragment {
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(requireActivity(), R.style.MyAlertDialogTheme);
         builder.setTitle(getResources().getString(R.string.notification))
-                .setIcon(R.drawable.logo_psc_512_transparent)
+                .setIcon(R.drawable.outline_info_24)
                 .setMessage(getResources().getString(R.string.portionstoosmall))
                 .setNeutralButton(getResources().getString(R.string.OK),
                         new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-
                             }
                         });
 

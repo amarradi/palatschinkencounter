@@ -122,7 +122,7 @@
     <string name="increase_description">Increase the amounts</string>
     <string name="decrease_description">decrease the amounts</string>
     <string name="notification">notification</string>
-    <string name="portionstoosmall">Less than 1 portions makes no sense, because no one really gets full from it.</string>
+    <string name="portionstoosmall">Less than 1 portion makes no sense, because no one really gets full from it.</string>
     <string name="OK">OK</string>
     <string name="undo">UNDO</string>
 
