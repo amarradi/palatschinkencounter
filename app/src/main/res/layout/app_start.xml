@@ -56,7 +56,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_counterstate"
         app:layout_constraintVertical_bias="0.237"
-        app:srcCompat="@drawable/logo_psc_512_transparent" />
+        app:srcCompat="@drawable/logo_psc" />
 
     <ImageButton
         android:id="@+id/counter_text_button"

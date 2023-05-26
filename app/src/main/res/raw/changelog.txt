@@ -1,9 +1,5 @@
 ## [1.0.14] - 2023-05-22
-neue Änderungshistorie eingefügt
-Übersetzungen überarbeitet
-einen splashscreen beim Start der App eingefügt
-eine einfache Teilen-Funktion über den bekannten share-Button eingefügt
-das Löschen des Counters kann jetzt rückgängig gemacht werden
-den Landscape-modus entfernt
+App für den Landscape-Modus gesperrt
+Die App benötigt jetzt mindestens Android 9
 ## Lizenzen
 ckChangeLog - http://www.apache.org/licenses/LICENSE-2.0

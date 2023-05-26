@@ -1,5 +1,7 @@
 package com.git.amarradi.palatschinkencounter;
 
+import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -25,6 +27,7 @@ public class RecipeActivity extends AppCompatActivity implements NotificationDia
 
     ArrayList<RecipeModel> ingredientsModels = new ArrayList<>();
     ArrayList<RecipeModel> preparationModels = new ArrayList<>();
+    private static final int SCREEN_ORIENTATION_UNSPECIFIED = SCREEN_ORIENTATION_PORTRAIT;
 
     private int portions = 1;
 
@@ -34,10 +37,9 @@ public class RecipeActivity extends AppCompatActivity implements NotificationDia
         setTheme(R.style.Theme_Palatschinkencounter);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipe);
+        setRequestedOrientation(SCREEN_ORIENTATION_UNSPECIFIED);
         TextView ingredients;
-
         ImageButton decrease;
-
         ImageButton increase;
 
         ingredients = findViewById(R.id.ingredients_tv);

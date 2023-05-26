@@ -1,5 +1,7 @@
 package com.git.amarradi.palatschinkencounter;
 
+import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,12 +15,12 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Calendar;
 
 public class ChangelogActivity extends AppCompatActivity {
+    private static final int SCREEN_ORIENTATION_UNSPECIFIED = SCREEN_ORIENTATION_PORTRAIT;
     TextView tv_changelog, et_changelog;
     ImageView birthday;
 
@@ -30,7 +32,7 @@ public class ChangelogActivity extends AppCompatActivity {
         setTheme(R.style.Theme_Palatschinkencounter);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_changelog);
-
+        setRequestedOrientation(SCREEN_ORIENTATION_UNSPECIFIED);
         tv_changelog = findViewById(R.id.tvChangeloghead);
         et_changelog = findViewById(R.id.etChangelog);
 
@@ -74,8 +76,6 @@ public class ChangelogActivity extends AppCompatActivity {
                 stringBuilder.append(s).append("\n");
             }
             et_changelog.setText(stringBuilder.toString());
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -7,10 +7,10 @@ android {
 
     defaultConfig {
         applicationId "com.git.amarradi.palatschinkencounter"
-        minSdkVersion 26
+        minSdkVersion 28
         targetSdkVersion 33
-        versionCode 18
-        versionName "1.0.14"
+        versionCode 19
+        versionName "1.0.15"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

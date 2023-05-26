@@ -1,5 +1,7 @@
 package com.git.amarradi.palatschinkencounter;
 
+import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -15,16 +17,23 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class AboutActivity extends AppCompatActivity {
 
+    private static final int SCREEN_ORIENTATION_UNSPECIFIED = SCREEN_ORIENTATION_PORTRAIT;
+
+    @SuppressLint("SourceLockedOrientationActivity")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         setTheme(R.style.Theme_Palatschinkencounter);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
+        setRequestedOrientation(SCREEN_ORIENTATION_UNSPECIFIED);
+
         TextView title = findViewById(R.id.tvAppName);
 
         TextView havefun = findViewById(R.id.tvhavefun);
         TextView intention = findViewById(R.id.intention);
         TextView decision = findViewById(R.id.tv_decision);
+        TextView bibleverse = findViewById(R.id.tv_bibleverse);
+
         TextView oss = findViewById(R.id.itsos);
         oss.setMovementMethod(LinkMovementMethod.getInstance());
         TextView appVersion = findViewById(R.id.tvVersion);
@@ -37,10 +46,12 @@ public class AboutActivity extends AppCompatActivity {
         oss.setTypeface(typeface_regular);
         intention.setTypeface(typeface_regular);
         decision.setTypeface(typeface_regular);
+        bibleverse.setTypeface(typeface_regular);
         TextView resethow = findViewById(R.id.resethowto);
         resethow.setTypeface(typeface_regular);
         @SuppressLint({"StringFormatInvalid", "LocalSuppress"}) String version = String.format(getResources().getString(R.string.version), BuildConfig.VERSION_NAME);
         appVersion.setText(version);
+
     }
 
     @Override

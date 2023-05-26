@@ -1,6 +1,7 @@
 package com.git.amarradi.palatschinkencounter;
 
 
+import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
 import static java.lang.String.format;
 import static java.util.Objects.requireNonNull;
 
@@ -9,7 +10,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
+import android.graphics.Canvas;
 import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
@@ -18,7 +21,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
@@ -27,13 +29,12 @@ import androidx.core.content.FileProvider;
 import androidx.core.splashscreen.SplashScreen;
 import androidx.preference.PreferenceManager;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.OutputStream;
+import java.nio.file.Files;
 import java.util.Objects;
 
 import de.cketti.library.changelog.ChangeLog;
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
     public static final String COUNTER = "text";
     public static final String NIGHT_MODE = "night_mode";
     public static final String SCREENSHOT_PNG = "screenshot.png";
+    private static final int SCREEN_ORIENTATION_UNSPECIFIED = SCREEN_ORIENTATION_PORTRAIT;
     private CoordinatorLayout coordinatorLayout;
     FloatingActionButton floatingActionButton;
     @SuppressLint("DefaultLocale")
@@ -66,6 +68,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setRequestedOrientation(SCREEN_ORIENTATION_UNSPECIFIED);
         floatingActionButton = findViewById(R.id.floatingActionButton);
 
         floatingActionButton.setOnClickListener(v -> {
@@ -143,14 +146,12 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
 
         floatingActionButton.setVisibility(View.INVISIBLE);
         View view1 = getWindow().getDecorView().getRootView();
-        view1.setDrawingCacheEnabled(true);
-        Bitmap bitmap = Bitmap.createBitmap(view1.getDrawingCache());
-        view1.setDrawingCacheEnabled(false);
+        Bitmap bitmap = getBitMapFromView(view1);
         imageButton.setVisibility(View.VISIBLE);
         floatingActionButton.setVisibility(View.VISIBLE);
         try {
             File cacheFile = new File(getApplicationContext().getCacheDir(), SCREENSHOT_PNG);
-            OutputStream outputStream = new FileOutputStream(cacheFile);
+            OutputStream outputStream = Files.newOutputStream(cacheFile.toPath());
             bitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream);
             outputStream.flush();
             outputStream.close();
@@ -167,6 +168,16 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         shareIntent.putExtra(Intent.EXTRA_STREAM, contentUri);
         shareIntent.putExtra(Intent.EXTRA_TEXT, String.format(resources.getString(R.string.share_counter), counter));
         startActivity(Intent.createChooser(shareIntent, String.format(resources.getString(R.string.share_with))));
+    }
+
+    private Bitmap getBitMapFromView(View view) {
+        Bitmap bitmap;
+        bitmap = Bitmap.createBitmap(view.getWidth(), view.getHeight(), Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(bitmap);
+        Drawable background = view.getBackground();
+        background.draw(canvas);
+        view.draw(canvas);
+        return bitmap;
     }
 
     private void setupSharedPreferences() {

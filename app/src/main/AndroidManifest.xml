@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.git.amarradi.palatschinkencounter">
     <application
+        android:screenOrientation="portrait"
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="@drawable/logo_psc_512_transparent"
