@@ -1,5 +1,6 @@
-## [1.0.14] - 2023-05-22
+## [1.0.14] - 2023-05-26
 App für den Landscape-Modus gesperrt
 Die App benötigt jetzt mindestens Android 9
+kleine Fehler sind behoben worden
 ## Lizenzen
 ckChangeLog - http://www.apache.org/licenses/LICENSE-2.0

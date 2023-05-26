@@ -3,6 +3,7 @@
     <release version="1.0.15" versioncode="19" >
         <change>Die App benötigt jetzt mindestens Android 9</change>
         <change>App für den Landscape-Modus gesperrt</change>
+        <change>kleine Fehler sind behoben worden</change>
     </release>
     <release version="1.0.14" versioncode="18" >
         <change>neue Änderungshistorie eingefügt</change>
