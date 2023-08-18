@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
+    <release version="1.0.16" versioncode="20" >
+        <change>kleine Fehler sind behoben worden</change>
+        <change>Gradle update</change>
+    </release>
     <release version="1.0.15" versioncode="19" >
         <change>Die App benötigt jetzt mindestens Android 9</change>
         <change>App für den Landscape-Modus gesperrt</change>
