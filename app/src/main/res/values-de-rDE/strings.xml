@@ -91,9 +91,9 @@
 
 
     <string name="theme_preference">Farbschema</string>
-    <string name="lightmode_preference_key">Hell (standard)</string>
+    <string name="lightmode_preference_key">Hell</string>
     <string name="darkmode_preference_key">Dunkel</string>
-    <string name="system_preference_key">Systemstandard</string>
+    <string name="system_preference_key">Systemstandard (standard)</string>
     <string name="item_share">Teilen</string>
     <string name="share_with">Teilen mit</string>
     <string name="ready_to_share">Bereit zum Teilen</string>

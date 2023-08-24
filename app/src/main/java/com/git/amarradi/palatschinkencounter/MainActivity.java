@@ -43,7 +43,8 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
 
     public static final String SHARED_PREFS = "sharedPrefs";
     public static final String COUNTER = "text";
-    public static final String NIGHT_MODE = "night_mode";
+    public static final String DESIGN_MODE = "system";
+
     public static final String SCREENSHOT_PNG = "screenshot.png";
     private static final int SCREEN_ORIENTATION_UNSPECIFIED = SCREEN_ORIENTATION_PORTRAIT;
     private CoordinatorLayout coordinatorLayout;
@@ -100,7 +101,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
 
 
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-        String themes = sharedPreferences.getString(NIGHT_MODE, "");
+        String themes = sharedPreferences.getString(DESIGN_MODE, "");
         changeTheme(themes);
         load_data();
         updateViews();
@@ -193,7 +194,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
     }
 
     private void loadThemeFromPreference(SharedPreferences sharedPreferences) {
-        changeTheme(sharedPreferences.getString(getString(R.string.theme_key), getString(R.string.lightmode_preference_option_value)));
+        changeTheme(sharedPreferences.getString(getString(R.string.theme_key), getString(R.string.system_preference_option_value)));
     }
 
     private void changeTheme(String theme_value) {
@@ -202,7 +203,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
                 SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString(NIGHT_MODE, theme_value);
+                editor.putString(DESIGN_MODE, theme_value);
                 editor.apply();
                 break;
             }
@@ -210,15 +211,15 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
                 SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString(NIGHT_MODE, theme_value);
+                editor.putString(DESIGN_MODE, theme_value);
                 editor.apply();
                 break;
             }
-            case "system default": {
+            case "system": {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
                 SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString(NIGHT_MODE, theme_value);
+                editor.putString(DESIGN_MODE, theme_value);
                 editor.apply();
                 break;
             }

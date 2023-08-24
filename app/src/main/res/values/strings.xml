@@ -26,6 +26,8 @@
     <string name="lightmode_preference_option_value" translatable="false">lightmode</string>
     <!-- Value in SharedPreferences for darkmode option -->
     <string name="darkmode_preference_option_value" translatable="false">darkmode</string>
+    <!-- Value in SharedPreferences for system_preference option -->
+    <string name="system_preference_option_value" translatable="false">system</string>
 
 
     <string name="cancel" tools:ignore="ButtonCase">NO</string>
@@ -108,10 +110,10 @@
     <string name="theme_preference">Theme</string>
     <string name="darkmode_preference" translatable="false">darkmode</string>
     <string name="lightmode_preference" translatable="false">lightmode</string>
-    <string name="system_preference" translatable="false">system default</string>
+    <string name="system_preference" translatable="false">system</string>
     <string name="lightmode_preference_key">lightmode</string>
     <string name="darkmode_preference_key">darkmode</string>
-    <string name="system_preference_key">system standard</string>
+    <string name="system_preference_key">follow system (standard)</string>
     <string name="change">Changelog of the current version and licence</string>
     <string name="item_share">share</string>
     <string name="share_with">share via</string>
