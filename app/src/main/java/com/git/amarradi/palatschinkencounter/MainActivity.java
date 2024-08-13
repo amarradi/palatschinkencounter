@@ -252,12 +252,14 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         counter = sharedPreferences.getInt(COUNTER, 0);
         saveDate = sharedPreferences.getString(SAVEDATE, "");
+
     }
 
     @SuppressLint("DefaultLocale")
     public void updateViews() {
+
         textView.setText(format("%d", counter));
-        if (counter != 0) {
+        if (counter != 0 || tvSaveDate.getText()!= "" ) {
             tvSaveDate.setText(String.format(getResources().getString(R.string.last_count_date), saveDate));
         } else {
             tvSaveDate.setText("");
@@ -269,6 +271,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         Resources resources = getResources();
         int undo = counter;
         counter = 0;
+        tvSaveDate.setText("");
         updateViews();
         save_data();
         Snackbar snackbar = Snackbar.make(coordinatorLayout,resources.getString(R.string.reset),Snackbar.LENGTH_LONG);

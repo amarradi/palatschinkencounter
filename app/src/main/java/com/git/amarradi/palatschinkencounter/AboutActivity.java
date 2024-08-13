@@ -15,8 +15,6 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import de.cketti.library.changelog.BuildConfig;
-
 public class AboutActivity extends AppCompatActivity {
 
     private static final int SCREEN_ORIENTATION_UNSPECIFIED = SCREEN_ORIENTATION_PORTRAIT;
@@ -48,12 +46,11 @@ public class AboutActivity extends AppCompatActivity {
         oss.setTypeface(typeface_regular);
         intention.setTypeface(typeface_regular);
         decision.setTypeface(typeface_regular);
-        bibleverse.setTypeface(typeface_regular);
+        bibleverse.setTypeface(typeface_bold);
         TextView resethow = findViewById(R.id.resethowto);
         resethow.setTypeface(typeface_regular);
-        @SuppressLint({"StringFormatInvalid", "LocalSuppress"}) String version = String.format(getResources().getString(R.string.version)+" "+BuildConfig.VERSION_NAME);
+        @SuppressLint({"StringFormatInvalid", "LocalSuppress"}) String version = String.format(getResources().getString(R.string.version), BuildConfig.VERSION_NAME);
         appVersion.setText(version);
-
     }
 
     @Override

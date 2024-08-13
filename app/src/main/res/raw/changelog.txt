@@ -1,7 +1,7 @@
-## [1.0.19] - 2024-08-13
+## [1.0.20] - 2024-08-13
 
 * Update, damit der Palatschinkencounter nicht aus dem PlayStore entfernt wird
-* Text unterhalb zum geteilte Bilder in deutsch und englisch wurde angepasst
+* Text zum geteilte Bilder in deutsch und englisch wurde angepasst
 * Das Changelog wurde entfernt
 * Auf der Startseite gibt es einen kleinen Hinweis, wann zuletzt mit dem Palatschinkencounter gezählt wurde.
-* Kleinen Fehler im Löschdialog behoben
+* Kleinere Fehlerbehebungen

@@ -134,5 +134,5 @@
     <string name="changelog_show_full">More…</string>
     <string name="birthdayCake">Birthdaycake</string>
     <string name="item_home">home</string>
-    <string name="last_count_date">The last time I counted pancakes was on %1$s.</string>
+    <string name="last_count_date">The last time I counted pancakes was on %1$s</string>
 </resources>
