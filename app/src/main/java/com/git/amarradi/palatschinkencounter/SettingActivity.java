@@ -29,6 +29,7 @@ public class SettingActivity extends AppCompatActivity {
         setTheme(R.style.Theme_Palatschinkencounter);
         super.onCreate(savedInstanceState);
         setRequestedOrientation(SCREEN_ORIENTATION_UNSPECIFIED);
+
         getSupportFragmentManager().beginTransaction()
                 .replace(android.R.id.content, new SettingsFragment())
                 .commit();

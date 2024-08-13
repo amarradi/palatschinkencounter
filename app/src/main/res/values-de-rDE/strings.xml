@@ -14,10 +14,10 @@
     aktivieren</string>
     <string name="txViewCounterState">0</string>
     <string name="textviewComplain">Anzahl der gegessenen Palatschinken</string>
-    <string name="share_counter">Ich habe Palatschinken %1$s gegessen</string>
+    <string name="share_counter">Ich habe %1$s Palatschinken gegessen</string>
     <string name="attention">Zähler zurücksetzen</string>
     <string name="cancel">Nein</string>
-    <string name="resetOK">OK</string>
+    <string name="resetOK">Ja</string>
     <string name="resetMessage">Möchten Sie den Zähler wirklich zurücksetzen?</string>
     <string name="intention">Wenn man Palatschinken mag, dann sollten das natürlich die besten der
     Welt sein. Mit dem Palatschinkencounter und dem Rezept ist jetzt jeder in der Lage die besten
@@ -112,4 +112,5 @@
     <string name="changelog_show_full">Mehr</string>
     <string name="birthdayCake">Geburtstagskuchen</string>
     <string name="item_home">home</string>
+    <string name="last_count_date">Ich habe zuletzt am %1$s Palatschinken gezählt.</string>
 </resources>

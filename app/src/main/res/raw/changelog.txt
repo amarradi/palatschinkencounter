@@ -1,3 +1,7 @@
-## [1.0.18] - 2023-08-24
+## [1.0.19] - 2024-08-13
 
-Das Theme folgt jetzt standardmäßig dem System
+* Update, damit der Palatschinkencounter nicht aus dem PlayStore entfernt wird
+* Text unterhalb zum geteilte Bilder in deutsch und englisch wurde angepasst
+* Das Changelog wurde entfernt
+* Auf der Startseite gibt es einen kleinen Hinweis, wann zuletzt mit dem Palatschinkencounter gezählt wurde.
+* Kleinen Fehler im Löschdialog behoben

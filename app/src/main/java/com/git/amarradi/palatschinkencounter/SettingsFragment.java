@@ -51,6 +51,7 @@ public class SettingsFragment extends PreferenceFragmentCompat implements Shared
         for (int i = 0; i < count; i++) {
             Preference p = prefScreen.getPreference(i);
 
+
             // You don't need to set up preference summaries for checkbox preferences because
             // they are already set up in xml using summaryOff and summary On
             if (!(p instanceof CheckBoxPreference)) {
@@ -114,17 +115,15 @@ public class SettingsFragment extends PreferenceFragmentCompat implements Shared
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-
-
         super.onCreate(savedInstanceState);
-        Objects.requireNonNull(getPreferenceScreen().getSharedPreferences())
-                .registerOnSharedPreferenceChangeListener(this);
+        Objects.requireNonNull(getPreferenceScreen().getSharedPreferences()).
+                registerOnSharedPreferenceChangeListener(this);
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        Objects.requireNonNull(getPreferenceScreen().getSharedPreferences())
-                .unregisterOnSharedPreferenceChangeListener(this);
+        Objects.requireNonNull(getPreferenceScreen().getSharedPreferences()).
+                unregisterOnSharedPreferenceChangeListener(this);
     }
 }

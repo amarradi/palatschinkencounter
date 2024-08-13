@@ -15,6 +15,7 @@ import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -35,14 +36,16 @@ import com.google.android.material.snackbar.Snackbar;
 import java.io.File;
 import java.io.OutputStream;
 import java.nio.file.Files;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 import java.util.Objects;
-
-import de.cketti.library.changelog.ChangeLog;
 
 public class MainActivity extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener, WipeDataDialog.WipeDialogListener {
 
     public static final String SHARED_PREFS = "sharedPrefs";
     public static final String COUNTER = "text";
+    public static final String SAVEDATE = "date";
     public static final String DESIGN_MODE = "system";
 
     public static final String SCREENSHOT_PNG = "screenshot.png";
@@ -53,6 +56,8 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
 
     private int counter = 0;
     private TextView textView;
+    private TextView tvSaveDate;
+    private String saveDate;
 
 
     @SuppressLint("DefaultLocale")
@@ -77,13 +82,6 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         });
 
 
-
-        ChangeLog cl = new ChangeLog(this);
-        if (cl.isFirstRun()) {
-            cl.getLogDialog().show();
-        }
-
-
         ImageButton counterTextButton = findViewById(R.id.counter_text_button);
         coordinatorLayout = findViewById(R.id.coordinatorLayout);
 
@@ -91,7 +89,8 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         TextView textView_start = findViewById(R.id.tv_startpage);
         textView.setTypeface(typeface);
         textView_start.setTypeface(typeface);
-
+        
+        tvSaveDate = findViewById(R.id.tv_saveDate);
         setupSharedPreferences();
 
         textView.setOnLongClickListener(v -> {
@@ -108,11 +107,19 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
 
         counterTextButton.setOnClickListener(v -> {
             counter++;
+            saveDate = setDate();
             textView.setText(String.format("%d", counter));
+            tvSaveDate.setText(String.format(getResources().getString(R.string.last_count_date), saveDate));
             save_data();
         });
         load_data();
         updateViews();
+    }
+
+    private String setDate() {
+        SimpleDateFormat simpleDateFormat;
+        simpleDateFormat = new SimpleDateFormat("dd.MM.yyyy", Locale.GERMAN);
+        return simpleDateFormat.format(new Date());
     }
 
     @Override
@@ -200,6 +207,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
     private void changeTheme(String theme_value) {
         switch (theme_value) {
             case "lightmode": {
+                Log.d("changeTheme", "changeTheme: "+theme_value);
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
                 SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -208,6 +216,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
                 break;
             }
             case "darkmode": {
+                Log.d("changeTheme", "changeTheme: "+theme_value);
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
                 SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -215,7 +224,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
                 editor.apply();
                 break;
             }
-            case "system": {
+            case "system": {  Log.d("changeTheme", "changeTheme: "+theme_value);
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
                 SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -235,17 +244,25 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putInt(COUNTER, counter);
+        editor.putString(SAVEDATE, saveDate);
         editor.apply();
     }
 
     public void load_data() {
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         counter = sharedPreferences.getInt(COUNTER, 0);
+        saveDate = sharedPreferences.getString(SAVEDATE, "");
     }
 
     @SuppressLint("DefaultLocale")
     public void updateViews() {
         textView.setText(format("%d", counter));
+        if (counter != 0) {
+            tvSaveDate.setText(String.format(getResources().getString(R.string.last_count_date), saveDate));
+        } else {
+            tvSaveDate.setText("");
+        }
+
     }
 
     public void reset_counter() {

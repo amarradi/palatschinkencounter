@@ -28,7 +28,9 @@ public class WipeDataDialog extends AppCompatDialogFragment {
 
                             }
                         })
-                .setPositiveButton(getResources().getString(R.string.resetOK), new DialogInterface.OnClickListener() {
+                .setPositiveButton(getResources().getString(R.string.resetOK),
+
+                        new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         listener.onYesClicked();
